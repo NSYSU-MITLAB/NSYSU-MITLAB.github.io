@@ -1,0 +1,371 @@
+\chapter{實驗}
+\label{ch:exp}
+\section{辨識系統設定}
+本實驗所使用的特徵參數為~MFCC~(Aurora frontend wI007)、~TECC~與~advanced front-end~(AFE)，
+其特徵向量是由~$c_1,...,c_{12}$~及第~$13$~維的能量特徵所組成，
+而能量特徵的使用如表~\ref{table:energy_use}~的設定。
+接著我們使用均值消去法~(mean subtraction, MS)、均值正規化法~(mean and variance normalization, MVN)、LER~、~DEFR~以及~MVN~($c_1 \sim c_{12}$)~對能量特徵作進一步處理。
+在訓練與測試階段時，再加入~velocity (delta)~及~acceleration (delta-delta)~的特徵。
+而特徵擷取所使用之音框長度~(frame length)~為~$25$~ms，音框間距~(frame shift)~為~$10$~ms，濾波器頻帶的數目為~$23$。
+此外，MVN~($c_1 \sim c_{12}$)~表示只有對特徵向量~$c_1,...,c_{12}$~進行的處理。
+
+\begin{table}[!htb]
+\renewcommand{\arraystretch}{1.1}
+\centering
+\caption{MFCC、TECC~與~AFE~之能量特徵使用的設定}
+\label{table:energy_use}  
+\vspace{2mm}
+\begin{tabular}{ccc}
+\hline 
+	MFCC & TECC & AFE  \\ 
+\hline
+{Log energy} & {$c_0$} & {Log energy} \\
+\hline
+\end{tabular}
+\end{table}
+
+後端的聲學模型是採用隱藏式馬可夫模型~(hidden Markov model, HMM)，
+模型內狀態的轉移情形可分為兩種，一種是停留在原狀態，另一種是由左至右跳到下一個相鄰的狀態。
+此外，除了數字~$1$~至~$9$~分別都有一個相對應的聲學模型外，阿拉伯數字~$0$~有~zero~和~oh~兩種聲學模型。
+而每個模型都有~$18$~個狀態~(states)，包含前後兩個模型間連接用的空狀態，且每個狀態均包含~$3$~個高斯混合分佈~(Gaussian mixture distributions)。
+除了數字的聲學模型外，另外還有靜音~(silence)~模型與間歇~(short-pause)~模型。
+靜音模型包含~$3$~個狀態，每個狀態有~$6$~個高斯混合分佈。
+而間歇模型包含~$1$~個狀態，並與靜音模型最中間的狀態共用。
+
+\section{實驗語料}
+\subsection{Aurora 2.0}
+本論文所用之語料庫為歐洲電信標準協會~(European telecommunication standard institute, ETSI)~發行的~Aurora 2.0~語料庫。
+Aurora 2.0~語料庫是由美國成年男女所錄製的乾淨環境連續數字，
+以人工的方式加入八種不同來源的加成性噪音~(additive noise)，
+分別為地下鐵~(subway)、細語~(babble)、汽車~(car)、宴會~(exhibition)、餐廳~(restaurant)、街道~(street)、機場~(airport)~與火車站~(train station)~等，
+以及不同程度的訊噪比~(signal-to-noise ratio, SNR)，
+分別為~$-5$dB、$0$dB、$5$dB、$10$dB、$15$dB、$20$dB~與~clean~等，來觀察噪音對訊號所造成的影響；
+通道效應則是包含由國際電信聯合會所訂立的兩個標準~G.712~和~MIRS。
+根據測試語料加入之通道噪音以及加成性噪音的種類不同，可分為~Set A、Set B~和~Set C~三種測試集合。
+\subsection{Aurora 3.0}
+Aurora 3.0~語料庫包含四種不同語言，分別為~Spanish，Finnish，German~和~Danish，
+其音檔是使用近身~(close-talking)~與手持~(hands-free)兩種不同麥克風錄製而成。
+而訓練與測試分為三種不同的場景，分別為~WM~(well-match)，MM~(medium-mismatch)~與~HM~(high-mismatch)。
+WM~的訓練與測試集皆採用兩種麥克風及三種訊噪比的語料。
+MM~之訓練與測試語料只包含手持麥克風所錄製之音檔。
+HM~則利用手持麥克風錄製之語料為訓練集，近身麥克風錄製之語料為測試集。
+
+\section{效能評估方法}
+\label{sec:performance}
+Aurora 2.0~的實驗結果分為乾淨~(clean-train)~和含噪音~(multi-train)~之訓練集合，
+測試資料集~(test set)~則是使用~SNR~$0-20$dB~的語料。
+實驗結果如表~\ref{table:aurora2_clean}、\ref{table:aurora2_multi}~所示。
+Aurora 2.0~的三個測試集語料的數目比為~$2:2:1$，而表中平均~($Avg$)~的欄位是根據此比例計算得到，
+其方程式如下
+\begin{equation}
+  \text{\bf Avg} = \frac{\text{\bf Set A}*2+\text{\bf Set
+      B}*2+\text{\bf Set C}*1}{5}.
+\label{eq:au2avg}      
+\end{equation}
+而表~\ref{table:aurora3_spanish}、\ref{table:aurora3_danish}、\ref{table:aurora3_german}、\ref{table:aurora3_finnish}~中的~Avg~欄位則是使用方程式(\ref{eq:au3avg})~計算得到。
+\begin{equation}
+  \text{\bf Avg} = \text{\bf HM} \times 0.25 + \text{\bf MM} \times 0.35 + \text{\bf WM} \times 0.4. 
+\label{eq:au3avg}      
+\end{equation}
+此外，欄位~$rimp$~是先利用方程式(\ref{eq:au2avg})~或方程式(\ref{eq:au2avg})~計算各個特徵的平均，
+再分別以~MFCC、TECC~與~AFE~的詞錯率為基準~(baseline)~計算相對改善率~(relative improvement)，式子如下
+\begin{equation}
+	rimp = \frac{S_c-S_b}{100-S_b}\times 100\%,
+\label{eq:rimp}
+\end{equation}
+其中~$S_c$~是我們想要與基準比較之平均值，$S_b$~為基準的平均。
+
+\section{實驗結果}
+\label{sec:result}
+本小節將會對實驗結果做分析與說明。
+而實驗中分段對數函數所使用的~$\alpha_1$~與~$\alpha_2$~設定如表~\ref{table:parameterset}~所示。
+我們將對實驗結果對~Aurora 2.0~與~Aurora 3.0~個別探討。
+在~Aurora 2.0~的實驗中，我們將聲學模型分為~clean-train~與~multi-train，藉此分析能量特徵對語音辨識上的影響。
+其分析如下：
+\begin{enumerate}
+	\item Clean-train~之實驗結果：	\\
+		從表\ref{table:aurora2_clean}~的實驗結果，		
+		我們發現~MFCC~與~TECC~經過~MS~後，雖然只有平移語音訊號，相對改善率卻成功的提升為~19.30\%~與~29.34\%，
+		這證明了音檔前後非語音音框的能量對辨識率的影響甚大。
+		而~MVN、LER~與~DEFR~的目的皆為減少乾淨與雜訊語音之能量特徵的差距。
+		從實驗結果證實~MVN、LER~與~DEFR~的方法大幅度地突破~MS~的辨識率，
+		其中~DEFR~的方法效果最好。
+		此外，為了使辨識率有更進一步的提升，我們將~DEFR~與~MVN~做結合，使得辨識率突破原有的瓶頸。		
+		然而，我們將同樣的方法實作在~AFE~上，發現效果相當不佳，其原因在於~AFE~在訊號處理的過程包含了降噪的部分，
+		因此對其特徵參數做進一步的調整效益不大。
+		綜合比較~DEFR-MFCC~與~DEFR-TECC~之辨識結果，DEFR-TECC~的結果明顯地優於~DEFR-MFCC，
+		進一步證實了~DEFR~的方法應用在~TECC~上效果非常卓越。
+	\item Multi-train~之實驗結果：	\\
+		Multi-train~的實驗設定皆與~clean-train~相同，其主要差別為訓練語料庫之音檔包含了雜訊語音的訓練語料。
+		我們比較表~\ref{table:aurora2_clean}~與表~\ref{table:aurora2_multi}~的實驗結果，
+		可以很明顯地看出訓練聲學模型時，加入了雜訊語音的訓練語料，使聲學模型更具有噪音強健性。
+		然而在這樣的訓練環境下，特徵參數的擷取方式依然存在極大的影響力。		
+\end{enumerate}
+我們由~Aurora 2.0~的實驗可以很明確地看出能量特徵重刻對辨識效能的影響極大。
+然而~Aurora 2.0~語料庫是以人工的方式加入噪音，其噪音的變化與現實生活相比還是有所落差。
+因此我們將同樣的實驗設定實作在~Aurora 3.0~語料庫上，做更進一步的驗證。
+從表~\ref{table:aurora3_spanish}、\ref{table:aurora3_danish}、\ref{table:aurora3_german}、\ref{table:aurora3_finnish}~中，
+我們可以發現~MVN~的結果好壞會直接影響~DEFR + MVN~($c_1 \sim c_{12})$~的辨識率。
+此外，我們只有使用~DEFR~的方法做特徵擷取，其辨識率與基準相比，有極大幅度的提升。
+因此我們可以證實~DEFR~具有非常傑出的噪音強健性。
+
+\begin{table}[!htb]
+\label{table:parameterset}
+\caption{分段對數函數實作在~Aurora 2.0~與~Aurora 3.0~語料庫上所使用之~$\alpha_1$~與~$\alpha_2$~的設定}
+\centering
+\begin{tabular}{c|c|c|c|c|c|cl}
+%\hline
+ {語料庫} &  \multicolumn{2}{c|}{MFCC}  
+& \multicolumn{2}{c|}{TECC} 
+& \multicolumn{2}{c}{AFE} \\
+\hline
+& $\alpha_1$ & $\alpha_2$ & $\alpha_1$ & $\alpha_2$ & $\alpha_1$ & $\alpha_2$ \\
+\hline
+\multicolumn{1}{c|}{Aurora 2.0} &
+\multicolumn{1}{c|}{1.9} & {1.8} &
+                    {1.9} & {1.8}  &
+                    {1.9} & {1.0}   \\  
+\multicolumn{1}{c|}{Spanish} &
+\multicolumn{1}{c|}{1.9} & {1.8} &
+                    {1.9} & {1.8}  &
+                    {1.9} & {1.0}   \\ 
+\multicolumn{1}{c|}{Danish} &
+\multicolumn{1}{c|}{1.9} & {1.8} &
+                    {1.9} & {1.7}  &
+                    {1.9} & {1.7}   \\ 
+\multicolumn{1}{c|}{German} &
+\multicolumn{1}{c|}{1.1} & {1.0} &
+                    {1.9} & {1.8}  &
+                    {1.1} & {1.0}   \\ 
+\multicolumn{1}{c|}{Finnish} &
+\multicolumn{1}{c|}{1.1} & {1.0} &
+                    {1.9} & {1.8}  &
+                    {1.9} & {1.0}   \\ 					
+\hline
+\end{tabular}
+\end{table}
+
+
+\begin{table}[!htb]
+\renewcommand{\arraystretch}{1.1}
+\centering
+\caption{Aurora 2.0~之詞辨識率。聲學模型訓練的語料為乾淨語料。實驗結果為~SNR~$0-20$dB~之平均。}
+\label{table:aurora2_clean}  
+\vspace{2mm}
+\begin{tabular}{c|ccc|c|c}
+\hline 
+Feature & Set A & Set B & Set C & Avg. & rimp  \\ 
+\hline \hline
+{MFCC} & 61.34 & 55.75 & 66.14 & 60.06 & -\\
+{MFCC+MS} & 66.18 & 70.81 & 64.88 & 67.77 & 19.30\\
+{MFCC+MVN} & 70.18 & 70.77 & 66.37 & 69.65 & 24.01\\
+{LER-MFCC} & 74.60 & 74.51 & 65.23 & 72.69 & 31.62\\
+{DEFR-MFCC} & 74.92 & 75.82 & 64.37 & 73.17 & 32.82\\
+{LER-MFCC+MVN~($c_1 \sim c_{12}$)} & 78.40 & 78.13 & 76.48 & 77.91 & 44.69\\
+{DEFR-MFCC+MVN~($c_1 \sim c_{12}$)} & 79.19 & 79.26 & 76.44 & 78.67 & 46.59\\
+\hline
+{TECC} & 55.55 & 51.79 & 65.30 & 56.00 &-\\
+{TECC+MS} & 66.92 & 71.52 & 67.67 & 68.91 & 29.34\\
+{TECC+MVN} & 74.91 & 75.38 & 76.03 & 75.32 & 43.91\\
+{LER-TECC} & 78.57 & 79.60 & 72.77 & 77.82 & 49.59\\
+{DEFR-TECC}  & 79.24 & 80.69 & 71.60 & 78.29 & 50.66\\
+{LER-TECC+MVN~($c_1 \sim c_{12}$)} & 80.77 &  82.26 & 81.32 & 81.47 & 57.89\\
+{DEFR-TECC+MVN~($c_1 \sim c_{12}$)} & 81.10 & 82.18 & 81.07 & 81.53 & 58.02\\
+\hline
+{AFE} & 86.69 & 85.57 & 82.81 & 85.47 &-\\
+{AFE+MS} & 84.91 & 85.62 & 83.39 & 84.89 & -3.99 \\
+{AFE+MVN} & 76.80 & 76.85 & 74.39 & 76.34 & -62.84 \\
+{LER-AFE} & 85.45 & 85.04 & 81.09 & 84.42  & -7.23 \\
+{DEFR-AFE} & 85.59 & 85.02 & 81.29  & 84.59  & -6.06 \\
+{LER-AFE+MVN~($c_1 \sim c_{12}$)} & 83.21 & 83.35 & 79.70 & 82.57 & -19.96\\
+{DEFR-AFE+MVN~($c_1 \sim c_{12}$)} & 83.23 & 83.19 & 79.62 & 82.50 & -20.44\\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[!htb]
+\renewcommand{\arraystretch}{1.1}
+\centering
+\caption{Aurora 2.0~之詞辨識率。聲學模型訓練的語料為含噪音之語料。實驗結果為~SNR~$0-20$dB~之平均。}
+\label{table:aurora2_multi}  
+\vspace{2mm}
+\begin{tabular}{c|ccc|c|c}
+\hline 
+Feature & Set A & Set B & Set C & Avg. & rimp  \\ 
+\hline \hline
+{MFCC}  & 87.82 & 86.27 & 83.78 & 86.39 &  -\\
+{MFCC+MS} & 88.72 & 87.79 & 87.25 & 88.06 & 12.27\\
+{MFCC+MVN} & 89.67 & 88.07 & 86.10 & 88.32 & 14.18\\
+{LER-MFCC} & 89.36 & 86.54 & 85.51 & 87.46 & 7.86\\
+{DEFR-MFCC} & 89.68 & 87.68 & 85.54 & 88.05 & 12.20\\
+{LER-MFCC+MVN~($c_1 \sim c_{12}$)} & 90.94 & 89.84 & 89.93 & 90.30  & 28.73\\
+{DEFR-MFCC+MVN~($c_1 \sim c_{12}$)} &  90.77 & 89.56 & 89.38 & 90.01 & 26.60\\
+\hline
+{TECC}  & 88.07 & 87.09 & 85.74 & 87.21 & - \\
+{TECC+MS} & 89.14 & 89.33 & 89.66 & 89.32 & 16.50\\
+{TECC+MVN} & 90.71 & 90.34 & 89.96 & 90.41 & 25.02\\
+{LER-TECC} & 89.86 & 88.99 & 87.75 & 89.09 & 14.70\\
+{DEFR-TECC}  & 90.23 & 89.26 & 88.21 & 89.44 & 17.44\\
+{LER-TECC+MVN~($c_1 \sim c_{12}$)} & 91.23 & 91.03 & 91.18 & 91.14 & 30.73\\
+{DEFR-TECC+MVN~($c_1 \sim c_{12}$)} & 91.16 & 90.98 & 91.02 & 91.06  & 30.10\\
+\hline
+{AFE} & 91.79 & 90.76  & 89.11 & 90.84 & - \\
+{AFE+MS} & 91.66 & 91.13 & 90.24  & 91.17  & 3.60 \\
+{AFE+MVN} & 90.99 & 89.68 & 88.11 & 89.89 & -10.37 \\
+{LER-AFE}& 92.00 & 90.97 & 89.47  & 91.08  & 2.62 \\
+{DEFR-AFE} &91.85  & 90.85 & 89.29  & 90.93  & 0.98 \\
+{LER-AFE+MVN~($c_1 \sim c_{12}$)} & 91.71 & 90.73 & 89.74 & 90.81 & -0.33\\
+{DEFR-AFE+MVN~($c_1 \sim c_{12}$)} & 91.62 & 90.27 & 89.74 & 90.70 & -1.53\\
+\hline
+\end{tabular}
+\end{table}
+
+
+\begin{table}[!htb]
+\renewcommand{\arraystretch}{1.1}
+\centering
+\caption{Aurora 3.0 Spanish~之詞辨識率。}
+\label{table:aurora3_spanish}  
+\vspace{2mm}
+\begin{tabular}{c|ccc|c|c}
+\hline 
+Feature & WM & MM & HM & Avg. & rimp  \\ 
+\hline \hline
+{MFCC}  & 86.90 & 73.74 & 42.23 & 71.13 & -\\
+{MFCC+MS}  & 90.27 & 83.43 & 66.50 & 81.93 & 37.41\\
+{MFCC+MVN}  & 92.02 & 84.37 & 68.96  & 83.58 & 43.12\\
+{LER-MFCC}  & 88.87 & 77.90 & 70.41 & 80.42 & 32.18\\
+{DEFR-MFCC}  & 88.68 & 79.42 & 68.12 & 80.30 & 31.76\\
+{LER-MFCC+MVN~($c_1 \sim c_{12}$)} & 92.90 & 83.03 & 76.54 & 85.36 & 49.29\\
+{DEFR-MFCC+MVN~($c_1 \sim c_{12}$)}  & 92.87 & 86.48 & 78.23  & 86.97 & 54.87\\
+\hline
+{TECC}   & 85.91 & 75.92 & 42.44 & 71.55 & -\\
+{TECC+MS}  & 89.44 & 82.68 & 59.25 & 79.53 & 28.05\\
+{TECC+MVN}  & 91.04 & 87.23 & 76.69 & 86.12 & 51.21\\
+{LER-TECC}  &89.75 & 75.41 & 64.21 & 78.35 & 23.90\\
+{DEFR-TECC}  &88.95 & 80.92 & 64.33 & 79.98 & 29.63\\
+{LER-TECC+MVN~($c_1 \sim c_{12}$)}  & 92.68 & 85.19 & 72.42 & 84.99 & 47.24\\
+{DEFR-TECC+MVN~($c_1 \sim c_{12}$)} & 92.92 & 88.03 & 74.17 & 86.52 & 52.62\\
+\hline
+{AFE}  &  92.17 & 84.02 & 82.65  & 86.94 & -\\
+{AFE+MS}  & 93.79 & 89.17 & 87.10  & 90.50 & 27.26\\
+{AFE+MVN}  &92.27 & 85.85 & 80.57 & 87.10 & 1.23\\
+{LER-AFE}  &93.62 & 86.22 & 86.29 & 89.20 & 17.30\\
+{DEFR-AFE}  & 93.37 & 87.70 & 86.89  & 89.77 & 21.67\\
+{LER-AFE+MVN~($c_1 \sim c_{12}$)}  & 94.48 & 88.36 & 84.39 & 89.82 & 22.05\\
+{DEFR-AFE+MVN~($c_1 \sim c_{12}$)}  & 94.34 & 88.86 & 85.80 & 90.29 & 25.65\\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[!htb]
+\renewcommand{\arraystretch}{1.1}
+\centering
+\caption{Aurora 3.0 Danish~之詞辨識率。}
+\label{table:aurora3_danish}  
+\vspace{2mm}
+\begin{tabular}{c|ccc|c|c}
+\hline 
+Feature & WM & MM & HM & Avg. & rimp  \\ 
+\hline \hline
+{MFCC} & 79.64 & 49.01 & 33.19 & 57.31 & -\\
+{MFCC+MS} & 84.35 & 63.14 & 39.30 & 65.66 & 19.56\\
+{MFCC+MVN} & 80.54 & 59.60 & 48.82 &65.28 & 18.67\\
+{LER-MFCC} & 83.68 & 58.05 & 51.65 & 66.70 & 22.00\\
+{DEFR-MFCC} & 83.96 & 62.15 & 56.35 & 69.42 & 28.37\\
+{LER-MFCC+MVN~($c_1 \sim c_{12}$)} & 81.29 & 59.04 & 50.47 & 65.80 & 19.89\\
+{DEFR-MFCC+MVN~($c_1 \sim c_{12}$)}  & 83.27 & 62.29 & 55.84 & 69.07 & 27.55\\
+\hline
+{TECC} & 80.03  & 49.44  & 28.21 & 56.37 & -\\
+{TECC+MS} & 83.64  & 64.83  & 33.58 &　64.54 & 18.73 \\
+{TECC+MVN} & 81.66  & 58.62  & 52.27  & 66.25 & 22.64\\
+{LER-TECC} & 83.54  & 57.63  & 47.77  & 65.52 & 20.97\\
+{DEFR-TECC} & 84.64  & 58.90  & 52.98  & 67.72 & 26.01\\
+{LER-TECC+MVN~($c_1 \sim c_{12}$)} & 81.78  & 49.01  & 44.28  & 60.94 & 10.47\\
+{DEFR-TECC+MVN~($c_1 \sim c_{12}$)}  & 83.84  & 51.98  & 51.14  & 64.51 & 18.66 \\
+\hline
+{AFE} & 85.84  & 62.15  & 64.77 & 72.28 & -\\
+{AFE+MS} & 83.06  & 65.25  & 65.91 & 72.54 & 0.94\\ 
+{AFE+MVN} & 79.62  & 62.15  & 53.88  & 67.07 & -18.80\\
+{LER-AFE} & 87.43  & 65.68  & 70.89  & 75.68 & 12.27\\
+{DEFR-AFE} & 87.31  & 66.67  & 68.77  & 75.45 & 11.44\\
+{LER-TECC+MVN~($c_1 \sim c_{12}$)} & 81.29  & 62.85  & 50.63  & 67.17 & -18.43 \\
+{DEFR-TECC+MVN~($c_1 \sim c_{12}$)} & 80.80  & 63.84  & 54.62  & 68.32 & -14.29\\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[!htb]
+\renewcommand{\arraystretch}{1.1}
+\centering
+\caption{Aurora 3.0 German~之詞辨識率。}
+\label{table:aurora3_german}  
+\vspace{2mm}
+\begin{tabular}{c|ccc|c|c}
+\hline 
+Feature & WM & MM & HM & Avg. & rimp  \\ 
+\hline \hline
+{MFCC} & 90.58  & 79.06  & 74.28 & 82.47 & -\\
+{MFCC+MS} & 91.44  & 79.43  & 76.55 & 83.51 & 5.93\\ 
+{MFCC+MVN} & 90.98  & 81.04  & 77.20  & 84.06 & 9.07\\
+{LER-MFCC} & 91.10  & 81.55  & 75.39  & 83.83 & 7.76\\
+{DEFR-MFCC} & 91.42  & 80.53  & 75.21  & 83.56 & 6.22\\
+{LER-MFCC+MVN~($c_1 \sim c_{12}$)} & 93.23  & 84.63  & 83.63  & 87.82 & 30.52\\
+{DEFR-MFCC+MVN~($c_1 \sim c_{12}$)} & 92.41  & 81.26  & 81.91  & 85.88 & 19.45\\
+\hline
+{TECC} & 90.84  & 78.62  & 68.73  & 81.04 & -\\
+{TECC+MS} & 91.79  & 78.62  & 76.73  & 83.42 & 12.55\\
+{TECC+MVN} & 91.58  & 80.16  & 83.81  & 85.64 & 24.26\\
+{LER-TECC} & 92.03  & 81.99  & 77.94  & 84.99 & 20.83\\
+{DEFR-TECC} & 92.63  & 82.36  & 76.64  & 85.04 & 21.10\\
+{LER-TECC+MVN($c_1 \sim c_{12}$)} & 93.11  & 81.19  & 85.20  & 86.96 & 31.22\\
+{DEFR-TECC+MVN($c_1 \sim c_{12}$)} & 92.93  & 82.06  & 86.31  & 87.47 & 33.91\\
+\hline
+{AFE} & 94.59  & 89.02  & 89.41  & 91.35 & -\\
+{AFE+MS} & 94.53  & 87.12  & 90.06  & 90.82 & -6.13\\
+{AFE+MVN} & 93.17  & 83.89  & 85.48  & 88.00 & -38.73\\
+{LER-AFE} & 94.17  & 88.43  & 88.58  & 90.76 & -6.82\\
+{DEFR-AFE} & 94.15  & 88.07  & 88.71  & 90.66 & -7.98\\
+{LER-AFE+MVN~($c_1 \sim c_{12}$)} & 94.61  & 88.14  & 87.47  & 90.56 & -9.13\\
+{DEFR-AFE+MVN~($c_1 \sim c_{12}$)} & 93.37  & 86.31  & 87.05  & 89.32 & -23.47\\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[!htb]
+\renewcommand{\arraystretch}{1.1}
+\centering
+\caption{Aurora 3.0 Finnish~之詞辨識率。}
+\label{table:aurora3_finnish}  
+\vspace{2mm}
+\begin{tabular}{c|ccc|c|c}
+\hline 
+Feature & WM & MM & HM & Avg. & rimp  \\ 
+\hline \hline
+{MFCC} & 90.39  & 72.37  & 31.06  & 69.25 & -\\
+{MFCC+MS} & 93.76  & 86.11  & 44.91   & 78.87 & 31.28\\
+{MFCC+MVN} & 82.23  & 78.45  & 14.35   & 63.94 & -17.27\\
+{LER-MFCC} & 93.66  & 75.85  & 40.85   & 74.22 & 16.16\\
+{DEFR-MFCC} & 94.12  & 76.13  & 41.66   & 74.71 & 17.76\\
+{LER-MFCC+MVN~($c_1 \sim c_{12}$)} & 86.13  & 68.54  & 39.12   & 68.22 & -3.35\\
+{DEFR-MFCC}+MVN~($c_1 \sim c_{12}$) & 86.00  & 70.18  & 43.00  & 69.71 & 1.50\\
+\hline
+{TECC} & 92.23  & 65.12  & 37.17   & 68.98 & -\\
+{TECC+MS} & 93.31  & 83.45  & 45.02   & 77.79 & 28.40\\
+{TECC+MVN} & 81.07  & 77.50  & 60.78   & 74.75 & 18.60\\
+{LER-TECC} & 92.15  & 70.93  & 64.56   & 77.83 & 28.53\\
+{DEFR-TECC} & 93.04  & 72.78  & 51.48   & 75.56 & 21.21\\
+{LER-TECC+MVN~($c_1 \sim c_{12}$)} & 78.36  & 70.18  & 68.09   & 72.93 & 12.73\\
+{DEFR-TECC+MVN~($c_1 \sim c_{12}$)} & 80.55  & 74.28  & 70.92   & 75.95 & 22.47\\
+\hline
+{AFE} & 95.19  & 77.70  & 68.66   & 82.44 & -\\
+{AFE+MS} & 95.84  & 88.58  & 80.49   &  89.46 & 39.98\\
+{AFE+MVN} & 87.48  & 71.14  & 61.17   & 75.18 & -41.34\\
+{LER-AFE} & 95.67  & 83.17  & 72.93   & 85.61 & 18.05\\
+{DEFR-AFE} & 95.79  & 82.83  & 79.65   & 87.22 & 27.22\\
+{LER-AFE+MVN~($c_1 \sim c_{12}$)} & 88.00  & 76.88  & 66.40   & 78.71 & -21.24\\
+{DEFR-AFE+MVN~($c_1 \sim c_{12}$)} & 88.26  & 75.31  & 72.61   & 79.82 & -14.92\\
+\hline
+\end{tabular}
+\end{table}
+

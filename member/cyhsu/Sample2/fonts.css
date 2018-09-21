@@ -1,0 +1,59 @@
+td {
+color: #000000;
+line-height: 180%;
+font-size: 12;
+font-weight: normal;
+font-family: Verdana;} 
+
+a:link, a:active, a:visited {
+color: #666666;
+font-size: 12; 
+text-decoration: none;
+font-family: Verdana;}
+
+a:hover {
+color: #0000FF;
+font-size: 12;
+font-family: Verdana;}
+
+.txt{
+color: #919191;
+font-size: 10;
+line-height: 130%;
+font-family: Verdana;}
+
+.txt1{
+color: #FF6600;
+font-size: 12;
+line-height: 180%;
+font-weight: bold;
+font-family: Verdana;}
+
+.txt2{
+color: #666699;
+font-size: 10;
+line-height: 170%;
+font-family: Verdana;}
+
+.txt3{
+color: #99891D;
+font-size: 11;
+line-height: 150%;
+font-family: Verdana;}
+
+.txt4{
+color: #999999;
+font-size: 10;
+line-height: 120%;
+font-family: Verdana;}
+
+BODY {
+SCROLLBAR-FACE-COLOR: #f7f7f7;
+SCROLLBAR-HIGHLIGHT-COLOR: #e7ebe7;
+SCROLLBAR-SHADOW-COLOR: white;
+SCROLLBAR-3DLIGHT-COLOR: white;
+SCROLLBAR-ARROW-COLOR: #7b867b;
+SCROLLBAR-TRACK-COLOR: white;
+SCROLLBAR-DARKSHADOW-COLOR: white;
+font-size: 11;
+font-family: Arial;}

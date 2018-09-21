@@ -1,0 +1,56 @@
+\begin{thebibliography}{10}
+
+\bibitem{stolcke2002sel}
+A.~Stolcke, ``{SRILM-an extensible language modeling toolkit},'' in {\em
+  Seventh International Conference on Spoken Language Processing}, ISCA, 2002.
+
+\bibitem{ayan2008iab}
+N.~Ayan, J.~Zheng, and W.~Wang, ``{Improving alignments for better confusion
+  networks for combining machine translation systems},'' in {\em Proceedings of
+  the 22nd International Conference on Computational Linguistics (Coling
+  2008)}, pp.~33--40, 2008.
+
+\bibitem{och2003mer}
+F.~Och, ``{Minimum error rate training in statistical machine translation},''
+  in {\em Proceedings of the 41st Annual Meeting on Association for
+  Computational Linguistics-Volume 1}, pp.~160--167, Association for
+  Computational Linguistics Morristown, NJ, USA, 2003.
+
+\bibitem{hildebrand:cmt}
+A.~Stolcke, ``{Combination of machine translation systems via hypothesis
+  selection from combined n-best lists},'' in {\em Proceedings of the Eighth
+  Conference of the Association for Machine Translation}, pp.~254--261, 2008.
+
+\bibitem{och03:asc}
+F.~J. Och and H.~Ney, ``A systematic comparison of various statistical
+  alignment models,'' {\em Computational Linguistics}, vol.~29, no.~1,
+  pp.~19--51, 2003.
+
+\bibitem{huang2007hsc}
+F.~Huang and K.~Papineni, ``{Hierarchical system combination for machine
+  translation},'' in {\em Proc. of the Conf. on Empirical Methods in Natural
+  Language Processing (EMNLP¡¦2007)}, 2007.
+
+\bibitem{fiscus1997pps}
+J.~Fiscus, ``{A post-processing system to yield reduced word error rates:
+  Recognizer output voting error reduction (ROVER)},'' in {\em 1997 IEEE
+  Workshop on Automatic Speech Recognition and Understanding, 1997.
+  Proceedings.}, pp.~347--354, 1997.
+
+\bibitem{bangalore2001cct}
+B.~Bangalore, G.~Bordel, and G.~Riccardi, ``{Computing consensus translation
+  from multiple machine translation systems},'' in {\em IEEE Workshop on
+  Automatic Speech Recognition and Understanding, 2001. ASRU'01}, pp.~351--354,
+  2001.
+
+\bibitem{jayaraman2005mem}
+S.~Jayaraman and A.~Lavie, ``{Multi-engine machine translation guided by
+  explicit word matching},'' in {\em ANNUAL MEETING-ASSOCIATION FOR
+  COMPUTATIONAL LINGUISTICS}, vol.~43, p.~101, 2005.
+
+\bibitem{rosti2007com}
+A.~Rosti, N.~Ayan, B.~Xiang, S.~Matsoukas, R.~Schwartz, and B.~Dorr,
+  ``{Combining outputs from multiple machine translation systems},'' in {\em
+  Proceedings of NAACL HLT}, pp.~228--235, 2007.
+
+\end{thebibliography}

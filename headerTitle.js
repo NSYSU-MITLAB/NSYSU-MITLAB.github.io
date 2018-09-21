@@ -1,0 +1,1 @@
+﻿document.write("<p class=\"style1\">多媒體資訊技術實驗室</p>");

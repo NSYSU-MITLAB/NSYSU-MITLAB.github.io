@@ -1,0 +1,61 @@
+\chapter{介紹}
+\label{ch:introduction}
+
+\section{研究動機與目的}
+\label{sec:motivation}
+近年來，科技快速發展，在硬體上許多輕薄短小的智慧型電子設備不斷的被開發出來，
+而軟體上的人機互動也逐漸以語音控制或語音輸入資訊的方式取代傳統以鍵盤為主的互動方式。
+因此語音成為人類與智慧型電子設備間最主要的人機介面，更進一步的帶動自動語音辨識~(automatic speech recognition, ASR)~技術的發展。
+目前已經有許多語音辨識方面的應用，例如：谷歌語音搜尋~(Google voice search)、讀寫機、聲控家電等等。
+但是在有限的語料所訓練出來的聲學模型中，要辨識龐大使用人潮錄製的語音訊號，辨識效能將奇差無比。
+而造成效能低落的主要因素有語者差異、背景噪音等等，
+我們發現在毫無噪音的環境下，可以快速並且準確地得到辨識結果；
+相對地，在充滿背景噪音的環境下，系統將無法準確辨識，甚至無法辨識。
+因此我們希望可以藉由觀察語音的特性，擷取出具有噪音強健性之特徵參數來增加辨識效能。
+
+我們以常見的梅爾倒頻譜參數~(Mel-frequency cepstral coefficients, MFCC)~與~Teager~能量倒頻譜參數~(Teager energy cepstral coefficients, TECC)~\cite{Dimitrios2011}~為基準，
+並根據能量為語音辨識之重要指標的特性~\cite{Zhu2005,Hwang2004,Ahadi2004,Chengalvarayan1999}，
+結合對數能量尺度重刻~(Log energy rescaling, LER)~\cite{chen2007}~來調整能量特徵。
+目的是希望能夠減少語音能量特徵受雜訊干擾所造成的失真。
+然而，對數能量尺度重刻不論是在語音~(speech)~或非語音~(non-speech)~的段落皆使用相同的尺度，
+導致在雜訊能量大時，非語音段落的雜訊能量值下降幅度過小，
+因此我們提出資料驅動能量特徵重刻法~(data-driven energy features rescaling, DEFR)~來解決此問題。
+我們使用語音活動偵測~(voice activity detection, VAD)~\cite{tu2007}~判斷語音與非語音出現的時間點，
+再利用分段對數尺度函數~(piecewise log rescaling function)~對能量特徵做不同尺度的重刻，以減緩雜訊干擾的影響，進而提升辨識效果。
+
+\section{背景}
+\label{sec:backgroup}
+現今自動語音辨識的技術已經相當成熟。
+但是在訓練與測試語料不匹配的情況下，辨識率將快速下滑。
+就背景噪音而言，是造成環境不匹配的主要因素，路人講話聲、汽車行駛的聲音等等皆是不希望出現在錄製語料中的噪音，
+另一種噪音則是來自於錄製設備的差異。
+除此之外，尚有通道效應~(channel effects)~\cite{Garreton2010}、說話方式~(speaking styles)、語者差異~(speaker variations)~\cite{Huang1992}~等影響因素。
+正因如此，噪音強健性長久以來被視為一個重要的研究課題。
+
+近年來越來越多學者投入語音強健這方面的研究，因此也有越來越多的語音強健技術被提出。
+然而，依據方法的本質可分為前端處理與後端聲學模型的調適。
+前端處理的部分又可分為兩種類型：
+\begin{itemize}
+\item[1.]{\bf 語音強化技術~(speech enhancement techniques)} \\
+	語音強化技術~\cite{David2007,Crookes2011}~目的在於希望能夠藉由觀察含噪音之語音還原出乾淨語音訊號，以提升語音訊號本身的品質。
+	而非調整辨識系統模型或特徵參數，希望藉由語音與雜訊所呈現不同的統計特性，來重建乾淨的語音訊號或是特徵參數。
+	然而在語音強化的過程中，往往也能順帶提升辨識的正確率。
+	常見的方法有維爾濾波器~(Wiener filter, WF)~\cite{Ngo2012}、頻譜消去法~(spectral subtraction, SS)~\cite{Randy2004}、
+	訊噪比波行處理~(signal waveform processing, SWP)~\cite{Macho2001}、噪音遮罩法~(noise masking, NM)~\cite{Christophe2007}~等。
+\item[2.]{\bf 強健性語音特徵~(robust speech features)} \\
+	強健性語音特徵的目的則是擷取出語音訊號中不受環境變化干擾而失真的強健性語音特徵參數。
+	常見方法有倒頻譜平均消去法~(cepstral mean subtraction, CMS)~\cite{Veisi2011}、倒頻譜正規化法~(cepstral mean and variance normalization, CVN)~\cite{Viikki1988}、
+	聲道長度正規化法~(vocal tract length normalization, VTLN)~\cite{Tom1998}、統計圖等化法~(histogram equalization, HEQ)~\cite{Yasunari2003}、特徵空間旋轉法~(feature space rotation, FSR)、
+	頻譜熵值特徵~(spectral entropy feature)~\cite{Misra2005}~等。
+\end{itemize}
+而後端處理的部分為聲學模型的調適~(acoustic model adaptation)，主要藉由對目標背景雜訊調整聲學模型，期望調適後的模型可以適用於新的環境。
+這類的方法優點是僅需要少量的語料就能對聲學模型進行調適；缺點是在進行即時調適時，計算量過大。
+常見的方法有最大相似度線性迴歸法~(maximum likelihood linear regression, MLLR)~\cite{Raghavan1999}、最大事後機率法則~(maximum a posteriori, MAP)~\cite{Gauvain1994}，
+以及平行模型合併法~(parallel model combination, PMC)~\cite{Veisi2009}。
+而在本論文，我們主要的研究是朝強健性語音特徵的方向進行。
+
+\section{論文架構}
+以下為本論文的基本架構，第~\ref{ch:feature-extraction}~章將介紹梅爾倒頻譜參數與~Teager~倒頻譜參數的特徵擷取方法，
+第~\ref{ch:rescale-method}~章為說明我們所提出的資料驅動能量特徵重刻法，
+第~\ref{ch:exp}~章為實驗，包括辨識系統設定、語料庫的介紹、效能評估方法以及實驗結果，
+最後為結論與未來展望。

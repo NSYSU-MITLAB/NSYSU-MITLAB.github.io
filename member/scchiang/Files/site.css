@@ -1,0 +1,112 @@
+/* CSS Document */
+* {font-family: Arial, Verdana, Helvetica, sans-serif; word-break:break-all;}
+html {overflow-y: scroll; overflow: auto;}
+a.userInfoLink:link,a.userInfoLink:active,a.userInfoLink:visited,a.userInfoLink:hover {text-decoration: underline;}
+body { text-align: center; margin:0 auto; padding:0 auto; background: #FFF; font-size:13px; color:#000; }
+div,form,img,ul,ol,li,dl,dt,dd {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+h1,h2,h3,h4,h5,h6 { margin:0; padding:0;}
+table,td,tr,th{font-size:12px;}
+h2{float:left;}
+
+.red {color:red;}
+.green {color:green;}
+.blue {color:blue}
+.rose {color:#FF0066;}
+.cat { color:#666;}
+.cat a {color:#666;}
+.cat a:hover { color:red; text-decoration:underline; }
+
+/* 鏈接樣式 */
+a {text-decoration:none; }
+a:hover { color:red; text-decoration:underline; }
+
+a.userLinkDark {color:#000000; text-decoration:underline;}
+a.userLinkDark:hover {color:red; text-decoration:underline;}
+a.userLinkMaster {color:green; text-decoration:underline;}
+a.userLinkMaster:hover {color:red; text-decoration:underline;}
+a.userLinkBlue {color:blue; text-decoration:underline;}
+a.userLinkBlue:hover {color:red; text-decoration:underline;}
+a.userLinkRed {color:red; text-decoration:underline;}
+a.userLinkRed:hover {color:red; text-decoration:underline;}
+a.userLinkLove {color:#FF00FF; text-decoration:underline;}
+a.userLinkLove:hover {color:#FF00FF; text-decoration:underline;}
+a.ForumLink:link{color:#666;text-decoration:none;}
+a.ForumLink:visited{color:#666;text-decoration:none;}
+a.ForumLink:hover{color:red; text-decoration:none;}
+
+a.TitleLink:link{color:#1F3A87;text-decoration:none;}
+a.TitleLink:hover{color:red;text-decoration:none;}
+
+/* 設置全局寬度、位置、字體 */
+
+.floatLeft {float:left;}
+.floatRight {float:right;}
+.splitLine {height:6px;clear:both;}
+.textCenter { text-align:center;}
+
+/* 表格 */
+.tbh { background:#D2E6F9 url(../img/tb_h.gif) repeat-x scroll 0% ; border:1px solid #9CBBDA; height:25px;line-height:25px; margin:0px; text-align:left;}
+.tbhc { background:#D2E6F9 url(../img/tb_h.gif) repeat-x scroll 0%; border:1px solid #9CBBDA; height:25px;line-height:25px; margin:0px; text-align:center;}
+.tbhc h2 { color:#1F3A87; font-size:13px; display:block; text-align:center;  float:none;}
+.tbh h2 { color:#1F3A87; font-size:13px; display:block; margin-left:6px;}
+.tbb {border-bottom:1px solid #9CBBDA;border-left:1px solid #9CBBDA;border-right:1px solid #9CBBDA;}
+.tba {border:1px solid #9CBBDA;}
+
+/* 当前位置 */
+#currentPosition {float:left;height:22px;padding: 3px 0 0;font-size:13px;}
+#currentPosition a{color:#1F3A87; height:22px;padding: 3px 0 0;font-size:13px;text-decoration:none;}
+#currentPosition a:hover{color:red; height:22px;padding: 3px 0 0;font-size:13px;text-decoration:underline;}
+
+/* Top Navigation */
+#topNav { clear:both;margin:0px; font-size:12px;padding-top:5px;}
+#topNav a { color:#1F3A87;  text-decoration: none; font-size:12px; }
+#topNav a:hover {color:red;  text-decoration: underline; font-size:12px; }
+#topNav a.red {color:red; font-size:12px; }
+#siteNav {}
+#userBar {}
+.siteNavWidth { width:100%; }
+.forumNavWidth { width:98%; }
+.articleNavWidth { width:97%}
+/* Header */
+#header {margin: 0 auto;padding: 0;clear:both;text-align:left;height:74px;width: 680px;}
+#topBanner { height:62px; padding:0px; position:relative; width:470px;}
+#topBannerImg { position:absolute; bottom:0px; left:0px;}
+#siteLogo { height:89px; position:relative; text-align:right; width:200px; }
+#siteLogoImg {  position:absolute; bottom:25px; right:0px;}
+
+/* 分页 */
+#pagination {clear:both; text-align:center; font-size:12px; color:#000;}
+#pagination ul { height:25px; line-height:25px;}
+#pagination ul li {margin: 0 1px;padding: 2px 1px;list-style-type:none;font-size: 12px; display:inline; }
+#pagination ul li.noLink {margin: 0 1px;padding: 2px 1px;list-style-type:none;font-size: 12px; color:#1F3A87;}
+#pagination ul li.disabled {color:#999999;border:1px solid #e0e0e0;}
+#pagination ul li.hover {margin: 0 1px;padding: 2px 1px;list-style-type:none;font-size: 12px;}
+#pagination ul li.noBorder {margin: 0 1px;padding: 2px 1px;list-style-type:none;font-size: 12px;}
+#pagination a {font-family:Tahoma, MingLiU, Arial, Helvetica, sans-serif; padding: 2px 0px;color:#1F3A87;text-decoration:none;font-size:12px;border:1px solid #1F3A87;}
+#pagination a:hover {font-family:Tahoma, MingLiU, Arial, Helvetica, sans-serif; padding: 2px 0px;color:#fff;text-decoration:underline;font-size:12px;background-color:#005599;border:1px solid #1F3A87;text-decoration:none;}
+#pagination span {font-family:Tahoma, MingLiU, Arial, Helvetica, sans-serif; padding: 2px 0px;font-size: 12px;font-weight:bold;border:1px solid #FFF;}
+
+/* 底部 */
+#footSplit { height:3px; clear:both; background-color:#376B9E; }
+#footer { clear:both; color:#1F3A87; }
+#footLink {clear:both; text-align:center;}
+#footLink a { color:#1F3A87; clear:both; text-align:center; text-decoration: underline;}
+#footLink a:hover {text-align:center;text-decoration: underline;}
+#copyright {clear:both; text-align:center;}
+
+/* 文本广告 */
+#textAd {height:36px;background-image:url(../img/bg_textAd.gif);background-repeat:repeat-x;text-align:center;width:100%;margin: 0 auto;clear:both;}
+#textAd ul {text-align:center; margin:0px; padding:0px;}
+#textAd li {list-style-type:none;display:inline;padding:0 10px 0 10px;}
+#textAd li a {color:#1F3A87; font-size:12px;font-weight: bold;text-decoration:underline;}
+#textAd li a:hover {color:red; font-size:12px;font-weight: bold;}
+#textAd a {color:#1F3A87; font-size:12px;font-weight: bold;text-decoration:underline;}
+#textAd a:hover {color:red; font-size:12px;font-weight: bold;}
+#textAd span{margin:0px; padding:0px;}
+#textAd div{margin:0px; padding:0px;width:100%;text-align:center;clear:both;height:30px;line-height:30px;}
+
+#yahoogarbage img {display:none; text-align:center;}

@@ -1,0 +1,26 @@
+\contentsline {chapter}{List of Tables}{viii}{chapter*.2}
+\contentsline {chapter}{List of Figures}{ix}{chapter*.3}
+\contentsline {chapter}{Chapter{} \numberline {1}介紹}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}研究動機與目的}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2}背景}{2}{section.1.2}
+\contentsline {section}{\numberline {1.3}論文架構}{3}{section.1.3}
+\contentsline {chapter}{Chapter{} \numberline {2}特徵參數擷取}{4}{chapter.2}
+\contentsline {section}{\numberline {2.1}梅爾倒頻譜參數}{4}{section.2.1}
+\contentsline {section}{\numberline {2.2}Teager\nobreakspace {}能量倒頻譜參數}{6}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Gamma-tone\nobreakspace {}濾波器}{6}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Teager\nobreakspace {}能量評估法}{8}{subsection.2.2.2}
+\contentsline {chapter}{Chapter{} \numberline {3}能量特徵重刻}{11}{chapter.3}
+\contentsline {section}{\numberline {3.1}資料驅動能量特徵重刻法}{11}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}低頻譜之語音活動偵測}{12}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}分段對數尺度函數}{13}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}參數搜尋法}{14}{subsection.3.1.3}
+\contentsline {chapter}{Chapter{} \numberline {4}實驗}{18}{chapter.4}
+\contentsline {section}{\numberline {4.1}辨識系統設定}{18}{section.4.1}
+\contentsline {section}{\numberline {4.2}實驗語料}{19}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Aurora 2.0}{19}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Aurora 3.0}{19}{subsection.4.2.2}
+\contentsline {section}{\numberline {4.3}效能評估方法}{19}{section.4.3}
+\contentsline {section}{\numberline {4.4}實驗結果}{20}{section.4.4}
+\contentsline {chapter}{Chapter{} \numberline {5}結論與未來展望}{28}{chapter.5}
+\contentsline {section}{\numberline {5.1}結論}{28}{section.5.1}
+\contentsline {section}{\numberline {5.2}未來展望}{28}{section.5.2}

@@ -1,0 +1,58 @@
+This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+The top-level auxiliary file: nsysuthesis.aux
+The style file: ieeetr.bst
+Database file #1: nsysuthesis.bib
+I was expecting a `,' or a `}'---line 127 of file nsysuthesis.bib
+ :   
+ :   month = {July}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 149 of file nsysuthesis.bib
+ :  
+ :  % publisher = {Elsevier Science Publishers B. V.},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--I'm ignoring Misra2005's extra "title" field
+--line 173 of file nsysuthesis.bib
+You've used 24 entries,
+            1876 wiz_defined-function locations,
+            634 strings with 8788 characters,
+and the built_in function-call counts, 6880 in all, are:
+= -- 664
+> -- 220
+< -- 0
++ -- 83
+- -- 59
+* -- 478
+:= -- 899
+add.period$ -- 24
+call.type$ -- 24
+change.case$ -- 22
+chr.to.int$ -- 0
+cite$ -- 24
+duplicate$ -- 381
+empty$ -- 695
+format.name$ -- 59
+if$ -- 1732
+int.to.chr$ -- 0
+int.to.str$ -- 24
+missing$ -- 22
+newline$ -- 75
+num.names$ -- 22
+pop$ -- 106
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 295
+stack$ -- 0
+substring$ -- 502
+swap$ -- 166
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 56
+width$ -- 26
+write$ -- 221
+(There were 2 error messages)

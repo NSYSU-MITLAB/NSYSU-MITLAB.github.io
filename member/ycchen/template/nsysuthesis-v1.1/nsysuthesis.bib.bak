@@ -1,0 +1,66 @@
+@conference{ayan2008iab,
+  title={{Improving alignments for better confusion networks for combining machine translation systems}},
+  author={Ayan, N.F. and Zheng, J. and Wang, W.},
+  booktitle={Proceedings of the 22nd International Conference on Computational Linguistics (Coling 2008)},
+  pages={33--40},
+  year={2008}
+}
+@conference{stolcke2002sel,
+  title={{SRILM-an extensible language modeling toolkit}},
+  author={Stolcke, A.},
+  booktitle={Seventh International Conference on Spoken Language Processing},
+  year={2002},
+  organization={ISCA}
+}
+@conference{hildebrand:cmt,
+  title={{Combination of machine translation systems via hypothesis selection from combined n-best lists}},
+  author={Stolcke, A.},
+  booktitle={Proceedings of the Eighth Conference of the Association for Machine Translation},
+  year={2008},
+  pages={254--261},
+}
+@conference{rosti2007com,
+  title={{Combining outputs from multiple machine translation systems}},
+  author={Rosti, A.V.I. and Ayan, N.F. and Xiang, B. and Matsoukas, S. and Schwartz, R. and Dorr, B.J.},
+  booktitle={Proceedings of NAACL HLT},
+  pages={228--235},
+  year={2007}
+}
+@conference{fiscus1997pps,
+  title={{A post-processing system to yield reduced word error rates: Recognizer output voting error reduction (ROVER)}},
+  author={Fiscus, JG},
+  booktitle={1997 IEEE Workshop on Automatic Speech Recognition and Understanding, 1997. Proceedings.},
+  pages={347--354},
+  year={1997}
+}
+@conference{bangalore2001cct,
+  title={{Computing consensus translation from multiple machine translation systems}},
+  author={Bangalore, B. and Bordel, G. and Riccardi, G.},
+  booktitle={IEEE Workshop on Automatic Speech Recognition and Understanding, 2001. ASRU'01},
+  pages={351--354},
+  year={2001}
+}
+
+@conference{huang2007hsc,
+  title={{Hierarchical system combination for machine translation}},
+  author={Huang, F. and Papineni, K.},
+  booktitle={Proc. of the Conf. on Empirical Methods in Natural Language Processing (EMNLP¡¦2007)},
+  year={2007}
+}
+@conference{jayaraman2005mem,
+  title={{Multi-engine machine translation guided by explicit word matching}},
+  author={Jayaraman, S. and Lavie, A.},
+  booktitle={ANNUAL MEETING-ASSOCIATION FOR COMPUTATIONAL LINGUISTICS},
+  volume={43},
+  number={2},
+  pages={101},
+  year={2005}
+}
+@ARTICLE{och03:asc,
+AUTHOR = {Franz Josef Och and Hermann Ney},
+TITLE = {A Systematic Comparison of Various Statistical Alignment Models},
+JOURNAL= {Computational Linguistics}, 
+NUMBER = 1,
+VOLUME = 29,
+YEAR = 2003,
+PAGES = {19--51}}

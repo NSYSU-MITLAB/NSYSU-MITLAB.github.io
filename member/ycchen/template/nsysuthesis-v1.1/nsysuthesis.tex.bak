@@ -1,0 +1,120 @@
+%%% =====================================================================
+%%% File: nsysutthesis.tex, version 1.1, March 2009
+%%% File: nsysutthesis.tex, version 1.0, June 2008
+%%% File: nsysutthesis.tex, version 0.1, November 2005
+%%% Copyright (C) 2005-2009 by M. C. Chiang.  All rights reserved.
+%%% =====================================================================
+%%% File: utthesis.doc, version 1.0, April 1999
+%%% =====================================================================
+%%% Copyright (c) 1994 by Dinesh Das.  All rights reserved.
+%%% This file is free and can be modified or distributed as long as
+%%% you meet the following conditions:
+%%% (1) This copyright notice is kept intact on all modified copies.
+%%% (2) If you modify this file, you MUST NOT use the original file name.
+%%% =====================================================================
+
+\documentclass[a4paper,12pt]{report}
+\usepackage{nsysuthesis}
+\usepackage{CJKutf8}
+\usepackage{times}
+\usepackage[pdftex]{graphicx}
+\usepackage[pdftex,unicode,plainpages=false,bookmarksnumbered,bookmarksopenlevel=3]{hyperref}
+\usepackage{color}
+
+\parindent 0pt
+
+\input lstset.tex
+\input macros.tex
+
+\setcounter{tocdepth}{4}
+\setcounter{secnumdepth}{4}
+
+%\singlespace %1.1
+\oneandhalfspace %1.5
+%\doublespace %1.7
+
+\leftchapter
+%\centerchapter
+%\rightchapter
+
+%\mastersthesis
+\phdthesis
+
+%\thesisdraft
+
+
+
+\begin{document}
+  \begin{CJK*}{UTF8}{bkai}
+
+    \newcommand{\myuniversity}{國立中山大學} 
+    \newcommand{\mydepartment}{資訊工程學系}
+    %\newcommand{\mythesistype}{碩士論文\\~\\\textcolor{red}{\textbf{（碩、博士論文暨論文計畫書樣板）\\{\normalsize (Version 1.1)}}}}
+    %% Comment out the above line and then uncomment one of the
+    %% following three lines
+    % \newcommand{\mythesistype}{碩士論文}
+    % \newcommand{\mythesistype}{博士論文}
+    \newcommand{\mythesistype}{論文計畫書}
+    \newcommand{\mythesistitlechinese}{線上機器翻譯系統之整合}
+    \newcommand{\mythesistitleenglish}{Combining outputs from online tranlsation systems}
+    \newcommand{\myname}{陳逸昌}
+    \newcommand{\myadvisor}{陳嘉平}
+    \newcommand{\mythesisyear}{中華民國九十八年三月}
+    
+    \hypersetup{
+      pdftitle={\myuniversity 學位論文典藏.PDF},
+      pdfauthor={\myuniversity~\mydepartment~\myname},
+      pdfsubject={\mythesistitlechinese},
+      pdfkeywords={\LaTeX, \TeX}
+    }
+
+    \renewcommand{\thesisuniversityname}{\myuniversity\mydepartment}
+    \renewcommand{\thesistype}{\mythesistype}
+    \renewcommand{\thesistitlechinese}{\mythesistitlechinese}
+    \renewcommand{\thesistitleenglish}{\mythesistitleenglish}
+    \renewcommand{\thesisauthor}{研究生：~~\myname~~撰}
+    \renewcommand{\thesisadvisor}{指導教授：~~\myadvisor~~博士}
+    \renewcommand{\thesisyear}{\mythesisyear}
+    \renewcommand{\thesisdedication}{Dedication Text}
+
+    \pagenumbering{alph}
+    %% Generate the title page.
+    \thesistitlepage
+
+    %% Generate the copyright page.
+    \renewcommand{\thesisauthor}{\myname}
+    \thesiscopyrightpage
+
+    %% Generate the abstract pages.
+    \input abschinese.tex
+    \input absenglish.tex
+
+    %% Generate table of contents, list of tables, list of figures, and
+    %% list of listings.
+     \contenttabfiglst
+    %% \tableofcontents
+    %% \listoftables
+    %%\listoffigures
+    %% \listoflistings
+
+    %% Generate the acknowledgement page.
+    %\input ack.tex
+
+    %% Generate the dedication page.
+    % \thesisdedicationpage
+
+    \input chap01.tex
+    \input chap02.tex
+    \input chap03.tex
+    %%\input chap04.tex
+    %%\input chap05.tex
+
+    \bibliographystyle{ieeetr}
+    \bibliography{nsysuthesis}
+
+   %% \appendix
+    %%\input app01.tex
+    %%\input app02.tex
+
+  \end{CJK*}
+\end{document}

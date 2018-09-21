@@ -1,0 +1,766 @@
+<html>
+<head>
+    <title></title>
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true">
+    </script>
+
+	<!--<script src="jquery-1.6.2.min.js" type="text/javascript">
+    </script>-->
+ 
+     
+      <link href="normalize.css" rel="stylesheet" type="text/css">
+      <link href="style.css" rel="stylesheet" type="text/css">        
+
+    
+<!--
+<script language="javascript">
+
+  var status=0;
+  var prex;
+  var prey;
+  var alreadyx;
+  var alreadyy;
+  var allxy=[];
+  $(document).ready(function() {
+    window['paperdown']=0;
+    window['motion']=0;
+    $("#mymap").mousedown(function(event){
+      if(window['paperdown']!=0)
+      {
+        $("#mymap").stop();
+      }
+      window['startmovetime']=new Date().getTime();
+      window['paperdown']=1;
+      window['moveX']=event.pageX;
+      window['moveY']=event.pageY;
+      window['motion']=0;                          
+    });
+    $("#mymap").mouseup(function(){
+       
+       window['endmovetime']=new Date().getTime();
+       window['lastX']=this.scrollLeft;
+       window['lastY']=this.scrollTop;
+       var orz=window['endmovetime']-window['startmovetime'];       
+       if(orz>=15){
+         orz=0;    
+         window['paperdown']=0; 
+         window['motion']=0;    
+       }
+       else
+       {
+         orz=15-orz;                                
+         //$("body").append(window['lastX']+','+window['moveSX']);    
+         //$("#fly").draggable({disabled: true});
+         window['motion']=1;
+         $("#mymap").animate({ 
+           'scrollLeft':(window['lastX']+(window['lastX']-window['moveSX'])/0.1),
+           'scrollTop':(window['lastY']+(window['lastY']-window['moveSY'])/0.1)
+         },{duration:orz*100,query:false},function(){
+         //  $("#fly").draggable({disabled: false});   
+            window['paperdown']=0;
+            window['motion']=0;                    
+         });                                                            
+       }   
+       
+    });
+    $("#mymap").mouseout(function(){
+       //window['paperdown']=0;
+       $("#mymap").mouseup();       
+    });
+    $("#mymap").mousemove(function(event){
+      if(window['paperdown']==1&&window['motion']==0)
+      {
+        window['startmovetime']=new Date().getTime();
+        window['moveSX']=this.scrollLeft;
+        window['moveSY']=this.scrollTop;
+                
+        this.scrollLeft-=(event.pageX-window['moveX']);
+        this.scrollTop-=(event.pageY-window['moveY']);
+        window['moveX']=event.pageX;
+        window['moveY']=event.pageY;
+      }
+    });
+    document.onselectstart = function(){return false;}
+    document.ondragstart = function(){return false;}
+    
+  });
+</script>
+-->
+       
+       
+        
+</head>
+
+	
+
+<body onLoad="init()">
+<div style="width: 780px">
+	
+
+   
+    <style >
+		table td
+		{
+		  border:2px dashed #ffc0c0 ;
+		}
+    </style> 
+    
+  <!--mymap-->
+  <script language="javascript">
+	
+	var map;
+	var panorama;//街景物件
+	var infowindow;
+	var geocoder;
+	var address="高雄火車站";
+	var sv = new google.maps.StreetViewService();
+	var myOptions;
+
+	
+        //***************************初始設定*****************************/
+		//初始地圖
+		function init()
+		{
+			//宣告資訊視窗物件
+			infowindow=new google.maps.InfoWindow();
+			//宣告地理編碼資訊
+            geocoder = new google.maps.Geocoder();
+	
+			myOptions = {			
+			zoom: 14,
+			disableDoubleClickZoom: false,
+			mapTypeId: google.maps.MapTypeId.ROADMAP,
+			streetViewControl: true,
+			scaleControl:true
+			};
+			
+			map = new google.maps.Map(document.getElementById("mymap"), myOptions);
+			var pos = new google.maps.LatLng(22.638145,120.302235);//高雄火車站
+
+
+		    map.setCenter(pos);
+			infowindow.setPosition(pos);
+			infowindow.setContent("高雄火車站");
+			infowindow.open(map);
+			
+			StreetSetting(pos);//顯示街景
+			
+           //在指定的LatLng特定半徑內，為全景擷取StreetViewPanoramaData。StreetViewPanoramaData會傳送到提供的回呼函式。如果半徑小於50公尺，系統會傳回最近的全景。(滑鼠點擊地圖處顯示街景)
+			google.maps.event.addListener(map, 'dblclick', function(event) {
+				sv.getPanoramaByLocation(event.latLng, 100, processSVData);
+				map.setCenter(event.latLng);
+			});
+			
+			//當拖曳地圖發生,關閉資訊視窗
+			google.maps.event.addListener(map, 'dragstart', function(event) {
+				infowindow.close();
+			});
+			
+	  }
+		
+	 
+	  
+		//***************************搜尋設定*****************************/
+		//地圖地點搜尋
+		function search(keyword) 
+        {
+			if(keyword=="中山大學")
+			{	
+			    map.setZoom(14);						    				
+				point =new google.maps.LatLng(22.619399,120.265961);
+				22.62696,120.266063
+				map.setCenter(point);
+				
+				// Create a marker
+                marker = new google.maps.Marker({      
+					position: point,        
+					map: map									
+				}); 
+				// To add the marker to the map, call setMap();
+				marker.setMap(map);	
+
+				StreetSetting(point);//顯示街景
+										
+                // Add address information to marker			
+				infowindow.setContent("中山大學");
+				infowindow.open(map,marker);
+                window.external.notify("Search completed");
+
+			}
+
+			else if(keyword=="高美濕地")
+			{
+				map.setZoom(14);
+				point =new google.maps.LatLng(24.31158616817183,120.55076837539673);
+				map.setCenter(point);
+				// Create a marker
+                marker = new google.maps.Marker
+				(
+					{       
+					position: point,        
+					map: map
+					}									
+				);
+				// To add the marker to the map, call setMap();
+				marker.setMap(map);  
+				                       
+   			    StreetSetting(point);//顯示街景
+				// Add address information to marker
+				infowindow.setContent("高美濕地");
+				infowindow.open(map,marker);
+                window.external.notify("Search completed");
+
+			}
+			
+			else if(keyword=="成功大學")
+			{
+				map.setZoom(14);
+				point =new google.maps.LatLng(22.9966,120.216780);
+				map.setCenter(point);
+				// Create a marker
+                marker = new google.maps.Marker
+				(
+					{       
+					position: point,        
+					map: map
+					}									
+				);
+				// To add the marker to the map, call setMap();
+				marker.setMap(map);  
+				                       
+   			    StreetSetting(point);//顯示街景
+				// Add address information to marker
+				infowindow.setContent("成功大學");
+				infowindow.open(map,marker);
+                window.external.notify("Search completed");
+
+			}
+
+			else if(keyword=="馬祖")
+			{
+				map.setZoom(14);
+				point =new google.maps.LatLng(26.197368,119.539719);
+				map.setCenter(point);
+				// Create a marker
+                marker = new google.maps.Marker
+				(
+					{       
+					position: point,        
+					map: map
+					}									
+				);
+
+ 				// To add the marker to the map, call setMap();
+				marker.setMap(map);
+				     			                       
+   			    StreetSetting(point);//顯示街景
+				
+                // Add address information to marker               
+				infowindow.setContent("馬祖");
+				infowindow.open(map,marker);
+                window.external.notify("Search completed");
+
+			}			
+			else
+			{	
+				if(keyword=="台北")
+				{
+				   keyword="台北車站";
+				}
+				if(keyword=="基隆")
+				{
+				   keyword="基隆車站";
+				}
+				if(keyword=="桃園")
+				{
+				   keyword="桃園車站";
+				}
+				if(keyword=="新竹")
+				{
+				   keyword="新竹車站";
+				}
+				if(keyword=="苗栗")
+				{
+				   keyword="苗栗車站";
+				}
+				if(keyword=="台中")
+				{
+				   keyword="台中車站";
+				}
+				if(keyword=="南投")
+				{
+				   keyword="南投車站";
+				}
+				if(keyword=="彰化")
+				{
+				   keyword="彰化車站";
+				}
+				if(keyword=="雲林")
+				{
+				   keyword="雲林車站";
+				}
+				if(keyword=="嘉義")
+				{
+				   keyword="嘉義車站";
+				}
+				if(keyword=="台南")
+				{
+				   keyword="台南車站";
+				}
+				if(keyword=="高雄")
+				{
+				   keyword="高雄車站";
+				}
+				if(keyword=="屏東")
+				{
+				   keyword="屏東車站";
+				}
+				if(keyword=="台東")
+				{
+				   keyword="台東車站";
+				}
+				if(keyword=="花蓮")
+				{
+				   keyword="花蓮車站";
+				}
+				if(keyword=="宜蘭")
+				{
+				   keyword="宜蘭車站";
+				}
+				if(keyword=="金門")
+				{
+					keyword="台灣金門";
+				}				
+							
+			  	if(keyword=="陽明山")
+				{
+					keyword="台灣陽明山";
+				}
+				if(keyword=="阿里山")
+				{
+					keyword="台灣阿里山";
+				}
+				if(keyword=="玉山")
+				{
+					keyword="台灣玉山";
+				}	
+				if(keyword=="壽山")
+				{
+					keyword="高雄壽山";
+				}	
+
+				if(keyword=="八卦山")
+				{
+					keyword="彰化八卦山";
+				}	
+				if(keyword=="太平山")
+				{
+					keyword="宜蘭太平山";
+				}
+				if(keyword=="清華大學")
+				{
+					keyword="新竹清華大學";
+				}
+				if(keyword=="交通大學")
+				{
+					keyword="新竹交通大學";
+				}		
+				if(keyword=="中央大學")
+				{
+					keyword="桃園中央大學";
+				}	
+				if(keyword=="國父紀念館")
+				{
+					keyword="台北國父紀念館";
+				}	
+				if(keyword=="東海大學")
+				{
+					keyword="台中東海大學";
+				}				
+				if(keyword=="故宮博物院")
+				{
+					keyword="台北故宮博物院";
+				}
+				if(keyword=="綠島")
+				{
+					keyword="台灣綠島";
+				}
+				if(keyword=="吉貝")
+				{
+					keyword="台灣吉貝";
+				}
+				if(keyword=="慈湖")
+				{
+					keyword="桃園慈湖";
+				}
+				if(keyword=="夢時代")
+				{
+					keyword="高雄夢時代";
+				}				
+					
+				
+                //geocoder.getLocations(keyword, addToMap);
+				geocoder.geocode({ 'address': keyword }, function(results, status) 
+				{
+					if (status == google.maps.GeocoderStatus.OK) 
+					{
+						map.setZoom(14);
+						map.setCenter(results[0].geometry.location);
+							marker = new google.maps.Marker({
+							map: map,														
+							position: results[0].geometry.location
+							});
+							infowindow.setContent(keyword);
+							infowindow.open(map,marker);
+							
+							StreetSetting1(marker);//顯示街景
+						
+					}
+				});
+				
+			}
+
+        }
+		
+		//移動指定x,y軸倍率來換算成相對應的經緯度
+		function movement(a,b)
+		{
+			
+			infowindow.close();
+			var center=4;//中心點
+			var zoom_std=14;
+			var zoom_new=map.getZoom();//當下的地圖倍率
+			var zoom_rate=zoom_new-zoom_std;		
+			
+			if(document.getElementById( 'textBoxx').value && document.getElementById( 'textBoxy').value)
+			{
+				x=document.getElementById( 'textBoxx').value-center;
+				y=document.getElementById( 'textBoxy').value-center;
+				
+				//alert(x+' '+y);
+			}
+			else
+			{
+			    
+				x=a-center;
+				y=b-center;
+				
+;			}
+
+			var lat_scale=-0.003802401368107;//緯度latitude	:zoom=14			
+			var lng_scale=0.0074100494384867;//經度 longtitude	
+			
+			var lat_scale1=-0.00202003883142;//緯度latitude	:zoom=15			
+			var lng_scale1=0.0036907196046;//經度 longtitude	
+			var lat_scale2=0.00101003055392	;//緯度latitude	:zoom=16			
+			//var lng_scale1=;//經度 longtitude
+			
+			var lat_rate=0.5312534464044922;
+			var lng_rate=0.4980694980833662;
+			
+			
+			loc=map.getCenter();
+			//alert(loc.lng());
+			
+			point =new google.maps.LatLng(loc.lat()+y*lat_scale*Math.pow(lat_rate,zoom_rate),loc.lng()+x*lng_scale*Math.pow(lng_rate,zoom_rate));
+		    map.setCenter(point);
+
+			
+		}
+		//***************************街景設定*****************************/
+		//切換街景模式
+		function toggleStreetView()
+		{
+			
+			var toggle=panorama.getVisible();
+			
+			  if (toggle == false)
+			  {		
+				
+				document.getElementById('fly_table').style.visibility='hidden';	//隱藏地圖表格table
+				
+				panorama.setVisible(true);
+				
+				//街景設定為地圖中心
+				loc=map.getCenter();				
+         			//sv.getPanoramaByLocation(loc.latlng, 100, processSVData);
+			    panorama = map.getStreetView();
+				panorama.setPosition(loc);//loc為經緯度
+				
+				panorama.setPov({
+				heading: 265,
+				zoom:1,
+				pitch:0}
+				);
+				//----
+			  } 
+			  else if(toggle == true)
+			  {
+       		    document.getElementById('fly_table').style.visibility='visible';
+				panorama.setVisible(false);
+  			  }
+            
+		}
+		//街景模式-輸入為經緯度
+		function StreetSetting(loc)
+		{							
+			panorama = map.getStreetView();
+		  	panorama.setPosition(loc);//loc為經緯度
+		  	panorama.setPov({
+			heading: 90,
+			zoom:1,
+			pitch:0}
+		  	);
+		}
+		//街景模式-輸入為地名
+		function StreetSetting1(loc)
+		{			
+		    
+			point =new google.maps.LatLng(loc.getPosition().lat(),loc.getPosition().lng());			
+			
+			panorama = map.getStreetView();
+		  	panorama.setPosition(point);//loc為經緯度
+			
+		  	panorama.setPov({
+			heading: 90,
+			zoom:1,
+			pitch:0}
+		  	);
+		}	
+		
+		
+		 //------------------------------------------------------------------
+	  function processSVData(data, status)
+	  {
+		 if (status == google.maps.StreetViewStatus.OK) 
+		 {
+			
+			var marker = new google.maps.Marker({
+			position: data.location.latLng,
+			map: map,
+			title: data.location.description
+			});
+		  
+			panorama.setPano(data.location.pano);
+			
+			//為「街景服務」全景設定視角。
+			panorama.setPov({
+			heading: 240,
+			pitch: 0,
+			zoom: 1
+			});
+			panorama.setVisible(true);
+		  
+            //滑鼠double點擊地圖處maker並顯示街景
+			google.maps.event.addListener(marker, 'dblclick', function() 
+			{
+		  
+				var markerPanoID = data.location.pano;
+				// Set the Pano to use the passed panoID
+					panorama.setPano(markerPanoID);
+					panorama.setPov({
+					  heading: 270,
+					  pitch: 0,
+					  zoom: 1
+					});
+					panorama.setVisible(true);
+			});
+		} 
+		
+		else
+		{
+		  alert("Street View data not found for this location.");
+		}
+	  }	
+
+	
+        </script> 
+        
+                
+    
+  <!--地圖瀏覽欄位-->
+  <div id="mymap" style="width: 780px; height: 475px; border-right: black thin solid;border-top: black thin solid; border-left: black thin solid; border-bottom: black thin solid;">
+            
+  </div>
+  <!--偵測滑鼠事件(使用jQuery trigger)-->
+  <!--
+  <script language="javascript">
+          $("#fly_table").css({
+            'left':$("#mymap").position().left,
+            'top':$("#mymap").position().top
+          });
+          $("#fly_table").mousedown(function(event){
+            $("#mymap").trigger(event);	
+          });
+          $("#fly_table").mouseup(function(event){
+            $("#mymap").trigger(event);
+          });
+          $("#fly_table").mousemove(function(event){
+            $("#mymap").trigger(event);
+          });
+          
+  </script>  
+ -->
+  <!--地圖畫框框-->  
+    <div>
+      <table id="fly_table" style="position:absolute; width:774px; height:467px; border:2px dashed pink; background-color:transparent; left: 16px; top: 13px;" name="fly_table" >
+                         <tr>
+                                <td ></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+            </tr>
+                              <tr>
+                                <td ></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+            </tr>
+                              <tr>
+                                <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+            </tr>
+                              <tr>
+                                <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+            </tr>
+                              <tr class="textcontents">
+                                <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+            </tr>
+                              <tr>
+                                <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+            </tr>
+                              <tr>
+                                <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+            </tr>
+                              <tr>
+                                <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+            </tr>
+            
+             
+                              <tr>
+                                <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+            </tr>
+                              <tr>
+                                <td ></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                </tr>
+          </table>
+    </div>      
+      
+
+  
+</div>
+
+
+        <!--搜尋中心點範圍設定-->       
+        <div id="centerFrame" style="POSITION: absolute; LEFT: 375px; top: 218px; color: #000; visibility: inherit;" >
+        <table position: width="50" height="50" cellspacing="0" cellpadding="0" >
+        <tr align="center"> 
+        <td style="border: 1px dotted rgb(255,0,102);">O</td>
+        </tr>
+        </table>
+   </div> 
+    
+ 
+    <!--查詢欄位-->
+	<div id="searchBox">
+      <input id="inputquery" value="成功大學">
+      <input onClick="search();" value="搜尋" type="button">
+      <input type="button" value="街景模式" onClick="toggleStreetView();">
+      X:
+      <input id="textBoxx">
+      Y:
+      <input id="textBoxy">
+      <input type="button" value="移動" onClick="movement();">
+      
+	</div>
+   
+	<!--街景切換鈕-->
+    <div id="toggle"></input>
+
+    </div>
+  
+</body>
+</html>

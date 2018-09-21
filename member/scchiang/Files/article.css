@@ -1,0 +1,330 @@
+body{background:#f5f9fa;}
+
+/************************************ ���� ************************************/
+#textAd, #footer{width:100%; margin: 0 auto; padding: 0; clear:both; text-align:left;}
+
+/* ͷ�� */
+#artLogo {
+	float:left;
+	margin-left: 20px;
+}
+#artNav {
+	float:right;
+	text-align:right;
+	margin-right: 20px;
+}
+#topNav {
+ /*	background:transparent url(../img/bg_splitLine.gif) repeat-x scroll right 18px; */
+}
+
+#header {width:97%; margin: 0 auto; padding: 0; clear:both; text-align:left; height:97px; }
+#artBanner { text-align:center;}
+/* ���� */
+#mainContent {clear:both; margin:5px auto; width:94%;}
+
+.forumSplitLine{height:20px;clear:both;}
+
+#forumMain {
+	width:100%;
+	height: auto;
+	clear: both;
+}
+
+#forumTitle {
+	clear:both;
+	height: auto;
+}
+#articleTitle {
+	width:100%;
+	background-color:#C8DFF7;
+	border: 1px solid #336699;
+	text-align: center;
+	height: 32px;
+}
+#articleTitle h2 {
+	font-size:14pt;
+	color:#004499;
+	padding: 4px 3px;
+	width: 100%;
+}
+
+#articleList {float:left; text-align:left; width:100%;}
+#articleList .postTitle {
+	width:100%;
+	clear:both;
+}
+#articleList .postAuthor {
+	float:left;
+	text-align:left;
+	font-size: 11pt;
+}
+#articleList .postAuthor a{
+	text-decoration: underline;
+}
+#articleList .postDate {
+	float:left;
+	text-align:left;
+	font-size: 10pt;
+	color:green;
+	padding: 2px 5px;
+}
+#articleList .postContent {
+	width:100%;
+	float:left;
+	text-align:left;
+	clear:both;
+	font-size: 15px;
+	background-color:#EEEEEE;
+	/*border: 1px solid #C4DEF9;*/
+}
+
+#articleList .textContent {
+	padding:20px 20px 5px 20px;
+	font-size:12pt;
+	line-height:200%;
+	word-break: break-all;
+	word-wrap : break-word ;
+	white-space:normal;
+}
+.textContent a {
+	text-decoration:underline;
+}
+#articleList .adminAction {
+	clear:both;
+	text-align:right;
+	width:100%;
+	font-size:13px;
+	height:30px;
+	line-height:30px;
+	padding-top:20px;
+}
+#articleList .adminAction a:link, #articleList .adminAction a:visited{
+	font-size:13px;
+	color: #004499;
+}
+#articleList .adminAction a:hover {
+	color: #ff0000;
+}
+#bannerBottom { clear:both; text-align:center;}
+
+#userLogin { clear:both; text-align:left; float:left; width:100% }
+#reply {
+	text-align:left;
+	width:100%;
+	clear: both;
+}
+.replydiv{width:980px;}
+#replyMain {
+	text-align:left;
+	width: 60%;
+	float: left;
+}
+#userReply {
+	text-align: left;
+	float: left;
+	width: 540px;
+}
+#replyComment li {
+	color:#C04080;
+	list-style-image: url(../img/list_red.gif);
+	list-style-position: inside;
+	padding: 5px 0;
+}
+#replyComment { text-align:left; }
+#adArticleReply { text-align:left; float:left; margin:10px 0px; }
+
+#optionBar {
+	background-color:#EEEEEE;
+	padding: 0 10px;
+	clear: both;
+	height: 30px;
+	line-height: 30px;
+}
+#adminBar { padding:5px 0 }
+#closeBar { }
+
+.googleAd{color:#004499; text-decoration:underline; font-size:13px;}
+
+.LoginDlg {
+	background-color:#F8F8FF;
+	border:1px solid #CCCCCC;
+}
+#DlgCont {
+	left:0px;
+	position:absolute;
+	top:40px;
+	width:100%;
+}
+#DialogBox {
+	cursor:default;
+	margin-bottom:0pt;
+	margin-left:auto;
+	margin-right:auto;
+}
+#DlgCont li {
+	list-style-type:none;
+	list-style-position:outside;
+}
+.DlgTitle {
+	background:#336699 ;
+	border-bottom:1px solid #336699;
+	cursor:move;
+	font-size:10pt;
+	height:22px;
+	left:0pt;
+	margin-bottom:12px;
+	padding-top:4px;
+	position:absolute;
+	text-align:left;
+	top:0pt;
+	width:100%;
+}
+.DlgTitle2 {
+	position:static;
+}
+.DlgTitle h1 {
+	color:#FFFFFF;
+	float:left;
+	font-size:11pt;
+	margin-left:4px;
+}
+.DlgTitle .DlgClose {
+	background:transparent url(../img/close.png) no-repeat scroll 0%;
+	cursor:pointer;
+	float:right;
+	height:17px;
+	margin-right:2px;
+	width:19px;
+}
+.LoginDlg li {
+	margin-bottom:10px;
+}
+.LoginDlg li.DlgTip {
+	color:#336699;
+	font-size:10pt;
+	font-weight:bold;
+	margin-bottom:8px;
+}
+.LoginDlg li.LoginBtn {
+	margin-top:14px;
+}
+.PreloadImg {
+	background-image:url(../../../images/index/house/close.png);
+	display:none;
+}
+ul.msg-link {
+}
+ul.msg-link li {
+	background:transparent url(../../../images/index/public/public/arrow.gif) no-repeat scroll 0px 10px;
+	font-size:11pt;
+	margin-left:0pt;
+	padding-left:16px;
+	padding-top:8px;
+}
+#redirectionMsg {
+	font-size:10pt;
+}
+table.TblPost {
+	background:#FFFFFF none repeat scroll 0%;
+	border-color:-moz-use-text-color #FF9900 rgb(255, 153, 0);
+	border-style:none solid solid;
+	border-width:0pt 1px 1px;
+}
+.btn_h {
+	background:transparent url(../img/bg_btn.gif) repeat-x scroll 0%;
+	border:1px solid #D49C48;
+	color:#000000;
+	cursor:pointer;
+	font-size:12px;
+	height:23px;
+	line-height:21px;
+}
+#articlecommend{height:300px;}
+.commendcontent{float:left; margin-left:15px;}
+.commendcontent ul{margin:0px;padding:0px;list-style-type:none; text-align:left;}
+.commendcontent ul li{line-height:30px; font-size:11pt;}
+
+.detail {
+	background-color: #E7F1FB;
+	border: 1px solid #004499;
+	position: absolute;
+	padding: 9px;
+	display: none;
+}
+.detail ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+.detail a {
+	color: #004499;
+}
+
+#recommendOutbox {
+	border:1px solid;
+	padding: 10px 0px 10px 20px;
+	background-color: #F7F7F7;
+	border: 1px solid #D3D3D3;
+}
+#recommendLeft {
+	float: left;
+	margin-top: 10px;
+	padding: 10px 5px;
+	background-color: #F2FAFF;
+	border: 1px solid #999999;
+	text-align: center;
+	height: 110px;
+	width: 90px;
+}
+#recommendLeft h2 {
+	float: none;
+}
+#recommendLeft h2 span {
+	font-size: 150%;
+	color: #008800;
+}
+#recommendRight {
+	float: left;
+	margin: 10px 0px 10px 10px;
+	text-align: left;
+}
+#recommendRight h3 {
+	color: #333333;
+}
+#recommendRight ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+#recommendRight ul li {
+	display: block;
+	height: 25px;
+	line-height: 25px;
+	text-indent: 15px;
+}
+#recommendRight .forumName {
+	color: #666666;
+	font-size: 12px;
+	margin-right: 15px;
+}
+#recommendRight .forumName:hover {
+	color: #FF6600;
+}
+#recommendTips {
+	display: none;
+	color: #ff0000;
+}
+.clear {
+	clear: both;
+	font-size: 0px;
+	visibility: hidden;
+}
+
+a.recommend:link,a.recommend:active,a.recommend:visited {
+	font-size:15px;
+	line-height:150%;
+}
+a.recommend:hover{
+	font-size:15px;
+	line-height:150%;
+}

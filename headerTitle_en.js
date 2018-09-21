@@ -1,0 +1,1 @@
+﻿document.write("<p class=\"style1\">Multimedia Information Technology Lab</p>");

@@ -1,0 +1,1 @@
+document.write('<a href="http://www.twbbs.net.tw/index.php?module=user" class="red" target="_top">註冊新會員</a> | <a href="http://www.twbbs.net.tw/index.php?action=login" target="_top">登入</a>');

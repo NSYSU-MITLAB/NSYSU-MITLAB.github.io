@@ -1,0 +1,55 @@
+\chapter{Experimental Results}
+\label{ch:exp}
+
+本系統利用IWSLT07
+
+\section{Parameter Settings}
+\label{sec:paramset}
+
+How the simulation is set up $\ldots$
+
+It is nice to know the parameter settings, isn't it?
+
+\section{Simulation Results}
+\label{sec:result}
+
+Now, the simulation results $\ldots$
+
+\begin{table}[tbh]
+  \centering
+  \newcommand{\z}{\phantom{0}}
+  \newcommand{\zz}{\phantom{00}}
+  \scriptsize
+  \begin{tabular}{|c|*{6}{c|}}\hline
+    Block Size & Original-16 & Original-256 & Original-4096 & Original-65536 & Original-1048576 & Null\\\hline\hline
+    1KB  & \zz19.07 & \zz18.96 & \zz18.46 & \zz18.09 & \zz17.78 & \zz25.23\\\hline
+    2KB  & \zz38.39 & \zz38.22 & \zz37.09 & \zz36.37 & \zz35.66 & \zz51.17\\\hline
+    4KB  & \zz77.48 & \zz76.31 & \zz74.48 & \zz72.30 & \zz71.13 & \z101.07\\\hline
+    8KB  & \z151.49 & \z147.56 & \z145.81 & \z142.02 & \z138.44 & \z199.12\\\hline
+    16KB & \z293.95 & \z287.19 & \z284.23 & \z279.99 & \z272.53 & \z389.01\\\hline
+    32KB & \z552.00 & \z552.93 & \z533.84 & \z535.46 & \z521.61 & \z756.50\\\hline
+    64KB &  1044.86 &  1035.19 &  1031.98 &  1014.00 &  1027.20 &  1403.01\\\hline
+  \end{tabular}
+  \newcommand{\xc}{Simulation result of sequential write}
+  \caption[\xc]{\xc.}
+  \label{tab:osw}
+\end{table}
+
+And the explanation.  \xtab{tab:osw} shows that $\ldots$
+
+Perhaps, figures (this time \textcolor{red}{in the PDF format}) $\ldots$
+
+One picture is worth more than ten thousand words. It certainly is,
+isn't it?
+
+\begin{figure}[tbh]
+  \centering
+  \includegraphics[width=0.97\textwidth]{figs/osw.pdf}
+  \newcommand{\xc}{Simulation result of sequential write}
+  \caption[\xc]{\xc.}
+  \label{fig:osw}
+\end{figure}
+
+And then the explanation, as usual.
+
+\xfig{fig:osw} shows that $\ldots$
