@@ -1,0 +1,357 @@
+/* CSS Document */
+body{
+	margin:0px auto;
+	padding:0px auto;
+	}
+/*定位*/
+#main{ width:970px; clear:both; margin:0 auto;}
+#divLeft{width:155px; float:left; margin-left:3px; margin-right:6px;}
+#divMiddle{width:471px; float:left; margin-left:6px; margin-right:6px;}
+#divRight{width:310px; float:left; margin-left:6px;}
+
+.menu{border:1px solid #A1A8D4;text-align:left;}
+.statics{background:#E7F1FB; font-size:12px;}
+.online{}
+
+.global{height:180px;width:100%;}
+.global p{line-height:200%; text-align:left; text-indent:2em; height:140px;}
+.channelFlash{
+	height: 190px; width:100%;
+}
+.inputBorder{border:1px solid #6699CC;}
+
+/****.moveAd{height:125px; width:100%;}*****/
+.moveAd{width:100%;}
+#globalTxtAD {
+	margin: 0 auto;
+}
+#globalTxtAD .globalTxtAd {
+	height:30px;
+	line-height:30px;
+	background:#E7F1FB;
+	border: 1px solid #A1A8D4;
+	text-align:center;
+	display: inline;
+}
+#globalTxtAD .globalTxtAd span a {
+	font-size: 11pt;
+}
+#globalTxtAD .globalTxtAd span a:link,#globalTxtAD .globalTxtAd span a:visited,#globalTxtAD .globalTxtAd span a:active {
+	color: #004499;
+}
+#globalTxtAD .globalTxtAd span a:hover {
+	color: #FF0000;
+}
+#globalTxtAD .globalTxtAd span a.adLink:link,#globalTxtAD .globalTxtAd span a.adLink:visited,#globalTxtAD .globalTxtAd span a.adLink:active {
+	color: #004499;
+	font-size: 11pt;
+}
+#globalTxtAD .globalTxtAd span a.adLink:hover {
+	color: #FF0000;
+	font-size: 11pt;
+}
+#globalTxtAD ul {
+	margin: 0px;
+	padding: 0px;
+}
+#globalTxtAD ul li {
+	display: inline;
+	height: 30px;
+	line-height:30px;
+ 	margin: 0 10px;
+ 	padding: 2px;
+}
+#globalTxtAD ul li span {
+	margin: 0 10px;
+	height: 30px;
+}
+
+/*Tabs Styles Start*/
+.tabMenu {color:#272727; border-bottom:1px solid #A1A8D4; height:32px;padding:0px;margin:0px;}
+.tabMenu ul {margin:0px; padding:0px; list-style:none;}
+
+.tabMenu li {display:block; float:left; list-style-position:outside;}
+.tabMenu li a,.tabMenu li a:link,.tabMenu li a:hover,.tabMenu li a:active{
+	display: block;
+	background: url(../../../img/jquery/tab.png) no-repeat;
+    position: relative;
+    top: 1px;
+    color: #004499;
+    font-size: 11pt;
+    line-height: 25px;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap; 
+}
+.tabMenu li a span {
+	display: block;
+	background: url(../../../img/jquery/tab.png) no-repeat;
+	background-position: -156px -100px;
+    width: 144px; 
+    height: 25px;
+    padding-top: 6px;
+	margin-left:13px;
+	z-index:15;
+}
+.tabMenu li a.tabactive span {
+	display: block;
+	background-position: -156px -150px;
+	font-weight:bold; 
+	margin-top: 1px;
+	color: #003399;
+	margin-left:13px;
+	width:144px;
+}
+.tabMenu li a.tabactive,.tabMenu li a.tabactive:hover,.tabMenu li a.tabactive:link,.tabMenu li a.tabactive:active{
+	display: block; 
+	font-weight:bold; 
+	margin-top: 1px;
+	color: #004499;
+	background-position:0px -50px;
+	margin-right:0px;
+}
+.tabContent{
+	border-bottom:1px solid #A1A8D4;
+	border-left:1px solid #A1A8D4;
+	border-right:1px solid #A1A8D4;
+	height:148px;
+}
+#tabcontent1,#tabcontent2,#tabcontent3,#tabcontent4 {
+	border:1px solid #ececec; 
+	width:198px; 
+	text-align:center;
+	padding:6px 0px; 
+	font-size:11pt; 
+	margin-bottom:5px;
+}
+
+.tabMenu .menuUlFor4 li a span {
+	background-position: -196px -100px;
+	width: 104px;
+}
+.tabMenu .menuUlFor4 li a.tabactive span {
+	background-position: -196px -150px;
+	width: 104px;
+}
+/*Tabs Styles End*/
+
+.userGb{
+	background:transparent url(/img/new/half_03.jpg) no-repeat scroll 0%; padding-top:10px;
+
+}
+.userGb-new {
+	background:transparent url(/img/new/half_03.jpg) no-repeat scroll 0%;
+	height: 182px;
+	width:470px;
+}
+.userGb-new label a {
+	font-size: 10pt;
+	padding: 2px;
+}
+.userGb-new label a.txtLink:link,.userGb label a.txtLink:active,.userGb label a.txtLink:visited {
+	color: #004499;
+	text-decoration: none;
+	font-weight: bold;
+}
+.userGb-new label a.txtLink:hover {
+	color: #FF0000;
+	text-decoration: underline;
+	font-size: 10pt;
+}
+
+/*******User_head_avator*********/
+.userGb label a {
+	font-size: 10pt;
+	padding: 2px;
+}
+.userGb label a.txtLink:link,.userGb label a.txtLink:active,.userGb label a.txtLink:visited {
+	color: #004499;
+	text-decoration: none;
+	font-weight: bold;
+}
+.userGb label a.txtLink:hover {
+	color: #FF0000;
+	text-decoration: underline;
+	font-size: 10pt;
+}
+#userLogin{background:transparent url(/img/new/loginn_03.jpg) no-repeat scroll 0%;height:182px;}
+#userLogin h3 { text-align:left; padding-left:10px; height:25px; line-height:25px; font-size:11pt;}
+#userLogin .logined {
+	background:url(../../../img/new/bg_03.jpg); 
+	height:45px; 
+	width:91px; 
+	float:left; 
+	margin-left:8px; 
+	list-style:none; 
+	list-style-position:outside;
+}
+#userLogin .logined li {
+	list-style-position:outside;
+	height: 45px;
+	list-style-type:none; 
+	padding:0px; 
+	margin-top:0px; 
+	text-align:left; 
+	margin-left:5px;
+}
+#userLogin .logined li a {
+	display: block;
+	padding-top: 10px;
+	height: 35px;
+}
+#userLogin .logined li a.member {
+	padding: 20px;
+	height: 200px;
+	display: block;
+	font-size:10pt;
+}
+#userLogin .logined li a.member:link,#userlogin .logined li a.member:active,#userlogin .logined li a.member:visited { 
+	color:#004499;
+	text-decoration: none;
+}
+#userLogin .logined li a.member:hover {
+	color: #FF0000;
+	text-decoration: none;
+}
+#userLogin .fastSetForum {
+	font-size:12px; 
+	text-align:left; 
+	margin-left:20px;
+	color: #333;
+}
+#userLogin .fastSetForum a.fastLink:link,#userLogin .fastSetForum a.fastLink:visited,#userLogin .fastSetForum a.fastLink:active {
+	color: #004499;
+	text-decoration: none;
+}
+#userLogin .fastSetForum a.fastLink:hover {
+	color: #FF0000;
+	text-decoration: underline;
+}
+#userLogin .userLogout {
+	height: 30px;
+}
+#userLogin .userLogout label {
+	float:right; 
+	line-height:30px; 
+	margin-right:30px;
+}
+#userLogin .userLogout label a.outLink:link,#userLogin .userLogout label a.outLink:visited,#userLogin .userLogout label a.outLink:active {
+	color: #004499;
+	text-decoration; none;
+}
+#userLogin .userLogout label a.outLink:hover {
+	color: #FF0000;
+	text-decoration: underline;
+}
+table a.outLink:link,table a.outLink:active,table a.outLink:visited {
+	color: #004499;
+	text-decoration; none;
+}
+table a.outLink:hover {
+	color: #FF0000;
+	text-decoration: underline;
+}
+#fastType a:link,#fastType a:visited,#fastType a:active {
+	color: #004499;
+	text-decoration: none;
+}
+#selectFastDiv {
+	display:none;
+	position:absolute; 
+	background-color:#E6F1FB; 
+	z-index:10027; 
+	padding:10px; 
+	padding-bottom: 0px;
+	border:1px solid #336699;
+	color:#000; width:200px; 
+	width: 120px;
+	left:780px; 
+	top:325px;
+}
+#selectFastDiv .fastList {
+	text-align: left;
+}
+#selectFastDiv a:link,#selectFastDiv a:visited,#selectFastDiv a:active {
+	color: #004499;
+	text-decoration: none;
+}
+#selectFastDiv .fastList ul {
+	list-style-type: none;
+}
+#selectFastDiv .fastList ul li {
+	height: 15px;
+	line-height: 15px;
+}
+#selectFastDiv .fastList ul li a:link,#selectFastDiv .fastList ul li a:visited,#selectFastDiv .fastList ul li a:active {
+	color: #004499;
+	text-decoration: none;
+}
+#selectFastDiv .fastList ul li a:hover {
+	color: #FF0000;
+}
+#setFastMethod {
+	display:none;
+	position:absolute; 
+	background-color:#E6F1FB; 
+	z-index:10026; 
+	padding:15px; 
+	border:1px solid #336699;
+	color:#000; width:200px; 
+	height:40px; 
+	left:740px; 
+	top:365px;
+}
+#setFastMethod div {
+	line-height: 200%;
+}
+#setFastMethod div a.fastLink:link,#setFastMethod div a.fastLink:visited,#setFastMethod div a.fastLink:active {
+	color: #004499;
+	text-decoration; none;
+}
+#setFastMethod div a.fastLink:hover {
+	color: #FF0000;
+	text-decoration: underline;
+}
+/* 情感 */
+.article .title {
+	height:30px; 
+	background:#EAF2FD;
+	border:1px solid #ececec;
+}
+.article .title h3 {
+	font-size:11pt; 
+	color:#003366; 
+	text-align:left; 
+	margin-left:10px; 
+	line-height:30px;
+}
+.article .content {
+	height:145px; 
+	background:#EFEFEF; 
+	border-bottom:1px solid #ECECEC;
+	border-left:1px solid #ECECEC;
+	border-right:1px solid #ECECEC;
+}
+#userLogin a.userInfo:link,#userLogin a.userInfo:active,#userLogin a.userInfo:visited{
+	font-size:10pt; 
+	color:#004499;
+	text-decoration: none;
+}
+#userLogin a.userInfo:hover{color:#FF0000;text-decoration: none;}
+
+
+.anouseMount{margin-left:5px;padding:0px;font-size:12px;list-style-type:disc; line-height:120%; text-align:left; color:#003366;}
+.anouseMount a.anouse:link,a.anouse:hover,a.anouse:active,a.anouse:visited{text-decoration:none;}
+.anouseMount a.anouse:link,a.anouse:active{color:#004499;}
+.anouseMount a.anouse:hover{color:#FF0000;text-decoration: underline;}
+.anouseMount a.anouse:visited{color:#004499;}
+
+.btn_h {
+	background:transparent url(../img/bg_btn.gif) repeat-x scroll 0%;
+	border:1px solid #D49C48;
+	color:#000000;
+	cursor:pointer;
+	font-size:12px;
+	height:23px;
+	line-height:21px;
+}

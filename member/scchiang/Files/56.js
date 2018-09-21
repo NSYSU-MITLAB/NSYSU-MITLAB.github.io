@@ -1,0 +1,1 @@
+document.write('<script type="text/javascript"><!--\ngoogle_ad_client = "pub-1962543031338143";\n/* 03.休閒娛樂文章頁 2008/11/26 */\ngoogle_ad_slot = "8918994675";\ngoogle_ad_width = 336;\ngoogle_ad_height = 280;\n//-->\n</script>\n<script type="text/javascript"\nsrc="http://pagead2.googlesyndication.com/pagead/show_ads.js">\n</script>')

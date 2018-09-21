@@ -1,0 +1,13 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces 梅爾倒頻譜參數與\nobreakspace {}Teager\nobreakspace {}能量倒頻譜參數的擷取流程}}{9}{figure.2.1}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Gamma-tone\nobreakspace {}濾波器之脈衝響應(中心頻率為\nobreakspace {}$1000$\nobreakspace {}Hz)}}{10}{figure.2.2}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Gamma-tone\nobreakspace {}濾波器之頻率響應}}{10}{figure.2.3}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces 重刻特徵參數流程圖}}{11}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces 對數轉換函數}}{15}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces 分段對數尺度函數。圖中\nobreakspace {}$\alpha _1$\nobreakspace {}和\nobreakspace {}$\alpha _2$\nobreakspace {}分別為非語音和語音能量所使用之參數}}{16}{figure.3.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces 一對平行語句之\nobreakspace {}MFCC\nobreakspace {}(上)、LER-MFCC\nobreakspace {}(中)\nobreakspace {}與\nobreakspace {}DEFR-MFCC\nobreakspace {}(下)\nobreakspace {}對數能量序列的比較，語句的\nobreakspace {}ID\nobreakspace {}為\nobreakspace {}{\sffamily FID\_3ZZ4A.08}。}}{16}{figure.3.4}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces 一對平行語句之\nobreakspace {}TECC\nobreakspace {}(上)、LER-TECC\nobreakspace {}(中) 與\nobreakspace {}DEFR-TECC\nobreakspace {}(下)\nobreakspace {}$c_0$\nobreakspace {}特徵序列的比較，語句的\nobreakspace {}ID\nobreakspace {}為\nobreakspace {}{\sffamily FID\_3ZZ4A.08}。}}{17}{figure.3.5}
+\addvspace {10\p@ }
+\addvspace {10\p@ }

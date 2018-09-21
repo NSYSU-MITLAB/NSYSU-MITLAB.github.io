@@ -1,0 +1,140 @@
+\begin{thebibliography}{10}
+
+\bibitem{Dimitrios2011}
+D.~Dimitriadis, P.~Maragos, and A.~Potamianos, ``{On the Effects of Filterbank
+  Design and Energy Computation on Robust Speech Recognition},'' {\em IEEE
+  Transactions on Audio, Speech, and Language Processing}, vol.~19,
+  pp.~1504--1516, August 2011.
+
+\bibitem{Zhu2005}
+W.~Zhu and D.~O'Shaughnessy, ``{Log-energy dynamic range normalization for
+  robust speech recognition},'' in {\em proceedings of 2005 IEEE International
+  Conference on Acoustics, Speech and Signal Processing(ICASSP), Philadelphia},
+  vol.~1, pp.~245--249, March 2005.
+
+\bibitem{Hwang2004}
+T.-H. Hwang and S.-C. Chang, ``{Energy contour enhancement for noisy speech
+  recognition},'' in {\em proceedings of 4th International Symposium on Chinese
+  Spoken Language Processing (ISCSLP 2004), Hong Kong}, pp.~249 -- 252,
+  December 2004.
+
+\bibitem{Ahadi2004}
+S.~M. Ahadi, H.~Sheikhzadeh, R.~L. Brennan, and G.~Freeman, ``{An energy
+  normalization scheme for improved robustness in speech recognition},'' in
+  {\em proceedings of 8th International Conference on Spoken Language
+  Processing(ICSLP 2004), Korea}, October 2004.
+
+\bibitem{Chengalvarayan1999}
+R.~Chengalvarayan, ``{Robust energy normalization using speech/nonspeech
+  discriminator for German connected digit recognition.},'' in {\em proceedings
+  of 6th European Conference on Speech Communication and Technology(EUROSPEECH
+  1999), Hungary}, September 1999.
+
+\bibitem{chen2007}
+陳鴻彬, "On the Study of Energy-Based Speech Feature Normalization and
+  Application to Voice Activity Detection,"
+  國立臺灣師範大學資訊工程學系碩士論文, 2007.
+
+\bibitem{tu2007}
+杜文祥, "Study on the Voice Activity Detection Techniques for Robust Speech
+  Feature Extraction," 國立暨南國際大學電機工程學系碩士論文,
+  2007.
+
+\bibitem{Garreton2010}
+C.~Garreton, N.~B. Yoma, and M.~Torres, ``{Channel Robust Feature
+  Transformation Based on Filter-Bank Energy Filtering},'' {\em IEEE
+  Transactions on Audio, Speech, and Language Processing}, vol.~18, pp.~1082
+  --1086, July 2010.
+
+\bibitem{Huang1992}
+X.~Huang, ``{Minimizing speaker variation effects for speaker-independent
+  speech recognition},'' in {\em proceedings of the workshop on Speech and
+  Natural Language}, pp.~191--196, 1992.
+
+\bibitem{David2007}
+D.~Y. Zhao and W.~B. Kleijn, ``{HMM-Based Gain Modeling for Enhancement of
+  Speech in Noise},'' {\em IEEE Transactions on Audio, Speech, and Language
+  Processing}, vol.~15, pp.~882--892, March 2007.
+
+\bibitem{Crookes2011}
+J.~Ming, R.~Srinivasan, and D.~Crookes, ``{A Corpus-Based Approach to Speech
+  Enhancement From Nonstationary Noise},'' {\em IEEE Transactions on Audio,
+  Speech, and Language Processing}, vol.~19, pp.~822--836, May 2011.
+
+\bibitem{Ngo2012}
+K.~Ngo, A.~Spriet, M.~Moonen, J.~Wouters, and S.~H. Jensen, ``{A combined
+  multi-channel Wiener filter-based noise reduction and dynamic range
+  compression in hearing aids},'' {\em Signal Processing}, vol.~92,
+  pp.~417--426, Feb 2012.
+
+\bibitem{Randy2004}
+R.~Gomez, A.~Lee, H.~Saruwatari, and K.~Shikano, ``{Robust speech recognition
+  with spectral subtraction in low SNR},'' in {\em proceedings of 8th
+  International Conference on Spoken Language Processing (ICSLP 2004), Korea},
+  October 2004.
+
+\bibitem{Macho2001}
+D.~Macho and Y.~M. Cheng, ``{SNR-dependent waveform processing for improving
+  the robustness of ASR front-end},'' in {\em proceedings of 2001 IEEE
+  International Conference on Acoustics, Speech and Signal Processing
+  (ICASSP)}, vol.~1, pp.~305--308, 2001.
+
+\bibitem{Christophe2007}
+C.~Cerisara, S.~Demange, and J.~P. Haton, ``{On noise masking for automatic
+  missing data speech recognition: A survey and discussion},'' {\em Computer
+  Speech {\&} Language}, vol.~21, no.~3, pp.~443--457, 2007.
+
+\bibitem{Veisi2011}
+H.~Veisi and H.~Sameti, ``{The integration of principal component analysis and
+  cepstral mean subtraction in parallel model combination for robust speech
+  recognition},'' {\em The 17th International Conference on Digital Signal
+  Processing(DSP 2011), Greece}, vol.~21, pp.~36--53, July 2011.
+
+\bibitem{Viikki1988}
+O.~Viikki and K.~Laurila, ``{Cepstral domain segmental feature vector
+  normalization for noise robust speech recognition},'' {\em Speech
+  Communication}, vol.~25, pp.~133--147, August 1998.
+
+\bibitem{Tom1998}
+T.~Claes, I.~Dologlou, L.~ten Bosch, and D.~V. Compernolle, ``{A novel feature
+  transformation for vocal tract length normalization in automatic speech
+  recognition},'' {\em IEEE Transactions on Speech and Audio Processing},
+  vol.~6, pp.~549--557, November 1998.
+
+\bibitem{Yasunari2003}
+Y.~Obuchi and R.~M. Stern, ``{Normalization of time-derivative parameters using
+  histogram equalization},'' in {\em proceedings of 8th European Conference on
+  Speech Communication and Technology(EUROSPEECH 2003), Switzerland}, September
+  2003.
+
+\bibitem{Misra2005}
+H.~Misra, S.~Ikbal, S.~Sivadas, and H.~Bourlard, ``{Multi-resolution spectral
+  entropy feature for robust ASR},'' in {\em proceedings of 2005 IEEE
+  International Conference on Acoustics, Speech and Signal Processing(ICASSP),
+  Philadelphia}, vol.~1, pp.~253--256, March 2005.
+
+\bibitem{Raghavan1999}
+P.~Raghavan, R.~Renomeron, C.~Che, D.-S. Yuk, and J.~Flanagan, ``{Speech
+  recognition in a reverberant environment using matched filter array (MFA)
+  processing and linguistic-tree maximum likelihood linear regression (LT-MLLR)
+  adaptation},'' in {\em proceedings of 1999 IEEE International Conference on
+  Acoustics, Speech, and Signal Processing(ICASSP), Phoenix}, vol.~2,
+  pp.~777--780, March 1999.
+
+\bibitem{Gauvain1994}
+J.~L. Gauvain and C.~H. Lee, ``{Maximum a posteriori estimation for
+  multivariate Gaussian mixture observations of Markov chains},'' {\em IEEE
+  Transactions on Audio, Speech, and Language Processing}, vol.~2, pp.~291
+  --298, April 1994.
+
+\bibitem{Veisi2009}
+H.~Veisi and H.~Sameti, ``{An improved parallel model combination method for
+  noisy speech recognition},'' in {\em proceedings of 2009 IEEE Workshop on
+  Automatic Speech Recognition {\&} Understanding(ASRU 2009), Italy},
+  pp.~237--242, December 2009.
+
+\bibitem{Slaney1993}
+M.~Slaney, ``{An Efficient Implementation of the Patterson-Holdsworth Auditory
+  Filter Bank},'' {\em Apple Computer Perception Group Tech Rep}, no.~35, 1993.
+
+\end{thebibliography}
