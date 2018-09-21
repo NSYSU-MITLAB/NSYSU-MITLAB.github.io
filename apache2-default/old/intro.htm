@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!-- DW6 -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>實驗室簡介</title>
+  <link rel="stylesheet" href="2col_leftNav.css" type="text/css">
+  <style type="text/css">
+<!--
+body {
+	background-color: #FFFFCC;
+}
+.style3 {font-size: x-large; font-family: "標楷體", "新細明體", "細明體"; }
+.style4 {font-size: xx-large}
+.style5 {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 18px;
+}
+.style6 {font-size: 18px}
+.style7 {font-family: "Times New Roman", Times, serif}
+-->
+  </style>
+  <script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_jumpMenu(targ,selObj,restore){ //v3.0
+  eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+  if (restore) selObj.selectedIndex=0;
+}
+//-->
+  </script><!-- The structure of this file is exactly the same as 2col_rightNav.html;
+     the only difference between the two is the stylesheet they use -->
+</head>
+<body>
+<!-- end masthead -->
+<h2 class="style3 style4" id="pageName">實驗室簡介</h2>
+<p class="style3 style6 style7">語音與資訊實驗室成立於2005年，主要研究領域為自動語音辨識、中文輸入及語言處理
+等。歡迎參觀與指導</p>
+<p class="style3 style4">自動語音辨識<span class="style7">(Automatic Speech
+recognition, ASR)</span></p>
+<p class="style3 style6 style7">語音辨識最主要的目的是希望電腦聽懂人類說話的聲音，進而命令電腦執行相對應的工作。
+當聲音藉由類比到數位的轉換裝置輸入到電腦內部，並以數值方式儲存後，用來訓練語音辨識系統，而受過一連串訓練後的系統便可使用建立好的模型與輸入的測試
+聲音樣本進行比對工作。比對完成後電腦即輸出一個它認為最“像”的聲音樣本序號，我們就可以知道使用者剛剛唸進去的聲音代表何意，進而命令電腦做事。</p>
+<p class="style3 style6 style7">ASR
+可以應用在自動總機、鐵公路訂票、銀行轉帳或股票下單、查詢等語音查詢服務，幫助肢障者更方便地控制滑鼠或是鍵盤，聲控衛星導航，語音的機器翻譯、語者辨
+識、語言辨識等，門禁系統，智慧型資訊家電、行動通訊系統、智慧型運輸系統及即時新聞語音播報等</p>
+<p class="style3 style4">中文輸入<span class="style7">(Chinese input)</span></p>
+<p class="style3 style4 style5">目前是著手於應用在手機上的中文注音輸入法的問題，而在中文輸入法中的斷詞（Word
+Segmentation）問題是必需去考慮到的，並且要有個好的方法有效的去解決它，而資料的收集也是一門課題，因為所需要的資料是每個人私密的手機簡
+訊，大多數的人都不喜歡將自己的隱私告訴別人，因此，收集到大量的手機簡訊也是個不小的問題，因為上述的問題，所以我們將會用平常人跟人之間的聊天內容來
+跟手機簡訊內容作比較，因為這個資料比較好去收集到，所以我們會利用聊天的內容去跟真正的手機簡訊作比較，看看他們的混淆度（Perplexity）的
+值，來決定可否使用聊天的內容來代替手機簡訊，主要只是因為聊天內容比較好去收集到大量的資料，而目前主要是會利用一些方法去訓練語言模型，然後再用其中
+一個去測試，來看看其混淆度的高低，進而去選擇所需要的效益。<br>
+</p>
+<p class="style3 style4 style5">在我們作過實驗之後，我們發現用聊天內容去代替手機簡訊的方法是可行的，其詳細的數據
+請參考-Chun-Han Tseng and
+Chia-Ping Chen, "<i>Chinese Input Method Based On Reduced Mandarin
+Phonetic Alphabet</i>", Proceedings of Interspeech
+2006, pp.
+733-736，所以我們目前正積極往兩方面去執行，一方面是持續地增加我們所用來測試的聊天資料，另一方面則是開始將本身手邊的資料作個統整並且著手於
+建構一
+個完整的輸入系統。
+</p>
+<p class="style3 style4 style7">Context-Free Grammar</p>
+<p class="style5 style6">對自然語言而言，如果我們有一個足夠好的文法，就可以由這樣的文法來產生自然語言中大部份的句子；相
+對來說，只要有這樣的文法，在自然語言中的每一個句子，就可以透過這個文法來分析出這個句子的意思；其中最主要的問題便是我們要如何找到這樣的一個文法，
+而Context-Free
+Grammar(CFG)就是一種強而有力的文法，但是要從自然語言中找出一個好的CFG，也是一項很困難的挑戰。在這方面，我們也提供了一個方法，詳細
+內容請參考-Tai-Hung Chen, Chun-Han Tseng and Chia-Ping Chen, " <em>Automatic
+Learning of Context-Free Grammar </em>", Proceedings of Rocling 2006。</p>
+<p class="style5 style6">CFG應用的範圍非常的廣泛，主要的應用包含了語音辨識、資訊擷取及互動式語音回應系統等等。而一個
+CFG的優劣，也會左右這些應用的成敗。</p>
+</body>
+</html>

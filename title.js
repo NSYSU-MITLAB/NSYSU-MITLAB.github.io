@@ -1,0 +1,1 @@
+﻿document.write("<title>多媒體資訊技術實驗室</title>");
