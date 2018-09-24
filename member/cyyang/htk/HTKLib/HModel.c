@@ -11,7 +11,7 @@
 /*                                                             */
 /*      Speech Vision and Robotics group                       */
 /*      Cambridge University Engineering Department            */
-/*      http://svr-www.eng.cam.ac.uk/                          */
+/*      https://svr-www.eng.cam.ac.uk/                          */
 /*                                                             */
 /*      Entropic Cambridge Research Laboratory                 */
 /*      (now part of Microsoft)                                */
@@ -19,7 +19,7 @@
 /* ----------------------------------------------------------- */
 /*         Copyright: Microsoft Corporation                    */
 /*          1995-2000 Redmond, Washington USA                  */
-/*                    http://www.microsoft.com                 */
+/*                    https://www.microsoft.com                 */
 /*                                                             */
 /*               2002 Cambridge University                     */
 /*                    Engineering Department                   */

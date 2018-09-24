@@ -11,7 +11,7 @@
 /*                                                             */
 /*      Speech Vision and Robotics group                       */
 /*      Cambridge University Engineering Department            */
-/*      http://svr-www.eng.cam.ac.uk/                          */
+/*      https://svr-www.eng.cam.ac.uk/                          */
 /*                                                             */
 /* author: Gunnar Evermann <ge204@eng.cam.ac.uk>               */
 /* ----------------------------------------------------------- */
