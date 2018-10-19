@@ -11,7 +11,7 @@
 /*                                                             */
 /*      Speech Vision and Robotics group                       */
 /*      Cambridge University Engineering Department            */
-/*      http://svr-www.eng.cam.ac.uk/                          */
+/*      https://svr-www.eng.cam.ac.uk/                          */
 /*                                                             */
 /* main authors: Valtcho Valtchev, Steve Young,                */
 /*               Julian Odell, Gareth Moore                    */

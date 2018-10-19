@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+    "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
 <head>
 <title>P&agrave;gina de prova de la instal&middot;laci&oacute; d'Apache</title>
 </head>
@@ -9,7 +9,7 @@
 <body bgcolor="#FFFFFF" text="#000000" link="#0000FF"
 vlink="#000080" alink="#FF0000">
 <p>Si veieu aix&ograve;, la instal&middot;laci&oacute; del progamari
-del <a href="http://www.apache.org/foundation/preFAQ.html">servidor
+del <a href="https://www.apache.org/foundation/preFAQ.html">servidor
 web d'Apache</a> al sistema ha tingut &egrave;xit. Ja podeu afegir
 contingut al directori i substituir aquesta p&agrave;gina.</p>
 

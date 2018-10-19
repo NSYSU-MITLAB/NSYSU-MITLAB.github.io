@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+    "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
 <title>Testna Stranica Apache Instalacije</title>
@@ -9,27 +9,27 @@
 (active) -->
 <body bgcolor="#FFFFFF" text="#000000" link="#0000FF"
 vlink="#000080" alink="#FF0000">
-<h2 align="center">Čestitamo! Apache web poslužitelj funkcionira!</h2>
-<p>Ukoliko vidite ovu stranicu, to znači da je instalacija <a
-href="http://www.apache.org/foundation/preFAQ.html">Apache web poslužitelja</a> uspješno izvršena na ovom računalu.
-Sada možete dodati sadržaj u ovaj direktorij te promijeniti ovu stranicu.</p>
+<h2 align="center">ďż˝estitamo! Apache web posluďż˝itelj funkcionira!</h2>
+<p>Ukoliko vidite ovu stranicu, to znaďż˝i da je instalacija <a
+href="https://www.apache.org/foundation/preFAQ.html">Apache web posluďż˝itelja</a> uspjeďż˝no izvrďż˝ena na ovom raďż˝unalu.
+Sada moďż˝ete dodati sadrďż˝aj u ovaj direktorij te promijeniti ovu stranicu.</p>
 
 <hr width="50%" size="8" />
-<h2 align="center">Očekivali ste neku drugu stranicu?</h2>
+<h2 align="center">Oďż˝ekivali ste neku drugu stranicu?</h2>
 
-<p>Ovu stranica vidite stoga što je administrator ovog poslužitelja promijenio
+<p>Ovu stranica vidite stoga ďż˝to je administrator ovog posluďż˝itelja promijenio
 konfiguraciju. Apache Softver Fondacija napisala je softver koji koristi
-administrator ovog web poslužitelja i nije odgovorna za njegovo održavanje! Zbog toga vas molimo da se za
-sva pitanja obratite <strong>administratoru ili osobi odgovornoj za održavanje ovog poslužitelja.</strong></p>
+administrator ovog web posluďż˝itelja i nije odgovorna za njegovo odrďż˝avanje! Zbog toga vas molimo da se za
+sva pitanja obratite <strong>administratoru ili osobi odgovornoj za odrďż˝avanje ovog posluďż˝itelja.</strong></p>
 
 <hr width="50%" size="8" />
-<p>Ovdje se nalazi <a href="/manual/">Dokumentacija</a> o Apache web poslužitelju
+<p>Ovdje se nalazi <a href="/manual/">Dokumentacija</a> o Apache web posluďż˝itelju
 (engleski).</p>
 
-<p>Donju sličicu možete slobodno koristiti na stranicama ovog veb poslužitelja.
-Hvala vam što koristite Apache!</p>
+<p>Donju sliďż˝icu moďż˝ete slobodno koristiti na stranicama ovog veb posluďż˝itelja.
+Hvala vam ďż˝to koristite Apache!</p>
 
-<div align="center"><img src="apache_pb.gif" alt="Apache Web Poslužitelj" /></div>
+<div align="center"><img src="apache_pb.gif" alt="Apache Web Posluďż˝itelj" /></div>
 </body>
 </html>
 

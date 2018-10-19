@@ -1,5 +1,5 @@
 <!doctype html public "-//W3C//DTD HTML 4.0 Transitional//EN"
- "http://www.w3.org/TR/REC-html40/loose.dtd">
+ "https://www.w3.org/TR/REC-html40/loose.dtd">
 <html>
  <head>
   <meta http-equiv="Content-Type" content="text/html; charset=ISO-2022-JP">
@@ -16,7 +16,7 @@
 
 
 <p>
-もしこのページが読めたのであれば、<a href="http://www.apache.org/foundation/preFAQ.html">Apache ウェブサーバ</a>のインストールがこの計算機で無事に終了したことを意味します。あなたは、このディレクトリに文書を加えたり、このページを置きかえることができます。
+もしこのページが読めたのであれば、<a href="https://www.apache.org/foundation/preFAQ.html">Apache ウェブサーバ</a>のインストールがこの計算機で無事に終了したことを意味します。あなたは、このディレクトリに文書を加えたり、このページを置きかえることができます。
 </p>
 <hr width="50%" size="8">
 
