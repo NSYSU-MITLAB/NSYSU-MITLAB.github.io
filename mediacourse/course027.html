@@ -1,0 +1,321 @@
+
+<html>
+    <head>
+    <title>國立中山大學-機器學習與多媒體技術學程</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script type="text/javascript">
+    var lastMenu;
+    function showMenu(identifier, element) {
+      menu = document.getElementById(identifier);
+      menu.style.left = getPositionX(element)+"px";
+      menu.style.top = getPositionY(element) + element.offsetHeight+"px";
+      menu.style.visibility="visible";
+      if(lastMenu != menu) { closeLastMenu();}
+      lastMenu = menu;
+    }
+    function closeLastMenu() {
+      if(lastMenu != null) {lastMenu.style.visibility="hidden";}
+    }
+    function getPositionX(element) {
+        return element.offsetLeft + (element.offsetParent ? getPositionX(element.offsetParent) : element.x ? element.x : 0);
+    }
+    function getPositionY(element) {
+      return element.offsetTop + (element.offsetParent ? getPositionY(element.offsetParent) : element.y ? element.y : 0);
+    }
+    </script>
+    
+    <style>
+    body, center {
+      margin:0px 0px 0px 0px; 
+      padding:0px 0px 0px 0px;
+      border-width:0px;
+    } 
+    .ta0 {
+      background-image:url(pic/page_back01.gif);
+      background-repeat: repeat-y;
+      background-position: top center; 
+      margin:0px 0px 0px 0px; 
+      padding:0px 0px 0px 0px;
+      border-width:0px;
+    } 
+    .ta1 {
+      background-image:url(pic/title.gif);
+      background-repeat: no-repeat; 
+      background-position: top center; 
+      margin:0px 0px 0px 0px; 
+      padding:0px 0px 0px 0px;
+      border-width:0px;
+    } 
+    .f1{
+      padding:10px;
+      margin:10px;
+      border-color:#0066CC;
+      font-size :10pt;
+      color: #FFFFFF
+    } 
+    legend {
+    padding:10px;
+    color:#0066CC;
+    font-weight:800;
+    font-size :16pt;
+    background:#EFEFFF;
+    } 
+    
+    a.a1:link {margin:0px; padding:3px; text-decoration: none;color: #000000;font-size :10pt;}
+    a.a1:visited {margin:0px; padding:3px; text-decoration: none;color: #000000;font-size :10pt;}
+    a.a1:hover {margin:0px; padding:3px; text-decoration: none;color: #000000;font-size :10pt;background-color: #F0F0FF}
+    
+    .s1{
+      background-image:url(pic/page_back02.gif);
+      background-repeat: repeat-y;
+      background-position: bottom center; 
+      color:#FFFFFF;
+      font-size :10pt;
+      margin:0px; 
+      padding:0px;
+      border-width:0px;
+    } 
+    
+    .s6 {
+      font-size :12pt;
+      padding:20px; 
+      letter-spacing: 0px;
+    }
+    .s2{
+      color:#000010;
+      font-size :10pt;
+      line-height: 2;
+      letter-spacing: 2px;
+      text-indent: 2em;
+     margin:20px 20px 20px 20px; 
+      padding:0px;
+      border-width:0px;
+    } 
+    .s3{
+      color:#000010;
+      font-size :10pt;
+      line-height: 2;
+      letter-spacing: 2px;
+     margin:20px 20px 20px 20px; 
+      padding:0px;
+      border-width:0px;
+    } 
+    .s4{
+     margin:0px 20px 0px 20px; 
+      color:#000040;
+      font-size :20pt;
+      font-family :"標楷體";
+      font-weight :"800";
+      letter-spacing: 2px;
+      padding:0px;
+      border-width:0px;
+    } 
+    </style>
+    </head>
+    <body>
+    
+    
+    <div id="tab_3" style="background-color:#DFDFFF;visibility:hidden;position:absolute">
+    <table width="160px">
+    
+    <tr><td align=center style="font:14px Arial;border-bottom:dotted 1px #600000" height="32px" width="100%">
+    <a href="course001.html" style="text-decoration:none;color:#000000">Ｃ程式設計（一）</a></td></tr>
+    
+    <tr><td align=center style="font:14px Arial;border-bottom:dotted 1px #600000" height="32px" width="100%">
+    <a href="course002.html" style="text-decoration:none;color:#000000">數位系統</a></td></tr>
+    
+    <tr><td align=center style="font:14px Arial;border-bottom:dotted 1px #600000" height="32px" width="100%">
+    <a href="course003.html" style="text-decoration:none;color:#000000">電腦圖學概論</a></td></tr>
+    
+    <tr><td align=center style="font:14px Arial;border-bottom:dotted 1px #600000" height="32px" width="100%">
+    <a href="course017.html" style="text-decoration:none;color:#000000">線性代數</a></td></tr>
+    
+    <tr><td align=center style="font:14px Arial;border-bottom:dotted 1px #600000" height="32px" width="100%">
+    <a href="course018.html" style="text-decoration:none;color:#000000">機率學</a></td></tr>
+    
+    
+    <tr><td align=center style="font:14px Arial;border-bottom:dotted 1px #600000" height="32px" width="100%">
+    <a href="course004.html" style="text-decoration:none;color:#000000">數位訊號處理</a></td></tr>
+    
+    <tr><td align=center style="font:14px Arial;border-bottom:dotted 1px #600000" height="32px" width="100%">
+    <a href="course005.html" style="text-decoration:none;color:#000000">Ｃ程式設計（二）</a></td></tr>
+    
+    <tr><td align=center style="font:14px Arial;border-bottom:dotted 1px #600000" height="32px" width="100%">
+    <a href="course006.html" style="text-decoration:none;color:#000000">Ｃ程式設計實驗(一)</a></td></tr>
+    
+    <tr><td align=center style="font:14px Arial;border-bottom:dotted 1px #600000" height="32px" width="100%">
+    <a href="course007.html" style="text-decoration:none;color:#000000">Ｃ程式設計實驗(二)</a></td></tr>
+    
+    <tr><td align=center style="font:14px Arial;border-bottom:dotted 1px #600000" height="32px" width="100%">
+    <a href="course008.html" style="text-decoration:none;color:#000000">影像處理</a></td></tr>
+    
+    <tr><td align=center style="font:14px Arial;border-bottom:dotted 1px #600000" height="32px" width="100%">
+    <a href="course009.html" style="text-decoration:none;color:#000000">數位信號處理架構設計</a></td></tr>
+    
+    <tr><td align=center style="font:14px Arial;border-bottom:dotted 1px #600000" height="32px" width="100%">
+    <a href="course010.html" style="text-decoration:none;color:#000000">三維計算機圖學</a></td></tr>
+    
+    <tr><td align=center style="font:14px Arial;border-bottom:dotted 1px #600000" height="32px" width="100%">
+    <a href="course011.html" style="text-decoration:none;color:#000000">商業音像內涵與創意元素</a></td></tr>
+    
+    <tr><td align=center style="font:14px Arial;border-bottom:dotted 1px #600000" height="32px" width="100%">
+    <a href="course012.html" style="text-decoration:none;color:#000000">數位行銷</a></td></tr>
+    
+    <tr><td align=center style="font:14px Arial;border-bottom:dotted 1px #600000" height="32px" width="100%">
+    <a href="course013.html" style="text-decoration:none;color:#000000">娛樂行銷與媒體</a></td></tr>
+    
+    <tr><td align=center style="font:14px Arial;border-bottom:dotted 1px #600000" height="32px" width="100%">
+    <a href="course014.html" style="text-decoration:none;color:#000000">三維電腦圖學及軟硬體實現</a></td></tr>
+    
+    <tr><td align=center style="font:14px Arial;border-bottom:dotted 1px #600000" height="32px" width="100%">
+    <a href="course015.html" style="text-decoration:none;color:#000000">電腦輔助繪圖</a></td></tr>
+    
+    <tr><td align=center style="font:14px Arial;border-bottom:dotted 1px #600000" height="32px" width="100%">
+    <a href="course020.html" style="text-decoration:none;color:#000000">技術繪圖</a></td></tr>
+    
+    <tr><td align=center style="font:14px Arial;border-bottom:dotted 1px #600000" height="32px" width="100%">
+    <a href="course016.html" style="text-decoration:none;color:#000000">視訊通訊</a></td></tr>
+    
+    <tr><td align=center style="font:14px Arial;border-bottom:dotted 1px #600000" height="32px" width="100%">
+    <a href="course019.html" style="text-decoration:none;color:#000000">嵌入式系統程式設計</a></td></tr>
+    
+    <tr><td align=center style="font:14px Arial;border-bottom:dotted 1px #600000" height="32px" width="100%">
+    <a href="course021.html" style="text-decoration:none;color:#000000">多媒體通訊之應用</a></td></tr>
+    
+    <tr><td align=center style="font:14px Arial;border-bottom:dotted 1px #600000" height="32px" width="100%">
+    <a href="course022.html" style="text-decoration:none;color:#000000">機器學習</a></td></tr>
+    
+    <tr><td align=center style="font:14px Arial;border-bottom:dotted 1px #600000" height="32px" width="100%">
+    <a href="course023.html" style="text-decoration:none;color:#000000">統計學習與資料探勘</a></td></tr>
+    
+    <tr><td align=center style="font:14px Arial;border-bottom:dotted 1px #600000" height="32px" width="100%">
+    <a href="course024.html" style="text-decoration:none;color:#000000">數位影像處理</a></td></tr>
+    
+    <tr><td align=center style="font:14px Arial;border-bottom:dotted 1px #600000" height="32px" width="100%">
+    <a href="course025.html" style="text-decoration:none;color:#000000">機器學習導論</a></td></tr>
+    
+    <tr><td align=center style="font:14px Arial;border-bottom:dotted 1px #600000" height="32px" width="100%">
+    <a href="course026.html" style="text-decoration:none;color:#000000">基礎訊號處理</a></td></tr>
+    
+    <tr><td align=center style="font:14px Arial;border-bottom:dotted 1px #600000" height="32px" width="100%">
+    <a href="course027.html" style="text-decoration:none;color:#000000">人工智慧導論</a></td></tr>
+    
+    <tr><td align=center style="font:14px Arial;border-bottom:dotted 1px #600000" height="32px" width="100%">
+    <a href="course028.html" style="text-decoration:none;color:#000000">大數據分析、機器學習、與人工智慧方法</a></td></tr>
+    
+    </table>
+    </div>
+    
+    <center>
+    <table width=1100 class="ta0">
+    <tr><td><center>
+    
+    
+    <table  width=1000 class="ta1">
+    <tr height=45><td width=30 rowspan=6></td><td width=140> </td><td width=350> </td><td width=350>
+        <table>
+        <tr valign="middle" height=40>
+        <td width=200></td>
+        <td width=100><a href="index.html" class="a1"><img src="pic/item.gif" align="top" border="0"> 回首頁</a></td>
+        <!--
+        <td width=100><a href="sitemap.html" class="a1"><img src="pic/item.gif" align="top" border="0"> 網站導覽</a></td>
+        -->
+        <td width=100><a href="contactus.html" class="a1"><img src="pic/item.gif" align="top" border="0"> 聯絡我們</a></td>
+        </table>
+    </td><td width=10 rowspan=2></td></tr>
+    
+    
+    <tr height=140><td colspan=3></td></tr>
+    <tr height=50><td></td><td colspan=2>
+    <!------------------ 上方活動按鈕區開始 ------------------>
+    <center><table width=90% border="0" cellspacing="0" cellpadding="0"><tr >
+    
+    <td class="tbg_m"><a href="index.html" onMouseOver='document.images["b1"].src="pic/Btn1_in.png"' 
+    onMouseOut='document.images["b1"].src="pic/Btn1_out.png"'>
+    <img name='b1' SRC="pic/Btn1_out.png" border=0></a></td>
+    
+    <td class="tbg_m"><a href="course.html" onMouseOver='document.images["b2"].src="pic/Btn2_in.png"' 
+    onMouseOut='document.images["b2"].src="pic/Btn2_out.png"'>
+    <img name='b2' SRC="pic/Btn2_out.png" border=0></a></td>
+    
+    <td class="tbg_m"><a href="records.html" onMouseOver='document.images["b3"].src="pic/Btn3_in.png"' 
+    onMouseOut='document.images["b3"].src="pic/Btn3_out.png"'>
+    <img name='b3' SRC="pic/Btn3_out.png" border=0></a></td>
+    
+    <td class="tbg_m"><a href="link.html" onMouseOver='document.images["b4"].src="pic/Btn4_in.png"' 
+    onMouseOut='document.images["b4"].src="pic/Btn4_out.png"'>
+    <img name='b4' SRC="pic/Btn4_out.png" border=0></a></td>
+    </table></center>
+    
+    <td></td><td colspan=1>
+    <!------------------ 上方活動按鈕區結束 ------------------>
+    </td></tr>
+    
+    <tr height=80><td colspan=3></td></tr> 
+    <tr height=300>
+    <td colspan=3 valign="top"  width="100">  
+    <!------------------ 分頁面內容開始 ------------------>
+    
+    
+    <table width=110% align="center">
+    <tr><td>
+     <H1><p align="center"><font face="標楷體">人工智慧導論</font>
+    </p> </H1>
+    </td></tr>
+    <tr><td>
+    <center>
+    <table width="100%">
+    <tr height="190">
+        <td width=140><center><img height=140 src="pic/ccw.jpg"></center></td>
+        <td colspan="2">
+            <ul class="s3">
+            <li>開課系所 : 資訊工程學系</li>
+            <li>授課教師 : 蔡崇煒 </li>
+            <li>授課方式 : 課堂講授 </li>
+            <li>學分數 : 3學分</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+    
+    </tr>
+    <tr>
+        <td colspan="3">
+            <p class="s4">課程目標
+        <p class="s2">本課程首先將介紹人工智慧發展歷史，以及幾個人工智慧研究領域所發展出的研究分支，其中包含: 智慧型代理人、搜尋、推理、不確定性、學習、知識表達等。課程並將介紹人工生命、仿生運算、監督式及非監督式學習的幾個人工智慧演算法，其中包含: 機器學習 (machine learning) 及超啟發式演算法 (metaheuristic algorithms)。學生於本課程可學習到如何把這些方法應用至物聯網、雲端計算、大數據資料分析及智慧城市等研究，了解這些方法的可能性。本課程並將透過專案實作來實現以人工演算法解決工程問題，以使學生更了解此研究領域及其相關應用。
+        </p>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <p class="s4">課程大綱
+            <p class="s2">
+            <ol class="s3">	
+                <li>人工智慧發展歷史及理論基礎</li>
+                <li>應用人工智慧演算法解決最佳化問題及工程問題</li>
+                <li>監督式及非監督式學習之設計與改良方式</li>
+                <li>人工智慧演算法於物聯網、雲端計算、大數據資料分析、智慧城市應用實例</li> 
+            </ol>
+            </p>
+            </p>
+        </td>
+    </tr>
+    
+    </table>
+    </center>
+    
+    </td></tr>
+    
+    
+    </table>
+    <!------------------ 分頁面內容結束 ------------------>
+    </td></tr>
+    </table>
+    <table width=1200 class="s1">
+    <tr height=60><td align="center">建議使用Firefox、Microsoft IE6.0以上版本，解析度1024x768以上</td></tr>
+    </table>
+    </center></td></tr>
+    </table>
+    </center>
+    </body>
+    </html>
