@@ -5,15 +5,43 @@
 <script type="text/javascript" src="/title.js"></script>
 <link href="/style1.css" rel="stylesheet" type="text/css" /> 
 <style type="text/css"> 
-body {
-	background-color: #FFFFFF;
-}
+  body {
+	  background-color: #FFFFFF;
+  }
+  .header {
+    text-align: center;
+    vertical-align: top;
+    width: auto;
+  }
+  .header > p {
+    text-align: left;
+  }
+
+  .info {
+    border: 1px solid black;
+    align-content: center;
+    border-spacing: 0px;
+    padding: 2px;
+    width: 100%;
+    height: fu
+  }
+  .info > tbody > tr > th {
+    text-align: center;
+    background-color: #5AB6D6;
+    vertical-align: center;
+    font-size: 14px;
+  }
+  .info > tbody > tr > td {
+    text-align: center;
+    vertical-align: center;
+    font-size: 13px;
+  }
 </style> 
 </head> 
  
 <body> 
 <div align="center"> 
-<table width="800" border="20" cellpadding="0" cellspacing="0" bgcolor="#003300" bordercolor="#666666"> 
+<table width="820" border="20" cellpadding="0" cellspacing="0" bgcolor="#003300" bordercolor="#666666"> 
   <tr> 
   
     <td > 
@@ -39,570 +67,568 @@ body {
   <tr> 
     <td><div style="background-color:#000000">&nbsp;</div></td> 
   </tr> 
+  
   <tr> 
-    <td ><table width="100%" border="3" bordercolor="#003300"> 
-      
-      <tr> 
-        <td width="76%" bgcolor="#CCCCCC" valign="top"> 
-		   <table width="100%" border="0"> 
-            
-            <tr> 
-              <td><table width="100%" border="0" align="center"> 
-                <tr bordercolor="#FFFFFF" background="images/header2_bg.jpg"> 
-                  <td colspan="2" align="center" class="style15">實驗室成員</td> 
-                </tr> 
-                <tr> 
-                  <td colspan="2" align="center" valign="top"><p align="left" class="style5">指導教授</p> 
-                    <table height="56" border="1" align="left" cellpadding="2" cellspacing="0"> 
-                      <tbody> 
-                        <tr> 
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">姓名</td> 
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">電子郵件信箱</td> 
-                        </tr> 
-                        <tr> 
-                          <td align="center" valign="middle"><a href="http://slpl.cse.nsysu.edu.tw/cpchen/" class="style17">陳嘉平</a></td> 
-                          <td align="center" valign="middle"><a href="mailto:cpchen@cse.nsysu.edu.tw">cpchen@cse.nsysu.edu.tw</a> </td> 
-                        </tr> 
-                      </tbody> 
-                    </table> 
-                    <p align="left" class="style5">&nbsp;</p></td> 
-                </tr> 
-                <tr> 
-                  <td colspan="2" align="center" valign="top"><hr /></td> 
-                  </tr> 
+    <th>
+      <table width="100%" border="3" bordercolor="#003300">  
+        <tr> 
+          <th width="76%" bgcolor="#CCCCCC" valign="top"> 
+            <table width="100%" border="0"> 
+              <tr> 
+                <th>
+                  <table width="100%" border="0" align="center"> 
+                    <tr bordercolor="#FFFFFF" background="images/header2_bg.jpg"> 
+                      <td colspan="2" align="center" class="style15">實驗室成員</td> 
+                    </tr>
+                    <!-- 教授 -->
+                    <tr> 
+                      <th colspan="2" scope="col" class="header">
+                        <p class="style5">指導教授</p> 
+                        <table height="56" aria-label="cpchen" class="info"> 
+                          <tbody> 
+                            <tr> 
+                              <th scope="col">姓名</th> 
+                              <th scope="col">電子郵件信箱</th> 
+                            </tr> 
+                            <tr> 
+                              <td><a href="http://slpl.cse.nsysu.edu.tw/cpchen/" class="style17">陳嘉平</a></td> 
+                              <td><a href="mailto:cpchen@cse.nsysu.edu.tw">cpchen@cse.nsysu.edu.tw</a> </td> 
+                            </tr> 
+                          </tbody> 
+                        </table> 
+                        <p class="style5">&nbsp;</p>
+                      </th> 
+                    </tr>
+                    <tr><td colspan="2"><hr></td></tr> <!-- 水平線 -->
+                    <!-- 碩士生 -->
+                    <tr> 
+                      <th scope="col" class="header"> <!-- 奇數學年 -->
+                        <p class="style5">碩士班</p>
+                        
+                        <table aria-label="111" class="info"> 
+                          <tbody>
+                            <tr>
+                              <th scope="col">級別</th>
+                              <th scope="col">姓名</th>
+                              <th scope="col">電子郵件信箱</th>
+                            </tr>
+                            <tr>
+                              <td rowspan="5" width="43">111</td>
+                              <td><a href="/member/thkuo/personal.html">郭子豪</a></td>
+                              <td><a href="mailto:M113040053@student.nsysu.edu.tw">M113040053@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                            <tr>
+                              <td><a href="/member/huaizhe/personal.html">楊淮哲</a></td>
+                              <td><a href="mailto:M113040065@student.nsysu.edu.tw">M113040065@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                            <tr>
+                              <td><a href="/member/hongjie/personal.html">胡弘杰</a></td>
+                              <td><a href="mailto:M113040040@student.nsysu.edu.tw">M113040040@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                            <tr>
+                              <td><a href="/member/ShiuHsiang/personal.html">劉旭祥</a></td>
+                              <td><a href="mailto:M113040104@student.nsysu.edu.tw">M113040104@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                            <tr>
+                              <td><a href="/member/kwhuan/personal.html">黃凱維</a></td>
+                              <td><a href="mailto:M113040110@student.nsysu.edu.tw">M113040110@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <p>&nbsp;</p>
 
-                <tr> 
-                  <td width="49%" valign="top"><p class="style5">碩士班</p>
-                    <table cellspacing="0" cellpadding="2" border="1">
-                      <tbody>
-                        <tr>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">級別</td>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">姓名</td>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">電子郵件信箱</td>
-                        </tr>
-                        <tr>
-                          <td rowspan="5" align="center" valign="middle" width="43">111</td>
-                          <td align="center" valign="middle"><a href="/member/thkuo/personal.html">郭子豪</a></td>
-                          <td align="center" valign="middle"><a href="mailto:M113040053@student.nsysu.edu.tw">M113040053@student.nsysu.edu.tw</a> </td>
-                        </tr>
-                        <tr>
-                          <td align="center" valign="middle"><a href="/member/huaizhe/personal.html">楊淮哲</a></td>
-                          <td align="center" valign="middle"><a href="mailto:M113040065@student.nsysu.edu.tw">M113040065@student.nsysu.edu.tw</a> </td>
-                        </tr>
-                        <tr>
-                          <td align="center" valign="middle"><a href="/member/hongjie/personal.html">胡弘杰</a></td>
-                          <td align="center" valign="middle"><a href="mailto:M113040040@student.nsysu.edu.tw">M113040040@student.nsysu.edu.tw</a> </td>
-                        </tr>
-                        <tr>
-                          <td align="center" valign="middle"><a href="/member/ShiuHsiang/personal.html">劉旭祥</a></td>
-                          <td align="center" valign="middle"><a href="mailto:M113040104@student.nsysu.edu.tw">M113040104@student.nsysu.edu.tw</a> </td>
-                        </tr>
-                        <tr>
-                          <td align="center" valign="middle"><a href="/member/kwhuan/personal.html">黃凱維</a></td>
-                          <td align="center" valign="middle"><a href="mailto:M113040110@student.nsysu.edu.tw">M113040110@student.nsysu.edu.tw</a> </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    <p>&nbsp;</p>
-                  </td>
-                  <td width="51%" valign="top"><p class="style5">&nbsp;</p>
-                    <table cellspacing="0" cellpadding="2" border="1">
-                      <tbody>
-                        <tr>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">級別</td>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">姓名</td>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">電子郵件信箱</td>
-                        </tr>
-                        <tr>
-                          <td rowspan="5" align="center" valign="middle" width="43">110</td>
-                          <td align="center" valign="middle"><a href="/member/CYKen/personal.html">陳彥寬</a></td>
-                          <td align="center" valign="middle"><a href="mailto:M103040087@student.nsysu.edu.tw">M103040087@student.nsysu.edu.tw</a> </td>
-                        </tr>
-                        <tr>
-                          <td align="center" valign="middle"><a href="/member/cpchiou/personal.html">邱川溥</a></td>
-                          <td align="center" valign="middle"><a href="mailto:M103040061@student.nsysu.edu.tw">M103040061@student.nsysu.edu.tw</a> </td>
-                        </tr>
-                        <tr>
-                          <td align="center" valign="middle"><a href="/member/twchen/personal.html">陳廷威</a></td>
-                          <td align="center" valign="middle"><a href="mailto:M103040017@student.nsysu.edu.tw">M103040017@student.nsysu.edu.tw</a> </td>
-                        </tr>
-                        <tr>
-                          <td align="center" valign="middle"><a href="/member/chiachuan/personal.html">劉家全</a></td>
-                          <td align="center" valign="middle"><a href="mailto:M103040063@student.nsysu.edu.tw">M103040063@student.nsysu.edu.tw</a> </td>
-                        </tr>
-                        <tr>
-                          <td align="center" valign="middle"><a href="/member/HJLien/personal.html">練欣柔</a></td>
-                          <td align="center" valign="middle"><a href="mailto:M103040105@student.nsysu.edu.tw">M103040105@student.nsysu.edu.tw</a> </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    <p>&nbsp;</p>
+                      </th>
+                      <th scope="col" class="header"> <!-- 偶數學年 -->
+                        <p class="style5">&nbsp;</p>
 
-				
-					<!--			
-					<table cellspacing="0" cellpadding="2" border="1">
-                      <tbody>
-                        <tr>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">級別</td>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">姓名</td>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">電子郵件信箱</td>
-                        </tr>
-                          <td rowspan="3" align="center" valign="middle" width="43">102</td>                          
-						<tr>
-                          <td align="center" valign="middle"><a href="/~cfliou/personal.html">劉創範</a></td>
-                          <td align="center" valign="middle"><a href="mailto:M023040056@student.nsysu.edu.tw">M023040056@student.nsysu.edu.tw</a></td>
-                        </tr>
-                      </tbody>
-                    </table> 
-                    <p>&nbsp;</p>
-					-->
-                  </td> 
-                  <td width="51%" valign="top"><p class="style5">&nbsp;</p>
-				  
-		
-				  
-					<!--	
-                    <table cellspacing="0" cellpadding="2" border="1">
-                      <tbody>
-                        <tr>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">級別</td>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">姓名</td>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">電子郵件信箱</td>
-                        </tr>
-						<tr>
-                          <td rowspan="4" align="center" valign="middle" width="43">103</td>                          
-                          <td align="center" valign="middle"><a href="/~pyshih/personal.html">史柏元</a></td>
-                          <td align="center" valign="middle"><a href="mailto:M033040066@student.nsysu.edu.tw">M033040066@student.nsysu.edu.tw</a></td>
-                        </tr>
-						<tr>
-                          <td align="center" valign="middle"><a href="/~cychen/personal.html">陳嘉穎</a></td> 
-                          <td align="center" valign="middle"><a href="mailto:M033040029@student.nsysu.edu.tw">M033040029@student.nsysu.edu.tw</a></td>
-                       </tr>
-                      </tbody>
-                    </table>
-                    <p>&nbsp;</p>
-					
-                   
-                   <p class="style5">&nbsp;</p></td>
-				   -->
-                </tr> 
-                <tr> 
-                  <td colspan="2" valign="top"><hr /></td> 
-                  </tr> 
-                <tr> 
-                  <td valign="top"><p class="style5">畢業成員</p>
-                    <table cellspacing="0" cellpadding="2" border="1">
-                      <tbody>
-                        <tr>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">級別</td>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">姓名</td>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">電子郵件信箱</td>
-                        </tr>
-                        <tr>
-                          <td rowspan="5" align="center" valign="middle" width="43">109</td>
-                          <td align="center" valign="middle"><a href="/member/sj/personal.html">黃頌仁</a></td>
-                          <td align="center" valign="middle"><a href="mailto:M093040011@student.nsysu.edu.tw">M093040011@student.nsysu.edu.tw</a> </td>
-                        </tr>
-                        <tr>
-                          <td align="center" valign="middle"><a href="/member/LYHung/personal.html">黃立宇</a></td>
-                          <td align="center" valign="middle"><a href="mailto:M093040070@student.nsysu.edu.tw">M093040070@student.nsysu.edu.tw</a> </td>
-                        </tr>
-                        <tr>
-                          <td align="center" valign="middle"><a href="/member/wtlin/personal.html">林威廷</a></td>
-                          <td align="center" valign="middle"><a href="mailto:M093040020@student.nsysu.edu.tw">M093040020@student.nsysu.edu.tw</a> </td>
-                        </tr>
-                        <tr>
-                          <td align="center" valign="middle"><a href="/member/halin/personal.html">林厚安</a></td>
-                          <td align="center" valign="middle"><a href="mailto:M093040066@student.nsysu.edu.tw">M093040066@student.nsysu.edu.tw</a> </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    <p>&nbsp;</p>
-                    
-                    <table cellspacing="0" cellpadding="2" border="1">
-                      <tbody>
-                        <tr>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">級別</td>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">姓名</td>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">電子郵件信箱</td>
-                        </tr>
-                        <tr>
-                          <td rowspan="5" align="center" valign="middle" width="43">108</td>
-                          <td align="center" valign="middle"><a href="/member/yihwen/personal.html">王奕雯</a></td>
-                          <td align="center" valign="middle"><a href="mailto:M083040011@student.nsysu.edu.tw">M083040011@student.nsysu.edu.tw</a> </td>
-                        </tr>
-                        <tr>
-                          <td align="center" valign="middle"><a href="/member/huihsin/personal.html">鄭蕙心</a></td>
-                          <td align="center" valign="middle"><a href="mailto:M083040026@student.nsysu.edu.tw">M083040026@student.nsysu.edu.tw</a> </td>
-                        </tr>
-                        <tr>
-                          <td align="center" valign="middle"><a href="/member/hplin/personal.html">林洪邦</a></td>
-                          <td align="center" valign="middle"><a href="mailto:M083040013@student.nsysu.edu.tw">M083040013@student.nsysu.edu.tw</a> </td>
-                        </tr>
-					            	<tr>
-                          <td align="center" valign="middle"><a href="/member/yczhang/personal.html">張育嘉</a></td>
-                          <td align="center" valign="middle"><a href="mailto:M083040025@student.nsysu.edu.tw">M083040025@student.nsysu.edu.tw</a> </td>
-                        </tr>
-                      </tbody>
-                    </table>
+                        <!-- 晚點改成學校信箱 -->
+                        <table aria-label="112" class="info">
+                          <tbody>
+                            <tr>
+                              <th scope="col">級別</th>
+                              <th scope="col">姓名</th>
+                              <th scope="col">電子郵件信箱</th>
+                            </tr>
+                            <tr>
+                              <td rowspan="6" width="43">112</td>
+                              <td><a href="/member/TCLin/personal.html">林子傑</a></td>
+                              <td><a href="mailto:M123040043@student.nsysu.edu.tw">M123040043@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                            <tr>
+                              <td><a href="/member/hsincian/personal.html">吳欣蒨</a></td>
+                              <td><a href="mailto:M123040001@student.nsysu.edu.tw">M123040001@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                            <tr>
+                              <td><a href="/member/pcchen/personal.html">陳品錞</a></td>
+                              <td><a href="mailto:M123040065@student.nsysu.edu.tw">M123040065@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                            <tr>
+                              <td><a href="/member/rayLee/personal.html">李承叡</a></td>
+                              <td><a href="mailto:M123040023@student.nsysu.edu.tw">M123040023@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                            <tr>
+                              <td><a href="">賴昱僑</a></td>
+                              <td><a href="mailto:M123040017@student.nsysu.edu.tw">M123040017@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                            <tr>
+                              <td><a href="">名字</a></td>
+                              <td><a href="mailto:@student.nsysu.edu.tw">@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <p>&nbsp;</p>
 
-                    <p>&nbsp;</p>
+                      </th>
+                      <!--
+                        直接把當前畢業學年的
+                        <table aria-label="110" class="info"> ...
+                        </table>
+                        <p>&nbsp;</p>
+                        放到畢業生 th 元素內部上方
+                      -->
+                    </tr>
+                    <tr><td colspan="2"><hr></td></tr> <!-- 水平線 -->
+                    <!-- 畢業生 -->
+                    <tr> 
+                      <th scope="col" class="header"> <!-- 奇數學年 -->
+                        <p class="style5">畢業成員</p>
 
-                    <table cellspacing="0" cellpadding="2" border="1">
-                      <tbody>
-                        <tr>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">級別</td>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">姓名</td>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">電子郵件信箱</td>
-                        </tr>
-                        <tr>
-                          <td rowspan="4" align="center" valign="middle" width="43">104</td>
-                          <td align="center" valign="middle"><a href="/member/thwu/personal.html">吳東翰</a></td>
-                          <td align="center" valign="middle"><a href="mailto:M043040029@student.nsysu.edu.tw">M043040029@student.nsysu.edu.tw</a> </td>
-                        </tr>
-                        <tr>
-                          <td align="center" valign="middle"><a href="/member/jszhan/personal.html">詹佳憲</a></td>
-                          <td align="center" valign="middle"><a href="mailto:M043040070@student.nsysu.edu.tw">M043040070@student.nsysu.edu.tw</a> </td>
-                        </tr>
-                        <tr>
-                          <td align="center" valign="middle"><a href="/member/thtseng/personal.html">曾子瑄</a></td>
-                          <td align="center" valign="middle"><a href="mailto:M043040013@student.nsysu.edu.tw">M043040013@student.nsysu.edu.tw</a> </td>
-                        </tr>
-						<tr>
-                          <td align="center" valign="middle"><a href="/member/thyang/personal.html">楊子玄</a></td>
-                          <td align="center" valign="middle"><a href="mailto:M043040003@student.nsysu.edu.tw">M043040003@student.nsysu.edu.tw</a> </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    
-                    <p>&nbsp;</p>
-				  
-				  <table cellspacing="0" cellpadding="2" border="1">
-                      <tbody>
-                        <tr>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">級別</td>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">姓名</td>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">電子郵件信箱</td>
-                        </tr>
-						<tr>
-                          <td rowspan="4" align="center" valign="middle" width="43">103</td>                          
-                          <td align="center" valign="middle"><a href="/member/pyshih/personal.html">史柏元</a></td>
-                          <td align="center" valign="middle"><a href="mailto:M033040066@student.nsysu.edu.tw">M033040066@student.nsysu.edu.tw</a></td>
-                        </tr>
-						<tr>
-                          <td align="center" valign="middle"><a href="/member/cychen/personal.html">陳嘉穎</a></td> 
-                          <td align="center" valign="middle"><a href="mailto:M033040029@student.nsysu.edu.tw">M033040029@student.nsysu.edu.tw</a></td>
-                       </tr>
-                      </tbody>
-                    </table>
-					<p>&nbsp;</p>
-				  
-					<table cellspacing="0" cellpadding="2" border="1">
-                      <tbody>
-                        <tr>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">級別</td>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">姓名</td>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">電子郵件信箱</td>
-                        </tr>
-						<tr>
-                          <td rowspan="3" align="center" valign="middle" width="43">102</td>                          
-                          <td align="center" valign="middle"><a href="/member/chhsieh/personal.html">謝其豪</a></td>
-                          <td align="center" valign="middle"><a href="mailto:M023040031@student.nsysu.edu.tw">M023040031@student.nsysu.edu.tw</a></td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    <p>&nbsp;</p>
-					
-					<table cellspacing="0" cellpadding="2" border="1">
-                      <tbody>
-                        <tr>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">級別</td>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">姓名</td>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">電子郵件信箱</td>
-                        </tr>
-                        <tr>
-                          <td rowspan="3" align="center" valign="middle" width="43">101</td>                          
-                          <td align="center" valign="middle"><a href="/member/yjhsu/personal2.html">邱柏菖</a></td>
-                          <td align="center" valign="middle"><a href="mailto:M013040072@student.nsysu.edu.tw">M013040072@student.nsysu.edu.tw</a></td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    <p>&nbsp;</p>
-					
-                     <table cellspacing="0" cellpadding="2" border="1">
-                      <tbody>
-                        <tr>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">級別</td>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">姓名</td>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">電子郵件信箱</td>
-                        </tr>
-                        <tr>
-                          <td rowspan="4" align="center" valign="middle" width="43">99</td>
-                          <td align="center" valign="middle"><a href="/member/mlshiu/personal.html">許妙鸞</a></td>
-                          <td align="center" valign="middle"><a href="mailto:M993040038@student.nsysu.edu.tw">M993040038@student.nsysu.edu.tw</a> </td>
-                        </tr>
-                        <tr>
-                          <td align="center" valign="middle"><a href="/member/bfyeh/personal.html">葉秉豐</a></td>
-                          <td align="center" valign="middle"><a href="mailto:M993040052@student.nsysu.edu.tw">M993040052@student.nsysu.edu.tw</a> </td>
-                        </tr>
-                        <tr>
-                          <td align="center" valign="middle"><a href="/member/cyhsu/personal.html">許志宇</a></td>
-                          <td align="center" valign="middle"><a href="mailto:M993040061@student.nsysu.edu.tw">M993040061@student.nsysu.edu.tw</a> </td>
-                        </tr>
-						 <tr>
-                          <td align="center" valign="middle"><a href="/member/yhhuang/personal.html">黃予宏</a></td>
-                          <td align="center" valign="middle"><a href="mailto:M993040036@student.nsysu.edu.tw">M993040036@student.nsysu.edu.tw</a> </td>
-                        </tr> 
-                      </tbody>
-                    </table> 
-                    <p>&nbsp;</p>
-                      <table cellspacing="0" cellpadding="2" border="1"> 
-                        <tbody> 
-                          <tr> 
-                            <td align="center" bgcolor="#5AB6D6" valign="middle">級別</td> 
-                            <td  align="center" valign="middle" bgcolor="#5AB6D6">姓名</td> 
-                            <td  align="center" valign="middle" bgcolor="#5AB6D6">電子郵件信箱</td> 
-                          </tr> 
-                          <tr> 
-                            <td rowspan="4" align="center" valign="middle" width="43">97</td> 
-                            <td align="center" valign="middle"> 
-							<a href="/member/jzye/index.html">葉佳璋</a></td> 
-                            <td align="center" valign="middle"> 
-							<a href="mailto:ycc97m@cse.nsysu.edu.tw">ycc97m@cse.nsysu.edu.tw</a> </td> 
-                          </tr> 
-                          <tr> 
-                            <td align="center" valign="middle"> 
-							<a href="/member/khwu/index.html">吳國豪</a>				</td> 
-                            <td align="center" valign="middle"> 
-							<a href="mailto:wkh97m@cse.nsysu.edu.tw"> wkh97m@cse.nsysu.edu.tw </a> </td> 
-                          </tr> 
-                          <tr> 
-                            <td align="center" valign="middle"> 
-							<a href="/member/cyyang/index.html">楊治鏞</a>							</td> 
-                            <td align="center" valign="middle"><a href="mailto:ycyg97m@cse.nsysu.edu.tw">ycyg97m@cse.nsysu.edu.tw</a> </td> 
-                          </tr> 
-                        </tbody> 
-                      </table> 
-                    <p>&nbsp;</p> 
-                    <table cellspacing="0" cellpadding="2" border="1"> 
-                        <tbody> 
-                          <tr> 
-                            <td align="center" bgcolor="#5AB6D6" valign="middle">級別</td> 
-                            <td align="center" bgcolor="#5AB6D6" valign="middle">姓名</td> 
-                            <td align="center" bgcolor="#5AB6D6" valign="middle">電子郵件信箱</td> 
-                          </tr>                            
-                          <tr> 
-						   <td rowspan="3" align="center" valign="middle" width="43">95</td> 
-                            <td align="center" valign="middle"> 
-							<a href="/member/ychuang/index.html">黃奕欽</a></td> 
-                            <td align="center" valign="middle"> 
-							<a href="mailto:M953040053@student.nsysu.edu.tw">M953040053@student.nsysu.edu.tw</a> </td> 
-                          </tr> 
-                          <tr> 
-                            <td align="center" valign="middle"> 
-							<a href="/member/bhchen/index.html">陳柏含</a></td> 
-                            <td align="center" valign="middle"><a href="mailto:M953040057@student.nsysu.edu.tw">M953040057@student.nsysu.edu.tw</a> </td> 
-                          </tr> 
-						  <tr>                            
-                            <td align="center" valign="middle"> 
-							<a href="/member/scchiang/index.html">江欣倩</a></a></td> 
-                            <td align="center" valign="middle"> 
-							<a href="mailto:M953040062@student.nsysu.edu.tw">M953040062@student.nsysu.edu.tw</a> </td> 
-                          </tr>
-                        </tbody> 
-                    </table></td> 
-                  <td valign="top"><p class="style5">&nbsp;</p>
+                        <table aria-label="109" class="info">
+                          <tbody>
+                            <tr>
+                              <th scope="col">級別</th>
+                              <th scope="col">姓名</th>
+                              <th scope="col">電子郵件信箱</th>
+                            </tr>
+                            <tr>
+                              <td rowspan="5" width="43">109</td>
+                              <td><a href="/member/sj/personal.html">黃頌仁</a></td>
+                              <td><a href="mailto:M093040011@student.nsysu.edu.tw">M093040011@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                            <tr>
+                              <td><a href="/member/LYHung/personal.html">黃立宇</a></td>
+                              <td><a href="mailto:M093040070@student.nsysu.edu.tw">M093040070@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                            <tr>
+                              <td><a href="/member/wtlin/personal.html">林威廷</a></td>
+                              <td><a href="mailto:M093040020@student.nsysu.edu.tw">M093040020@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                            <tr>
+                              <td><a href="/member/halin/personal.html">林厚安</a></td>
+                              <td><a href="mailto:M093040066@student.nsysu.edu.tw">M093040066@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <p>&nbsp;</p>
+                        
+                        <table aria-label="107" class="info">
+                          <tbody>
+                            <tr>
+                              <th scope="col">級別</th>
+                              <th scope="col">姓名</th>
+                              <th scope="col">電子郵件信箱</th>
+                            </tr>
+                            <tr>
+                              <td rowspan="5" width="43">107</td>
+                              <td><a href="/member/ckfang/personal.html">房志剛</a></td>
+                              <td><a href="mailto:M073040003@student.nsysu.edu.tw">M073040003@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                            <tr>
+                              <td><a href="/member/pcwang/personal.html">王伯晉</a></td>
+                              <td><a href="mailto:M073040069@student.nsysu.edu.tw">M073040069@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                            <tr>
+                              <td><a href="/member/accheng/personal.html">鄭安傑</a></td>
+                              <td><a href="mailto:M073040081@student.nsysu.edu.tw">M073040081@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                            <tr>
+                              <td><a href="/member/kcwu/personal.html">吳鎧丞</a></td>
+                              <td><a href="mailto:M073040098@student.nsysu.edu.tw">M073040098@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <p>&nbsp;</p>
 
-                    <table cellspacing="0" cellpadding="2" border="1">
-                      <tbody>
-                        <tr>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">級別</td>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">姓名</td>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">電子郵件信箱</td>
-                        </tr>
-                        <tr>
-                          <td rowspan="5" align="center" valign="middle" width="43">107</td>
-                          <td align="center" valign="middle"><a href="/member/ckfang/personal.html">房志剛</a></td>
-                          <td align="center" valign="middle"><a href="mailto:M073040003@student.nsysu.edu.tw">M073040003@student.nsysu.edu.tw</a> </td>
-                        </tr>
-                        <tr>
-                          <td align="center" valign="middle"><a href="/member/pcwang/personal.html">王伯晉</a></td>
-                          <td align="center" valign="middle"><a href="mailto:M073040069@student.nsysu.edu.tw">M073040069@student.nsysu.edu.tw</a> </td>
-                        </tr>
-                        <tr>
-                          <td align="center" valign="middle"><a href="/member/accheng/personal.html">鄭安傑</a></td>
-                          <td align="center" valign="middle"><a href="mailto:M073040081@student.nsysu.edu.tw">M073040081@student.nsysu.edu.tw</a> </td>
-                        </tr>
-                        <tr>
-                          <td align="center" valign="middle"><a href="/member/kcwu/personal.html">吳鎧丞</a></td>
-                          <td align="center" valign="middle"><a href="mailto:M073040098@student.nsysu.edu.tw">M073040098@student.nsysu.edu.tw</a> </td>
-                        </tr>
-                      </tbody>
-                    </table>
-					          
-                    <p>&nbsp;</p>
-
-                    <table cellspacing="0" cellpadding="2" border="1">
-                      <tbody>
-                        <tr>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">級別</td>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">姓名</td>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">電子郵件信箱</td>
-                        </tr>
-                        <tr>
-                          <td rowspan="4" align="center" valign="middle" width="43">106</td>
-                          <td align="center" valign="middle"><a href="/member/suyu/personal.html">張蘇瑜</a></td>
-                          <td align="center" valign="middle"><a href="mailto:M063040058@student.nsysu.edu.tw">M063040058@student.nsysu.edu.tw</a> </td>
-                        </tr>
-                        <tr>
-                          <td align="center" valign="middle"><a href="/member/MengPing/personal.html">呂孟蘋</a></td>
-                          <td align="center" valign="middle"><a href="mailto:M063040028@student.nsysu.edu.tw">M063040028@student.nsysu.edu.tw</a> </td>
-                        </tr>
-                        <tr>
-                          <td align="center" valign="middle"><a href="/member/ctyeh/personal.html">葉致廷</a></td>
-                          <td align="center" valign="middle"><a href="mailto:M063040008@student.nsysu.edu.tw">M063040008@student.nsysu.edu.tw</a> </td>
-                        </tr>
-						<tr>
-                          <td align="center" valign="middle"><a href="/member/yifan/personal.html">陳奕帆</a></td>
-                          <td align="center" valign="middle"><a href="mailto:M063040003@student.nsysu.edu.tw">M063040003@student.nsysu.edu.tw</a> </td>
-                        </tr>
-                      </tbody>
-                    </table>
-					<p>&nbsp;</p>
-                    <table cellspacing="0" cellpadding="2" border="1">
-                      <tbody>
-                        <tr>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">級別</td>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">姓名</td>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">電子郵件信箱</td>
-                        </tr>
-                        <tr>
-                          <td rowspan="4" align="center" valign="middle" width="43">105</td>
-                          <td align="center" valign="middle"><a href="/member/zygao/personal.html">高子元</a></td>
-                          <td align="center" valign="middle"><a href="mailto:M053040030@student.nsysu.edu.tw">M053040030@student.nsysu.edu.tw</a> </td>
-                        </tr>
-                        <tr>
-                          <td align="center" valign="middle"><a href="/member/pwhsiao/personal.html">蕭伯瑋</a></td>
-                          <td align="center" valign="middle"><a href="mailto:M053040067@student.nsysu.edu.tw">M053040067@student.nsysu.edu.tw</a> </td>
-                        </tr>
-                        <tr>
-                          <td align="center" valign="middle"><a href="/member/zsding/personal.html">丁子軒</a></td>
-                          <td align="center" valign="middle"><a href="mailto:M053040022@student.nsysu.edu.tw">M053040022@student.nsysu.edu.tw</a> </td>
-                        </tr>
-						<tr>
-                          <td align="center" valign="middle"><a href="/member/pchsieh/personal.html">謝博丞</a></td>
-                          <td align="center" valign="middle"><a href="mailto:M053040031@student.nsysu.edu.tw">M053040031@student.nsysu.edu.tw</a> </td>
-                        </tr>
-                      </tbody>
-                    </table>
-          <p>&nbsp;</p>    
+                        <table aria-label="105" class="info">
+                          <tbody>
+                            <tr>
+                              <th scope="col">級別</th>
+                              <th scope="col">姓名</th>
+                              <th scope="col">電子郵件信箱</th>
+                            </tr>
+                            <tr>
+                              <td rowspan="4" width="43">105</td>
+                              <td><a href="/member/zygao/personal.html">高子元</a></td>
+                              <td><a href="mailto:M053040030@student.nsysu.edu.tw">M053040030@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                            <tr>
+                              <td><a href="/member/pwhsiao/personal.html">蕭伯瑋</a></td>
+                              <td><a href="mailto:M053040067@student.nsysu.edu.tw">M053040067@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                            <tr>
+                              <td><a href="/member/zsding/personal.html">丁子軒</a></td>
+                              <td><a href="mailto:M053040022@student.nsysu.edu.tw">M053040022@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                            <tr>
+                              <td><a href="/member/pchsieh/personal.html">謝博丞</a></td>
+                              <td><a href="mailto:M053040031@student.nsysu.edu.tw">M053040031@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <p>&nbsp;</p>
               
-				   <table cellspacing="0" cellpadding="2" border="1">
-                      <tbody>
-                        <tr>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">級別</td>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">姓名</td>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">電子郵件信箱</td>
-                        </tr>
-                        <tr>
-                          <td rowspan="3" align="center" valign="middle" width="43">100</td>                          
-                          <td align="center" valign="middle"><a href="/member/tpyen/personal.html">顏宗芃</a></td>
-                          <td align="center" valign="middle"><a href="mailto:M003040029@student.nsysu.edu.tw">M003040029@student.nsysu.edu.tw</a> </td>
-                        </tr>
-                        <tr>
-                          <td align="center" valign="middle"><a href="/member/mkwu/personal.html">吳銘冠</a></td>
-                          <td align="center" valign="middle"><a href="mailto:M003040056@student.nsysu.edu.tw">M003040056@student.nsysu.edu.tw</a> </td>						  
-                        </tr>
-						<tr>                       
-                          <td align="center" valign="middle"><a href="/member/yjhsu/personal.html">許又壬</a></td>
-                          <td align="center" valign="middle"><a href="mailto:M003040035@student.nsysu.edu.tw">M003040035@student.nsysu.edu.tw</a> </td>
-                        </tr>
-                      </tbody>
-                    </table>
-					<p>&nbsp;</p>
-                  <table cellspacing="0" cellpadding="2" border="1">
-                    <tbody>
-                      <tr>
-                        <td align="center" bgcolor="#5AB6D6" valign="middle">級別</td>
-                        <td align="center" bgcolor="#5AB6D6" valign="middle">姓名</td>
-                        <td align="center" bgcolor="#5AB6D6" valign="middle">電子郵件信箱</td>
-                      </tr>
-                      <tr>
-                        <td rowspan="3" align="center" valign="middle" width="43">98</td>
-                        <td align="center" valign="middle"><a href="/member/hhchung/personal.html">黃重翔</a></td>
-                        <td align="center" valign="middle"><a href="mailto:M983040007@student.nsysu.edu.tw">M983040007@student.nsysu.edu.tw</a></td>
-                      </tr>
-                      <tr>
-                        <td align="center" valign="middle"><a href="/member/bfwu/personal.html">吳柏鋒</a></td>
-                        <td align="center" valign="middle"><a href="mailto:M983040035@student.nsysu.edu.tw">M983040035@student.nsysu.edu.tw</a></td>
-                      </tr>
-                      <tr>
-                        <td align="center" valign="middle"><a href="/member/fgshiu/personal.html">許峰閤</a></td>
-                        <td align="center" valign="middle"><a href="mailto:M983040058@student.nsysu.edu.tw">M983040058@student.nsysu.edu.tw</a></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <p>&nbsp;</p>
-                      <table cellspacing="0" cellpadding="2" border="1"> 
-                        <tbody> 
-                          <tr> 
-                            <td align="center" bgcolor="#5AB6D6" valign="middle">級別</td> 
-                            <td align="center" bgcolor="#5AB6D6" valign="middle">姓名</td> 
-                            <td align="center" bgcolor="#5AB6D6" valign="middle">電子郵件信箱</td> 
-                          </tr> 
-                          <tr> 
-                            <td rowspan="3" align="center" valign="middle" width="43">96</td> 
-                            <td align="center" valign="middle"><a href="/member/ypwang/personal.html">王佑平</a></td> 
-                            <td align="center" valign="middle">
-                            <a href="mailto:papadogintw@hotmail.com">M963040020@student.nsysu.edu.tw</a> </td> 
-                          </tr> 
-                          <tr> 
-                            <td align="center" valign="middle"> 
-							<a href="/member/scchou/index.html">邱聖權</a></td> 
-                            <td align="center" valign="middle"> 
-							<a href="mailto:M963040039@student.nsysu.edu.tw">M963040039@student.nsysu.edu.tw</a> </td> 
-                          </tr> 
-                          <tr> 
-                            <td align="center" valign="middle"> 
-							<a href="/member/ycchen/index.html">陳逸昌</a>							</td> 
-                            <td align="center" valign="middle"> 
-							<a href="mailto:M963040046@student.nsysu.edu.tw">M963040046@student.nsysu.edu.tw</a> </td> 
-                          </tr> 
-                        </tbody> 
-                      </table> 
-                    <p>&nbsp;</p> 
-                    <table cellspacing="0" cellpadding="2" border="1"> 
-                        <tbody> 
-                          <tr> 
-                            <td align="center" bgcolor="#5AB6D6" valign="middle">級別</td> 
-                            <td align="center" bgcolor="#5AB6D6" valign="middle">姓名</td> 
-                            <td align="center" bgcolor="#5AB6D6" valign="middle">電子郵件信箱</td> 
-                          </tr> 
-                          <tr> 
-                            <td rowspan="3" align="center" valign="middle" width="43">94</td> 
-                            <td align="center" valign="middle"> 
-							<a href="/apache2-default/chtseng/index.html">曾俊翰</a></td> 
-                            <td align="center" valign="middle"><a href="mailto:M943040041@student.nsysu.edu.tw">M943040041@student.nsysu.edu.tw</a> </td> 
-                          </tr> 
-                          <tr> 
-                            <td align="center" valign="middle"><a href="/member/sfwang/index.html">王聖富</a></td> 
-                            <td align="center" valign="middle"><a href="mailto:M943040056@student.nsysu.edu.tw">M943040055@student.nsysu.edu.tw</a> </td> 
-                          </tr> 
-                          <tr> 
-                            <td align="center" valign="middle"> 
-							<a href="/apache2-default/thchen/index.html">陳泰宏</a></td> 
-                            <td align="center" valign="middle"><a href="mailto:M943040071@student.nsysu.edu.tw">M943040071@student.nsysu.edu.tw</a> </td> 
-                          </tr> 
-                        </tbody> 
-                      </table> 
-                   </td> 
-                </tr> 
-              </table> 
-                </td> 
-            </tr> 
-          </table></td> 
+                        <table aria-label="103" class="info">
+                          <tbody>
+                            <tr>
+                              <th scope="col">級別</th>
+                              <th scope="col">姓名</th>
+                              <th scope="col">電子郵件信箱</th>
+                            </tr>
+                            <tr>
+                              <td rowspan="4" width="43">103</td>                          
+                              <td><a href="/member/pyshih/personal.html">史柏元</a></td>
+                              <td><a href="mailto:M033040066@student.nsysu.edu.tw">M033040066@student.nsysu.edu.tw</a></td>
+                            </tr>
+                            <tr>
+                              <td><a href="/member/cychen/personal.html">陳嘉穎</a></td> 
+                              <td><a href="mailto:M033040029@student.nsysu.edu.tw">M033040029@student.nsysu.edu.tw</a></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <p>&nbsp;</p>
+              
+                        <table aria-label="101" class="info">
+                          <tbody>
+                            <tr>
+                              <th scope="col">級別</th>
+                              <th scope="col">姓名</th>
+                              <th scope="col">電子郵件信箱</th>
+                            </tr>
+                            <tr>
+                              <td rowspan="3" width="43">101</td>                          
+                              <td><a href="/member/yjhsu/personal2.html">邱柏菖</a></td>
+                              <td><a href="mailto:M013040072@student.nsysu.edu.tw">M013040072@student.nsysu.edu.tw</a></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <p>&nbsp;</p>
+              
+                        <table aria-label="99" class="info">
+                          <tbody>
+                            <tr>
+                              <th scope="col">級別</th>
+                              <th scope="col">姓名</th>
+                              <th scope="col">電子郵件信箱</th>
+                            </tr>
+                            <tr>
+                              <td rowspan="4" width="43">99</td>
+                              <td><a href="/member/mlshiu/personal.html">許妙鸞</a></td>
+                              <td><a href="mailto:M993040038@student.nsysu.edu.tw">M993040038@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                            <tr>
+                              <td><a href="/member/bfyeh/personal.html">葉秉豐</a></td>
+                              <td><a href="mailto:M993040052@student.nsysu.edu.tw">M993040052@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                            <tr>
+                              <td><a href="/member/cyhsu/personal.html">許志宇</a></td>
+                              <td><a href="mailto:M993040061@student.nsysu.edu.tw">M993040061@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                            <tr>
+                              <td><a href="/member/yhhuang/personal.html">黃予宏</a></td>
+                              <td><a href="mailto:M993040036@student.nsysu.edu.tw">M993040036@student.nsysu.edu.tw</a> </td>
+                            </tr> 
+                          </tbody>
+                        </table> 
+                        <p>&nbsp;</p>
+
+                        <table aria-label="97" class="info"> 
+                          <tbody> 
+                            <tr> 
+                              <th scope="col">級別</th> 
+                              <th scope="col">姓名</th> 
+                              <th scope="col">電子郵件信箱</th> 
+                            </tr> 
+                            <tr> 
+                              <td rowspan="4" width="43">97</td> 
+                              <td><a href="/member/jzye/index.html">葉佳璋</a></td> 
+                              <td><a href="mailto:ycc97m@cse.nsysu.edu.tw">ycc97m@cse.nsysu.edu.tw</a> </td> 
+                            </tr> 
+                            <tr> 
+                              <td><a href="/member/khwu/index.html">吳國豪</a></td> 
+                              <td><a href="mailto:wkh97m@cse.nsysu.edu.tw"> wkh97m@cse.nsysu.edu.tw </a> </td> 
+                            </tr> 
+                            <tr> 
+                              <td><a href="/member/cyyang/index.html">楊治鏞</a></td> 
+                              <td><a href="mailto:ycyg97m@cse.nsysu.edu.tw">ycyg97m@cse.nsysu.edu.tw</a> </td> 
+                            </tr> 
+                          </tbody> 
+                        </table> 
+                        <p>&nbsp;</p>
+
+                        <table aria-label="95" class="info"> 
+                          <tbody> 
+                            <tr> 
+                              <th scope="col">級別</th> 
+                              <th scope="col">姓名</th> 
+                              <th scope="col">電子郵件信箱</th> 
+                            </tr>                            
+                            <tr> 
+                              <td rowspan="3" width="43">95</td> 
+                              <td><a href="/member/ychuang/index.html">黃奕欽</a></td> 
+                              <td><a href="mailto:M953040053@student.nsysu.edu.tw">M953040053@student.nsysu.edu.tw</a> </td> 
+                            </tr> 
+                            <tr> 
+                              <td><a href="/member/bhchen/index.html">陳柏含</a></td> 
+                              <td><a href="mailto:M953040057@student.nsysu.edu.tw">M953040057@student.nsysu.edu.tw</a> </td> 
+                            </tr> 
+                            <tr>                            
+                              <td><a href="/member/scchiang/index.html">江欣倩</a></a></td> 
+                              <td><a href="mailto:M953040062@student.nsysu.edu.tw">M953040062@student.nsysu.edu.tw</a> </td> 
+                            </tr>
+                          </tbody> 
+                        </table>
+                        <p>&nbsp;</p>
+                      </th>
+                      <th scope="col" class="header"> <!-- 偶數學年 -->
+                        <p class="style5">&nbsp;</p>
+                        
+                        <table aria-label="110" class="info">
+                          <tbody>
+                            <tr>
+                              <th scope="col">級別</th>
+                              <th scope="col">姓名</th>
+                              <th scope="col">電子郵件信箱</th>
+                            </tr>
+                            <tr>
+                              <td rowspan="5" width="43">110</td>
+                              <td><a href="/member/CYKen/personal.html">陳彥寬</a></td>
+                              <td><a href="mailto:M103040087@student.nsysu.edu.tw">M103040087@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                            <tr>
+                              <td><a href="/member/cpchiou/personal.html">邱川溥</a></td>
+                              <td><a href="mailto:M103040061@student.nsysu.edu.tw">M103040061@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                            <tr>
+                              <td><a href="/member/twchen/personal.html">陳廷威</a></td>
+                              <td><a href="mailto:M103040017@student.nsysu.edu.tw">M103040017@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                            <tr>
+                              <td><a href="/member/chiachuan/personal.html">劉家全</a></td>
+                              <td><a href="mailto:M103040063@student.nsysu.edu.tw">M103040063@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                            <tr>
+                              <td><a href="/member/HJLien/personal.html">練欣柔</a></td>
+                              <td><a href="mailto:M103040105@student.nsysu.edu.tw">M103040105@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <p>&nbsp;</p>
+
+                        <table aria-label="108" class="info">
+                          <tbody>
+                            <tr>
+                              <th scope="col">級別</th>
+                              <th scope="col">姓名</th>
+                              <th scope="col">電子郵件信箱</th>
+                            </tr>
+                            <tr>
+                              <td rowspan="5" width="43">108</td>
+                              <td><a href="/member/yihwen/personal.html">王奕雯</a></td>
+                              <td><a href="mailto:M083040011@student.nsysu.edu.tw">M083040011@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                            <tr>
+                              <td><a href="/member/huihsin/personal.html">鄭蕙心</a></td>
+                              <td><a href="mailto:M083040026@student.nsysu.edu.tw">M083040026@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                            <tr>
+                              <td><a href="/member/hplin/personal.html">林洪邦</a></td>
+                              <td><a href="mailto:M083040013@student.nsysu.edu.tw">M083040013@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                            <tr>
+                              <td><a href="/member/yczhang/personal.html">張育嘉</a></td>
+                              <td><a href="mailto:M083040025@student.nsysu.edu.tw">M083040025@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <p>&nbsp;</p>
+
+                        <table aria-label="106" class="info">
+                          <tbody>
+                            <tr>
+                              <th scope="col">級別</th>
+                              <th scope="col">姓名</th>
+                              <th scope="col">電子郵件信箱</th>
+                            </tr>
+                            <tr>
+                              <td rowspan="4" width="43">106</td>
+                              <td><a href="/member/suyu/personal.html">張蘇瑜</a></td>
+                              <td><a href="mailto:M063040058@student.nsysu.edu.tw">M063040058@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                            <tr>
+                              <td><a href="/member/MengPing/personal.html">呂孟蘋</a></td>
+                              <td><a href="mailto:M063040028@student.nsysu.edu.tw">M063040028@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                            <tr>
+                              <td><a href="/member/ctyeh/personal.html">葉致廷</a></td>
+                              <td><a href="mailto:M063040008@student.nsysu.edu.tw">M063040008@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                <tr>
+                              <td><a href="/member/yifan/personal.html">陳奕帆</a></td>
+                              <td><a href="mailto:M063040003@student.nsysu.edu.tw">M063040003@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <p>&nbsp;</p>
+                        
+                        <table aria-label="104" class="info">
+                          <tbody>
+                            <tr>
+                              <th scope="col">級別</th>
+                              <th scope="col">姓名</th>
+                              <th scope="col">電子郵件信箱</th>
+                            </tr>
+                            <tr>
+                              <td rowspan="4" width="43">104</td>
+                              <td><a href="/member/thwu/personal.html">吳東翰</a></td>
+                              <td><a href="mailto:M043040029@student.nsysu.edu.tw">M043040029@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                            <tr>
+                              <td><a href="/member/jszhan/personal.html">詹佳憲</a></td>
+                              <td><a href="mailto:M043040070@student.nsysu.edu.tw">M043040070@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                            <tr>
+                              <td><a href="/member/thtseng/personal.html">曾子瑄</a></td>
+                              <td><a href="mailto:M043040013@student.nsysu.edu.tw">M043040013@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                <tr>
+                              <td><a href="/member/thyang/personal.html">楊子玄</a></td>
+                              <td><a href="mailto:M043040003@student.nsysu.edu.tw">M043040003@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                          </tbody>
+                        </table>  
+                        <p>&nbsp;</p>
+
+                        <table aria-label="102" class="info">
+                          <tbody>
+                            <tr>
+                              <th scope="col">級別</th>
+                              <th scope="col">姓名</th>
+                              <th scope="col">電子郵件信箱</th>
+                            </tr>
+                            <tr>
+                              <td rowspan="3" width="43">102</td>                          
+                              <td><a href="/member/chhsieh/personal.html">謝其豪</a></td>
+                              <td><a href="mailto:M023040031@student.nsysu.edu.tw">M023040031@student.nsysu.edu.tw</a></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <p>&nbsp;</p>
+
+                        <table aria-label="100" class="info">
+                          <tbody>
+                            <tr>
+                              <th scope="col">級別</th>
+                              <th scope="col">姓名</th>
+                              <th scope="col">電子郵件信箱</th>
+                            </tr>
+                            <tr>
+                              <td rowspan="3" width="43">100</td>                          
+                              <td><a href="/member/tpyen/personal.html">顏宗芃</a></td>
+                              <td><a href="mailto:M003040029@student.nsysu.edu.tw">M003040029@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                            <tr>
+                              <td><a href="/member/mkwu/personal.html">吳銘冠</a></td>
+                              <td><a href="mailto:M003040056@student.nsysu.edu.tw">M003040056@student.nsysu.edu.tw</a> </td>						  
+                            </tr>
+                            <tr>                       
+                              <td><a href="/member/yjhsu/personal.html">許又壬</a></td>
+                              <td><a href="mailto:M003040035@student.nsysu.edu.tw">M003040035@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <p>&nbsp;</p>
+
+                        <table aria-label="98" class="info">
+                          <tbody>
+                            <tr>
+                              <th scope="col">級別</th>
+                              <th scope="col">姓名</th>
+                              <th scope="col">電子郵件信箱</th>
+                            </tr>
+                            <tr>
+                              <td rowspan="3" width="43">98</td>
+                              <td><a href="/member/hhchung/personal.html">黃重翔</a></td>
+                              <td><a href="mailto:M983040007@student.nsysu.edu.tw">M983040007@student.nsysu.edu.tw</a></td>
+                            </tr>
+                            <tr>
+                              <td><a href="/member/bfwu/personal.html">吳柏鋒</a></td>
+                              <td><a href="mailto:M983040035@student.nsysu.edu.tw">M983040035@student.nsysu.edu.tw</a></td>
+                            </tr>
+                            <tr>
+                              <td><a href="/member/fgshiu/personal.html">許峰閤</a></td>
+                              <td><a href="mailto:M983040058@student.nsysu.edu.tw">M983040058@student.nsysu.edu.tw</a></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <p>&nbsp;</p>
+
+                        <table aria-label="96" class="info"> 
+                          <tbody> 
+                            <tr> 
+                              <th scope="col">級別</th> 
+                              <th scope="col">姓名</th> 
+                              <th scope="col">電子郵件信箱</th> 
+                            </tr> 
+                            <tr> 
+                              <td rowspan="3" width="43">96</td> 
+                              <td><a href="/member/ypwang/personal.html">王佑平</a></td> 
+                              <td><a href="mailto:papadogintw@hotmail.com">M963040020@student.nsysu.edu.tw</a> </td> 
+                            </tr> 
+                            <tr> 
+                              <td><a href="/member/scchou/index.html">邱聖權</a></td> 
+                              <td><a href="mailto:M963040039@student.nsysu.edu.tw">M963040039@student.nsysu.edu.tw</a> </td> 
+                            </tr> 
+                            <tr> 
+                              <td><a href="/member/ycchen/index.html">陳逸昌</a></td> 
+                              <td><a href="mailto:M963040046@student.nsysu.edu.tw">M963040046@student.nsysu.edu.tw</a> </td> 
+                            </tr> 
+                          </tbody> 
+                        </table> 
+                        <p>&nbsp;</p>
+
+                        <table aria-label="94" class="info"> 
+                            <tbody> 
+                              <tr> 
+                                <th scope="col">級別</th> 
+                                <th scope="col">姓名</th> 
+                                <th scope="col">電子郵件信箱</th> 
+                              </tr> 
+                              <tr> 
+                                <td rowspan="3" width="43">94</td> 
+                                <td><a href="/apache2-default/chtseng/index.html">曾俊翰</a></td> 
+                                <td><a href="mailto:M943040041@student.nsysu.edu.tw">M943040041@student.nsysu.edu.tw</a> </td> 
+                              </tr> 
+                              <tr> 
+                                <td><a href="/member/sfwang/index.html">王聖富</a></td> 
+                                <td><a href="mailto:M943040056@student.nsysu.edu.tw">M943040055@student.nsysu.edu.tw</a> </td> 
+                              </tr> 
+                              <tr> 
+                                <td><a href="/apache2-default/thchen/index.html">陳泰宏</a></td> 
+                                <td><a href="mailto:M943040071@student.nsysu.edu.tw">M943040071@student.nsysu.edu.tw</a> </td> 
+                              </tr> 
+                            </tbody> 
+                        </table>
+                        <p>&nbsp;</p>
+                      </th>
+                    </tr>
+
+                  </table> 
+                </th> 
+              </tr> 
+            </table>
+          </td> 
         </tr> 
-    </table> 
+      </table> 
    
       <div align="center"> 
         <table width="100%" border="0" bordercolor="#FFFFCC"  bgcolor="#eeeeee"> 
@@ -612,7 +638,9 @@ body {
             </span></strong><strong>電話</strong><strong><span lang="EN-US" xml:lang="EN-US">: (07)525-1750 </span></strong><strong>轉</strong><strong><span lang="EN-US" xml:lang="EN-US"> 434201</span></strong></div></td> 
           </tr> 
         </table> 
-        </div></td> 
+      </div>
+      
+    </td> 
   </tr> 
 </table> 
 </div> 

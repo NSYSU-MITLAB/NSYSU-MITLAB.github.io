@@ -5,15 +5,43 @@
 <script type="text/javascript" src="/title.js"></script>
 <link href="/style1.css" rel="stylesheet" type="text/css" /> 
 <style type="text/css"> 
-body {
-	background-color: #FFFFFF;
-}
+  body {
+	  background-color: #FFFFFF;
+  }
+  .header {
+    text-align: center;
+    vertical-align: top;
+    width: auto;
+  }
+  .header > p {
+    text-align: left;
+  }
+
+  .info {
+    border: 1px solid black;
+    align-content: center;
+    border-spacing: 0px;
+    padding: 2px;
+    width: 100%;
+    height: fu
+  }
+  .info > tbody > tr > th {
+    text-align: center;
+    background-color: #5AB6D6;
+    vertical-align: center;
+    font-size: 14px;
+  }
+  .info > tbody > tr > td {
+    text-align: center;
+    vertical-align: center;
+    font-size: 13px;
+  }
 </style> 
 </head> 
  
 <body> 
 <div align="center"> 
-<table border="20" cellpadding="0" cellspacing="0" bgcolor="#003300" bordercolor="#666666"> 
+<table width="820" border="20" cellpadding="0" cellspacing="0" bgcolor="#003300" bordercolor="#666666"> 
   <tr> 
   
     <td > 
@@ -56,8 +84,8 @@ body {
                     <table height="56" width="100%"  border="1" align="left" cellpadding="2" cellspacing="0"> 
                       <tbody> 
                         <tr> 
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">Name</td> 
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">E-mail Address</td> 
+                          <th scope="col">Name</td> 
+                          <th scope="col">E-mail Address</td> 
                         </tr> 
                         <tr> 
                           <td align="center" valign="middle"><a href="http://slpl.cse.nsysu.edu.tw/cpchen/" class="style17">Chia-Ping Chen</a></td> 
@@ -79,9 +107,9 @@ body {
                         <table cellspacing="0" cellpadding="2" border="1">
                           <tbody>
                             <tr>
-                              <td align="center" bgcolor="#5AB6D6" valign="middle">Grade</td>
-                              <td align="center" bgcolor="#5AB6D6" valign="middle">Name</td>
-                              <td align="center" bgcolor="#5AB6D6" valign="middle">E-mail Address</td>
+                              <th scope="col">Grade</td>
+                              <th scope="col">Name</td>
+                              <th scope="col">E-mail Address</td>
                             </tr>
                             <tr>
                               <td rowspan="5" align="center" valign="middle" width="43">110</td>
@@ -115,9 +143,9 @@ body {
                         <table cellspacing="0" cellpadding="2" border="1">
                           <tbody>
                             <tr>
-                              <td align="center" bgcolor="#5AB6D6" valign="middle">Grade</td>
-                              <td align="center" bgcolor="#5AB6D6" valign="middle">Name</td>
-                              <td align="center" bgcolor="#5AB6D6" valign="middle">E-mail Address</td>
+                              <th scope="col">Grade</td>
+                              <th scope="col">Name</td>
+                              <th scope="col">E-mail Address</td>
                             </tr>
                             <tr>
                               <td rowspan="5" align="center" valign="middle" width="43">109</td>
@@ -145,9 +173,9 @@ body {
         <table width="100%" cellspacing="0" cellpadding="2" border="1">
           <tbody>
             <tr>
-              <td align="center" bgcolor="#5AB6D6" valign="middle">Grade</td>
-              <td align="center" bgcolor="#5AB6D6" valign="middle">Name</td>
-              <td align="center" bgcolor="#5AB6D6" valign="middle">E-mail Address</td>
+              <th scope="col">Grade</td>
+              <th scope="col">Name</td>
+              <th scope="col">E-mail Address</td>
             </tr>
               <td rowspan="2" align="center" valign="middle" width="10%">102</td>
             <tr>
@@ -172,9 +200,9 @@ body {
                     <table cellspacing="0" cellpadding="2" border="1">
                       <tbody>
                         <tr>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">Grade</td>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">Name</td>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">E-mail Address</td>
+                          <th scope="col">Grade</td>
+                          <th scope="col">Name</td>
+                          <th scope="col">E-mail Address</td>
                         </tr>
                         <tr>
                           <td rowspan="5" align="center" valign="middle" width="43">108</td>
@@ -200,9 +228,9 @@ body {
                       <table width="100%" cellspacing="0" cellpadding="2" border="1">
                           <tbody>
                               <tr>
-                                  <td align="center" bgcolor="#5AB6D6" valign="middle">Grade</td>
-                                  <td align="center" bgcolor="#5AB6D6" valign="middle">Name</td>
-                                  <td align="center" bgcolor="#5AB6D6" valign="middle">E-mail Address</td>
+                                  <th scope="col">Grade</td>
+                                  <th scope="col">Name</td>
+                                  <th scope="col">E-mail Address</td>
                               </tr>
                               <tr>
                                   <td rowspan="4" align="center" valign="middle" width="10%">104</td>
@@ -228,9 +256,9 @@ body {
 					 <table width="100%" cellspacing="0" cellpadding="2" border="1">
                       <tbody>
                         <tr>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">Grade</td>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">Name</td>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">E-mail Address</td>
+                          <th scope="col">Grade</td>
+                          <th scope="col">Name</td>
+                          <th scope="col">E-mail Address</td>
                         </tr>
                         <tr>
                           <td rowspan="4" align="center" valign="middle" width="10%">103</td>                          
@@ -248,9 +276,9 @@ body {
 					 <table width="100%" cellspacing="0" cellpadding="2" border="1">
                       <tbody>
                         <tr>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">Grade</td>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">Name</td>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">E-mail Address</td>
+                          <th scope="col">Grade</td>
+                          <th scope="col">Name</td>
+                          <th scope="col">E-mail Address</td>
                         </tr>
 						<tr>
                           <td rowspan="2" align="center" valign="middle" width="10%">102</td>
@@ -264,9 +292,9 @@ body {
 					<table width="100%" cellspacing="0" cellpadding="2" border="1">
                       <tbody>
                         <tr>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">Grade</td>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">Name</td>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">E-mail Address</td>
+                          <th scope="col">Grade</td>
+                          <th scope="col">Name</td>
+                          <th scope="col">E-mail Address</td>
                         </tr>
                         <tr>
                           <td rowspan="1" align="center" valign="middle" width="10%">101</td>                          
@@ -280,9 +308,9 @@ body {
                      <table width="100%" cellspacing="0" cellpadding="2" border="1">
                       <tbody>
                         <tr>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">Grade</td>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">Name</td>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">E-mail Address</td>
+                          <th scope="col">Grade</td>
+                          <th scope="col">Name</td>
+                          <th scope="col">E-mail Address</td>
                         </tr>
                         <tr>
                           <td rowspan="4" align="center" valign="middle" width="10%">99</td>
@@ -307,7 +335,7 @@ body {
                       <table width="100%" border="1" cellpadding="2" cellspacing="0"> 
                         <tbody> 
                           <tr> 
-                            <td align="center" bgcolor="#5AB6D6" valign="middle">Grade</td> 
+                            <th scope="col">Grade</td> 
                             <td align="center" valign="middle" bgcolor="#5AB6D6">Name</td> 
                             <td align="center" valign="middle" bgcolor="#5AB6D6">E-mail Address</td> 
                           </tr> 
@@ -330,7 +358,7 @@ body {
                     <table width="100%" border="1" cellpadding="2" cellspacing="0"> 
                         <tbody> 
                           <tr> 
-                            <td align="center" bgcolor="#5AB6D6" valign="middle">Grade</td> 
+                            <th scope="col">Grade</td> 
                             <td align="center" valign="middle" bgcolor="#5AB6D6">Name</td> 
                             <td align="center" valign="middle" bgcolor="#5AB6D6">E-mail Address</td> 
                           </tr>                            
@@ -353,9 +381,9 @@ body {
                   <table width="100%" cellspacing="0" cellpadding="2" border="1">
                     <tbody>
                       <tr>
-                        <td align="center" bgcolor="#5AB6D6" valign="middle">Grade</td>
-                        <td align="center" bgcolor="#5AB6D6" valign="middle">Name</td>
-                        <td align="center" bgcolor="#5AB6D6" valign="middle">E-mail Address</td>
+                        <th scope="col">Grade</td>
+                        <th scope="col">Name</td>
+                        <th scope="col">E-mail Address</td>
                       </tr>
                       <tr>
                         <td rowspan="5" align="center" valign="middle" width="43">107</td>
@@ -382,9 +410,9 @@ body {
                     <table width="100%" cellspacing="0" cellpadding="2" border="1">
                       <tbody>
                           <tr>
-                              <td align="center" bgcolor="#5AB6D6" valign="middle">Grade</td>
-                              <td align="center" bgcolor="#5AB6D6" valign="middle">Name</td>
-                              <td align="center" bgcolor="#5AB6D6" valign="middle">E-mail Address</td>
+                              <th scope="col">Grade</td>
+                              <th scope="col">Name</td>
+                              <th scope="col">E-mail Address</td>
                           </tr>
                           <tr>
                               <td rowspan="4" align="center" valign="middle" width="10%">106</td>
@@ -409,9 +437,9 @@ body {
                     <table width="100%" cellspacing="0" cellpadding="2" border="1">
                       <tbody>
                           <tr>
-                              <td align="center" bgcolor="#5AB6D6" valign="middle">Grade</td>
-                              <td align="center" bgcolor="#5AB6D6" valign="middle">Name</td>
-                              <td align="center" bgcolor="#5AB6D6" valign="middle">E-mail Address</td>
+                              <th scope="col">Grade</td>
+                              <th scope="col">Name</td>
+                              <th scope="col">E-mail Address</td>
                           </tr>
                           <tr>
                               <td rowspan="4" align="center" valign="middle" width="10%">105</td>
@@ -436,9 +464,9 @@ body {
 				  <table width="100%" cellspacing="0" cellpadding="2" border="1">
                       <tbody>
                         <tr>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">Grade</td>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">Name</td>
-                          <td align="center" bgcolor="#5AB6D6" valign="middle">E-mail Address</td>
+                          <th scope="col">Grade</td>
+                          <th scope="col">Name</td>
+                          <th scope="col">E-mail Address</td>
                         </tr>
                         <tr>
                           <td rowspan="3" align="center" valign="middle" width="10%">100</td>                          
@@ -459,7 +487,7 @@ body {
                   <table width="100%" cellspacing="0" cellpadding="2" border="1">
                     <tbody>
                       <tr>
-                        <td align="center" bgcolor="#5AB6D6" valign="middle">Grade</td>
+                        <th scope="col">Grade</td>
                         <td align="center" valign="middle" bgcolor="#5AB6D6">Name</td>
                         <td align="center" valign="middle" bgcolor="#5AB6D6">E-mail Address</td>
                       </tr>
@@ -482,9 +510,9 @@ body {
                       <table width="100%" cellspacing="0" cellpadding="2" border="1"> 
                         <tbody> 
                           <tr> 
-                            <td align="center" bgcolor="#5AB6D6" valign="middle">Grade</td> 
-                            <td align="center" bgcolor="#5AB6D6" valign="middle">Name</td> 
-                            <td align="center" bgcolor="#5AB6D6" valign="middle">E-mail Address</td> 
+                            <th scope="col">Grade</td> 
+                            <th scope="col">Name</td> 
+                            <th scope="col">E-mail Address</td> 
                           </tr> 
                           <tr> 
                             <td rowspan="3" align="center" valign="middle" width="10%">96</td> 
@@ -505,9 +533,9 @@ body {
                     <table width="100%" cellspacing="0" cellpadding="2" border="1"> 
                         <tbody> 
                           <tr> 
-                            <td align="center" bgcolor="#5AB6D6" valign="middle">Grade</td> 
-                            <td align="center" bgcolor="#5AB6D6" valign="middle">Name</td> 
-                            <td align="center" bgcolor="#5AB6D6" valign="middle">E-mail Address</td> 
+                            <th scope="col">Grade</td> 
+                            <th scope="col">Name</td> 
+                            <th scope="col">E-mail Address</td> 
                           </tr> 
                           <tr> 
                             <td rowspan="3" align="center" valign="middle" width="10%">94</td> 
