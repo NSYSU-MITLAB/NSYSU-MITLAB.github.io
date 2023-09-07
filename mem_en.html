@@ -18,23 +18,29 @@
   }
 
   .info {
-    border: 1px solid black;
+    border: 2px solid black;
     align-content: center;
-    border-spacing: 0px;
+    border-spacing: 2px;
     padding: 2px;
     width: 100%;
-    height: fu
+    height: 169px;
+    border-collapse: collapse;
   }
   .info > tbody > tr > th {
+    border: 1px solid black;
     text-align: center;
     background-color: #5AB6D6;
     vertical-align: center;
-    font-size: 14px;
+    font-size: 11px;
   }
   .info > tbody > tr > td {
+    border: 1px solid black;
     text-align: center;
     vertical-align: center;
-    font-size: 13px;
+    font-size: 11px;
+  }
+  table[aria-label="cpchen"] > tbody > tr > * { 
+    font-size: 16px;
   }
 </style> 
 </head> 
@@ -68,498 +74,492 @@
     <td><div style="background-color:#000000">&nbsp;</div></td> 
   </tr> 
   <tr> 
-    <td ><table width="100%" border="3" bordercolor="#003300"> 
-      
-      <tr> 
-        <td width="76%" bgcolor="#CCCCCC" valign="top"> 
-		   <table width="100%" border="0"> 
-            
-            <tr> 
-              <td><table width="100%" border="0" align="center"> 
-                <tr bordercolor="#FFFFFF" background="images/header2_bg.jpg"> 
-                  <td colspan="2" align="center" class="style15">Members</td> 
-                </tr> 
-                <tr> 
-                  <td align="center" valign="top"><p align="left" class="style5">Advisor</p> 
-                    <table height="56" width="100%"  border="1" align="left" cellpadding="2" cellspacing="0"> 
-                      <tbody> 
-                        <tr> 
-                          <th scope="col">Name</td> 
-                          <th scope="col">E-mail Address</td> 
-                        </tr> 
-                        <tr> 
-                          <td align="center" valign="middle"><a href="http://slpl.cse.nsysu.edu.tw/cpchen/" class="style17">Chia-Ping Chen</a></td> 
-                          <td align="center" valign="middle"><a href="mailto:cpchen@cse.nsysu.edu.tw">cpchen@cse.nsysu.edu.tw</a> </td> 
-                        </tr> 
-                      </tbody> 
-                    </table> 
-                    <p align="left" class="style5">&nbsp;</p>
-					</td> 
-                </tr> 
-                <tr> 
-                  <td colspan="2" align="center" valign="top"><hr /></td> 
-                  </tr> 
+    <th>
+      <table width="100%" border="3" bordercolor="#003300"> 
+        <tr> 
+          <th width="76%" bgcolor="#CCCCCC" valign="top"> 
+		        <table width="100%" border="0"> 
+              <tr> 
+                <th>
+                  <table width="100%" border="0" align="center"> 
+                    <tr bordercolor="#FFFFFF" background="images/header2_bg.jpg"> 
+                      <td colspan="2" align="center" class="style15">Members</td> 
+                    </tr> 
+                    <!-- advisor -->
+                    <tr> 
+                      <th colspan="2" scope="col" class="header">
+                        <p class="style5">Advisor</p> 
+                        <table height="56" aria-label="cpchen" class="info"> 
+                          <tbody> 
+                            <tr> 
+                              <th scope="col">Name</th> 
+                              <th scope="col">E-mail Address</th> 
+                            </tr> 
+                            <tr> 
+                              <td><a href="http://slpl.cse.nsysu.edu.tw/cpchen/" class="style17">Chia-Ping Chen</a></td> 
+                              <td><a href="mailto:cpchen@cse.nsysu.edu.tw">cpchen@cse.nsysu.edu.tw</a> </td> 
+                            </tr> 
+                          </tbody> 
+                        </table> 
+                        <p class="style5">&nbsp;</p>
+                      </th> 
+                    </tr> 
+                    <tr><td colspan="2"><hr></td></tr> <!-- horizontal line -->
+                    <!-- master's student -->
+                    <tr> 
+                      <th scope="col" class="header"> <!-- even -->
+                        <p class="style5">Mastery Students</p>
 
-                <tr> 
-                    <td valign="top">
-                        <p align="left" class="style5">Mastery Students</p>
-
-                        <table cellspacing="0" cellpadding="2" border="1">
-                          <tbody>
-                            <tr>
-                              <th scope="col">Grade</td>
-                              <th scope="col">Name</td>
-                              <th scope="col">E-mail Address</td>
-                            </tr>
-                            <tr>
-                              <td rowspan="5" align="center" valign="middle" width="43">110</td>
-                              <td align="center" valign="middle"><a href="/member/CYKen/personal.html">Yen-Kuan Chen</a></td>
-                              <td align="center" valign="middle"><a href="mailto:M103040087@student.nsysu.edu.tw">M103040087@student.nsysu.edu.tw</a> </td>
-                            </tr>
-                            <tr>
-                              <td align="center" valign="middle"><a href="/member/cpchiou/personal.html">Chung-Pu Chiou</a></td>
-                              <td align="center" valign="middle"><a href="mailto:M103040061@student.nsysu.edu.tw">M103040061@student.nsysu.edu.tw</a> </td>
-                            </tr>
-                            <tr>
-                              <td align="center" valign="middle"><a href="/member/twchen/personal.html">Ting-Wei Chen</a></td>
-                              <td align="center" valign="middle"><a href="mailto:M103040017@student.nsysu.edu.tw">M103040017@student.nsysu.edu.tw</a> </td>
-                            </tr>
-                            <tr>
-                              <td align="center" valign="middle"><a href="/member/chiachuan/personal.html">Chia-Chuan Liu</a></td>
-                              <td align="center" valign="middle"><a href="mailto:M103040063@student.nsysu.edu.tw">M103040063@student.nsysu.edu.tw</a> </td>
-                            </tr>
-                            <tr>
-                              <td align="center" valign="middle"><a href="/member/HJLien/personal.html">Hsin-Jou Lien</a></td>
-                              <td align="center" valign="middle"><a href="mailto:M103040105@student.nsysu.edu.tw">M103040105@student.nsysu.edu.tw</a> </td>
-                            </tr>
-                          </tbody>
+                        <table aria-label="110" class="info">
+                              <tbody>
+                                <tr>
+                                  <th scope="col">Grade</th>
+                                  <th scope="col">Name</th>
+                                  <th scope="col">E-mail Address</th>
+                                </tr>
+                                <tr>
+                                  <td rowspan="5" width="43">110</td>
+                                  <td><a href="/member/CYKen/personal.html">Yen-Kuan Chen</a></td>
+                                  <td><a href="mailto:M103040087@student.nsysu.edu.tw">M103040087@student.nsysu.edu.tw</a> </td>
+                                </tr>
+                                <tr>
+                                  <td><a href="/member/cpchiou/personal.html">Chung-Pu Chiou</a></td>
+                                  <td><a href="mailto:M103040061@student.nsysu.edu.tw">M103040061@student.nsysu.edu.tw</a> </td>
+                                </tr>
+                                <tr>
+                                  <td><a href="/member/twchen/personal.html">Ting-Wei Chen</a></td>
+                                  <td><a href="mailto:M103040017@student.nsysu.edu.tw">M103040017@student.nsysu.edu.tw</a> </td>
+                                </tr>
+                                <tr>
+                                  <td><a href="/member/chiachuan/personal.html">Chia-Chuan Liu</a></td>
+                                  <td><a href="mailto:M103040063@student.nsysu.edu.tw">M103040063@student.nsysu.edu.tw</a> </td>
+                                </tr>
+                                <tr>
+                                  <td><a href="/member/HJLien/personal.html">Hsin-Jou Lien</a></td>
+                                  <td><a href="mailto:M103040105@student.nsysu.edu.tw">M103040105@student.nsysu.edu.tw</a> </td>
+                                </tr>
+                              </tbody>
                         </table>
                         <p>&nbsp;</p>
 
-                    </td>
-                    <td width="50%" valign="top">
+                      </th>
+                      <th scope="col" class="header"> <!-- odd -->
                         <p class="style5">&nbsp;</p>
 
-                        <table cellspacing="0" cellpadding="2" border="1">
+                        <table aria-label="109" class="info">
+                              <tbody>
+                                <tr>
+                                  <th scope="col">Grade</th>
+                                  <th scope="col">Name</th>
+                                  <th scope="col">E-mail Address</th>
+                                </tr>
+                                <tr>
+                                  <td rowspan="5" width="43">109</td>
+                                  <td><a href="/member/sj/personal.html">Sung-Jen Huang</a></td>
+                                  <td><a href="mailto:M093040011@student.nsysu.edu.tw">M093040011@student.nsysu.edu.tw</a> </td>
+                                </tr>
+                                <tr>
+                                  <td><a href="/member/LYHung/personal.html">Li-Yu Hung</a></td>
+                                  <td><a href="mailto:M093040070@student.nsysu.edu.tw">M093040070@student.nsysu.edu.tw</a> </td>
+                                </tr>
+                                <tr>
+                                  <td><a href="/member/wtlin/personal.html">Wei-Ting Lin</a></td>
+                                  <td><a href="mailto:M093040020@student.nsysu.edu.tw">M093040020@student.nsysu.edu.tw</a> </td>
+                                </tr>
+                                <tr>
+                                  <td><a href="/member/halin/personal.html">Hou-An Lin</a></td>
+                                  <td><a href="mailto:M093040066@student.nsysu.edu.tw">M093040066@student.nsysu.edu.tw</a> </td>
+                                </tr>
+                              </tbody>
+                        </table>
+                        <p>&nbsp;</p>
+
+                      </th>
+                    </tr> 
+                    <tr><td colspan="2"><hr></td></tr> <!-- horizontal line -->
+                    <!-- master -->
+                    <tr> 
+                      <th scope="col" class="header"> <!-- even -->
+                        <p class="style5">Graduated Mastery Students</p>
+                        
+                        <table aria-label="108" class="info">
                           <tbody>
                             <tr>
-                              <th scope="col">Grade</td>
-                              <th scope="col">Name</td>
-                              <th scope="col">E-mail Address</td>
+                              <th scope="col">Grade</th>
+                              <th scope="col">Name</th>
+                              <th scope="col">E-mail Address</th>
                             </tr>
                             <tr>
-                              <td rowspan="5" align="center" valign="middle" width="43">109</td>
-                              <td align="center" valign="middle"><a href="/member/sj/personal.html">Sung-Jen Huang</a></td>
-                              <td align="center" valign="middle"><a href="mailto:M093040011@student.nsysu.edu.tw">M093040011@student.nsysu.edu.tw</a> </td>
+                              <td rowspan="5" width="43">108</td>
+                              <td><a href="/member/yihwen/personal.html">Yih-Wen Wang</a></td>
+                              <td><a href="mailto:M083040011@student.nsysu.edu.tw">M083040011@student.nsysu.edu.tw</a> </td>
                             </tr>
                             <tr>
-                              <td align="center" valign="middle"><a href="/member/LYHung/personal.html">Li-Yu Hung</a></td>
-                              <td align="center" valign="middle"><a href="mailto:M093040070@student.nsysu.edu.tw">M093040070@student.nsysu.edu.tw</a> </td>
+                              <td><a href="/member/huihsin/personal.html">Hui-Hsin Jeng</a></td>
+                              <td><a href="mailto:M083040026@student.nsysu.edu.tw">M083040026@student.nsysu.edu.tw</a> </td>
                             </tr>
                             <tr>
-                              <td align="center" valign="middle"><a href="/member/wtlin/personal.html">Wei-Ting Lin</a></td>
-                              <td align="center" valign="middle"><a href="mailto:M093040020@student.nsysu.edu.tw">M093040020@student.nsysu.edu.tw</a> </td>
+                              <td><a href="/member/hplin/personal.html">Hung-Pang Lin</a></td>
+                              <td><a href="mailto:M083040013@student.nsysu.edu.tw">M083040013@student.nsysu.edu.tw</a> </td>
                             </tr>
                             <tr>
-                              <td align="center" valign="middle"><a href="/member/halin/personal.html">Hou-An Lin</a></td>
-                              <td align="center" valign="middle"><a href="mailto:M093040066@student.nsysu.edu.tw">M093040066@student.nsysu.edu.tw</a> </td>
+                              <td><a href="/member/yczhang/personal.html">Yu-Jia Zhang</a></td>
+                              <td><a href="mailto:M083040025@student.nsysu.edu.tw">M083040025@student.nsysu.edu.tw</a> </td>
                             </tr>
                           </tbody>
                         </table>
                         <p>&nbsp;</p>
 
-
-                        <!--
-        <table width="100%" cellspacing="0" cellpadding="2" border="1">
-          <tbody>
-            <tr>
-              <th scope="col">Grade</td>
-              <th scope="col">Name</td>
-              <th scope="col">E-mail Address</td>
-            </tr>
-              <td rowspan="2" align="center" valign="middle" width="10%">102</td>
-            <tr>
-              <td align="center" valign="middle"><a href="/member/cfliou/personal.html">Chung-Fan Liou</a></td>
-              <td align="center" valign="middle"><a href="mailto:M023040056@student.nsysu.edu.tw">M023040056@student.nsysu.edu.tw</a></td>
-            </tr>
-          </tbody>
-        </table>
-        <p>&nbsp;</p>
-        -->
-
-
-					<!--
-                    <p class="style5">&nbsp;</p></td>
-					-->
-                </tr> 
-                <tr> 
-                  <td colspan="2" valign="top"><hr /></td> 
-                  </tr> 
-                <tr> 
-                  <td valign="top"><p align="left" class="style5">Graduated Mastery Students</p>
-                    <table cellspacing="0" cellpadding="2" border="1">
-                      <tbody>
-                        <tr>
-                          <th scope="col">Grade</td>
-                          <th scope="col">Name</td>
-                          <th scope="col">E-mail Address</td>
-                        </tr>
-                        <tr>
-                          <td rowspan="5" align="center" valign="middle" width="43">108</td>
-                          <td align="center" valign="middle"><a href="/member/yihwen/personal.html">Yih-Wen Wang</a></td>
-                          <td align="center" valign="middle"><a href="mailto:M083040011@student.nsysu.edu.tw">M083040011@student.nsysu.edu.tw</a> </td>
-                        </tr>
-                        <tr>
-                          <td align="center" valign="middle"><a href="/member/huihsin/personal.html">Hui-Hsin Jeng</a></td>
-                          <td align="center" valign="middle"><a href="mailto:M083040026@student.nsysu.edu.tw">M083040026@student.nsysu.edu.tw</a> </td>
-                        </tr>
-                        <tr>
-                          <td align="center" valign="middle"><a href="/member/hplin/personal.html">Hung-Pang Lin</a></td>
-                          <td align="center" valign="middle"><a href="mailto:M083040013@student.nsysu.edu.tw">M083040013@student.nsysu.edu.tw</a> </td>
-                        </tr>
-                        <tr>
-                          <td align="center" valign="middle"><a href="/member/yczhang/personal.html">Yu-Jia Zhang</a></td>
-                          <td align="center" valign="middle"><a href="mailto:M083040025@student.nsysu.edu.tw">M083040025@student.nsysu.edu.tw</a> </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    <p>&nbsp;</p>
-
-                      <table width="100%" cellspacing="0" cellpadding="2" border="1">
+                        <table aria-label="106" class="info">
                           <tbody>
-                              <tr>
-                                  <th scope="col">Grade</td>
-                                  <th scope="col">Name</td>
-                                  <th scope="col">E-mail Address</td>
-                              </tr>
-                              <tr>
-                                  <td rowspan="4" align="center" valign="middle" width="10%">104</td>
-                                  <td align="center" valign="middle"><a href="/member/thwu/personal_en.html">Tung-Han Wu</a></td>
-                                  <td align="center" valign="middle"><a href="mailto:M043040029@student.nsysu.edu.tw">M043040029@student.nsysu.edu.tw</a> </td>
-                              </tr>
-                              <tr>
-                                  <td align="center" valign="middle"><a href="/member/jszhan/personal_en.html">Chia-Hsien Chan</a></td>
-                                  <td align="center" valign="middle"><a href="mailto:M043040070@student.nsysu.edu.tw">M043040070@student.nsysu.edu.tw</a> </td>
-                              </tr>
-                              <tr>
-                                  <td align="center" valign="middle"><a href="/member/thtseng/personal_en.html">Tzu-Hsuan Tseng</a></td>
-                                  <td align="center" valign="middle"><a href="mailto:M043040013@student.nsysu.edu.tw">M043040013@student.nsysu.edu.tw</a> </td>
-                              </tr>
-                              <tr>
-                                  <td align="center" valign="middle"><a href="/member/thyang/personal_en.html">Tzu-Hsuan Yang</a></td>
-                                  <td align="center" valign="middle"><a href="mailto:M043040003@student.nsysu.edu.tw">M043040003@student.nsysu.edu.tw</a> </td>
-                              </tr>
+                            <tr>
+                              <th scope="col">Grade</th>
+                              <th scope="col">Name</th>
+                              <th scope="col">E-mail Address</th>
+                            </tr>
+                            <tr>
+                              <td rowspan="4" width="43">106</td>
+                              <td><a href="//member/suyu/personal_en.html">Su-Yu Chang</a></td>
+                              <td><a href="mailto:M063040058@student.nsysu.edu.tw">M063040058@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                            <tr>
+                              <td><a href="//member/MengPing/personal_en.html">Meng-Ping Lu</a></td>
+                              <td><a href="mailto:M063040028@student.nsysu.edu.tw">M063040028@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                            <tr>
+                              <td><a href="//member/ctyeh/personal_en.html">Chih-Ting Yeh</a></td>
+                              <td><a href="mailto:M063040008@student.nsysu.edu.tw">M063040008@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                            <tr>
+                              <td><a href="//member/yifan/personal_en.html">Yi-Fan Chen</a></td>
+                              <td><a href="mailto:M053010023@student.nsysu.edu.tw">M053010023@student.nsysu.edu.tw</a> </td>
+                            </tr>
                           </tbody>
-                      </table>
-                      <p>&nbsp;</p>
+                        </table>
+                        <p>&nbsp;</p>
 
-					 <table width="100%" cellspacing="0" cellpadding="2" border="1">
-                      <tbody>
-                        <tr>
-                          <th scope="col">Grade</td>
-                          <th scope="col">Name</td>
-                          <th scope="col">E-mail Address</td>
-                        </tr>
-                        <tr>
-                          <td rowspan="4" align="center" valign="middle" width="10%">103</td>                          
-                          <td align="center" valign="middle"><a href="/member/pyshih/personal_en.html">Po-Yuan Shih</a></td>
-                          <td align="center" valign="middle"><a href="mailto:M033040066@student.nsysu.edu.tw">M033040066@student.nsysu.edu.tw</a> </td>
-                        </tr>
-						<tr>
-                          <td align="center" valign="middle"><a href="/member/cychen/personal.html">Chia-Ying Chen</a></td>
-                          <td align="center" valign="middle"><a href="mailto:M033040029@student.nsysu.edu.tw">M033040029@student.nsysu.edu.tw</a></td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    <p>&nbsp;</p>
-				  
-					 <table width="100%" cellspacing="0" cellpadding="2" border="1">
-                      <tbody>
-                        <tr>
-                          <th scope="col">Grade</td>
-                          <th scope="col">Name</td>
-                          <th scope="col">E-mail Address</td>
-                        </tr>
-						<tr>
-                          <td rowspan="2" align="center" valign="middle" width="10%">102</td>
-                          <td align="center" valign="middle"><a href="/member/chhsieh/personal_en.html">Chi-Hao Hsieh</a></td>
-                          <td align="center" valign="middle"><a href="mailto:M023040031@student.nsysu.edu.tw">M023040031@student.nsysu.edu.tw</a> </td>
-                        </tr>                  
-                      </tbody>
-                    </table>
-                    <p>&nbsp;</p>
-					
-					<table width="100%" cellspacing="0" cellpadding="2" border="1">
-                      <tbody>
-                        <tr>
-                          <th scope="col">Grade</td>
-                          <th scope="col">Name</td>
-                          <th scope="col">E-mail Address</td>
-                        </tr>
-                        <tr>
-                          <td rowspan="1" align="center" valign="middle" width="10%">101</td>                          
-                          <td align="center" valign="middle"><a href="/member/yjhsu/personal2.html">Bo-Chang Chiou</a></td>
-                          <td align="center" valign="middle"><a href="mailto:M013040072@student.nsysu.edu.tw">M013040072@student.nsysu.edu.tw</a> </td>
-                        </tr>                    
-                      </tbody>
-                    </table>
-                    <p>&nbsp;</p>
-								  
-                     <table width="100%" cellspacing="0" cellpadding="2" border="1">
-                      <tbody>
-                        <tr>
-                          <th scope="col">Grade</td>
-                          <th scope="col">Name</td>
-                          <th scope="col">E-mail Address</td>
-                        </tr>
-                        <tr>
-                          <td rowspan="4" align="center" valign="middle" width="10%">99</td>
-                          <td align="center" valign="middle"><a href="/member/mlshiu/personal.html">Miau-Luan Shiu</a></td>
-                          <td align="center" valign="middle"><a href="mailto:M993040038@student.nsysu.edu.tw">M993040038@student.nsysu.edu.tw</a> </td>
-                        </tr>
-                        <tr>
-                          <td align="center" valign="middle"><a href="/member/bfyeh/personal.html">Bing-Feng Yeh</a></td>
-                          <td align="center" valign="middle"><a href="mailto:M993040052@student.nsysu.edu.tw">M993040052@student.nsysu.edu.tw</a> </td>
-                        </tr>
-                        <tr>
-                          <td align="center" valign="middle"><a href="/member/cyhsu/personal.html">Chih-Yu Hsu</a></td>
-                          <td align="center" valign="middle"><a href="mailto:M993040061@student.nsysu.edu.tw">M993040061@student.nsysu.edu.tw</a> </td>
-                        </tr>
-						  <tr>
-                          <td align="center" valign="middle"><a href="/member/yhhuang/personal_en.html">Yu-Hung Huang</a></td>
-                          <td align="center" valign="middle"><a href="mailto:M993040036@student.nsysu.edu.tw">M993040036@student.nsysu.edu.tw</a> </td>
-                        </tr> 
-                      </tbody>
-                    </table> 
-                    <p>&nbsp;</p>
-                      <table width="100%" border="1" cellpadding="2" cellspacing="0"> 
-                        <tbody> 
-                          <tr> 
-                            <th scope="col">Grade</td> 
-                            <td align="center" valign="middle" bgcolor="#5AB6D6">Name</td> 
-                            <td align="center" valign="middle" bgcolor="#5AB6D6">E-mail Address</td> 
-                          </tr> 
-                          <tr> 
-                            <td rowspan="3" align="center" valign="middle" width="10%">97</td> 
-                            <td align="center" valign="middle"><a href="/member/jzye/index.html">Ja-Zang Yeh</a></td> 
-                            <td align="center" valign="middle"><a href="mailto:ycc97m@cse.nsysu.edu.tw">ycc97m@cse.nsysu.edu.tw</a> </td> 
-                          </tr> 
-                          <tr> 
-                            <td align="center" valign="middle"><a href="/member/khwu/index.html">Kuo-Hao Wu</a></td> 
-                            <td align="center" valign="middle"><a href="mailto:wkh97m@cse.nsysu.edu.tw">wkh97m@cse.nsysu.edu.tw </a> </td> 
-                          </tr> 
-                          <tr> 
-                            <td align="center" valign="middle"><a href="/member/cyyang/index.html">Chih-Yung Yang</a></td> 
-                            <td align="center" valign="middle"><a href="mailto:ycyg97m@cse.nsysu.edu.tw">ycyg97m@cse.nsysu.edu.tw</a> </td> 
-                          </tr> 
-                        </tbody> 
-                      </table> 
-                    <p>&nbsp;</p> 
-                    <table width="100%" border="1" cellpadding="2" cellspacing="0"> 
-                        <tbody> 
-                          <tr> 
-                            <th scope="col">Grade</td> 
-                            <td align="center" valign="middle" bgcolor="#5AB6D6">Name</td> 
-                            <td align="center" valign="middle" bgcolor="#5AB6D6">E-mail Address</td> 
-                          </tr>                            
-                          <tr> 
-							<td rowspan="3" align="center" valign="middle" width="10%">95</td> 
-                            <td align="center" valign="middle"><a href="/member/ychuang/index.html">Yi-Ching Huang</a></td> 
-                            <td align="center" valign="middle"><a href="mailto:M953040053@student.nsysu.edu.tw">M953040053@student.nsysu.edu.tw</a> </td> 
-                          </tr> 
-                          <tr> 
-                            <td align="center" valign="middle"><a href="/member/bhchen/index.html">Bo-Han Chen</a></td> 
-                            <td align="center" valign="middle"><a href="mailto:M953040057@student.nsysu.edu.tw">M953040057@student.nsysu.edu.tw</a> </td> 
-                          </tr> 
-						  <tr>                            
-                            <td align="center" valign="middle"><a href="/member/scchiang/index.html">Shin-Chian Chiang</a></a></td> 
-                            <td align="center" valign="middle"><a href="mailto:M953040062@student.nsysu.edu.tw">M953040062@student.nsysu.edu.tw</a> </td> 
-                          </tr>
-                        </tbody> 
-                    </table></td> 
-                  <td valign="top"><p class="style5">&nbsp;</p>
-                  <table width="100%" cellspacing="0" cellpadding="2" border="1">
-                    <tbody>
-                      <tr>
-                        <th scope="col">Grade</td>
-                        <th scope="col">Name</td>
-                        <th scope="col">E-mail Address</td>
-                      </tr>
-                      <tr>
-                        <td rowspan="5" align="center" valign="middle" width="43">107</td>
-                        <td align="center" valign="middle"><a href="/member/ckfang/personal.html">Chih-Gang Fang</a></td>
-                        <td align="center" valign="middle"><a href="mailto:M073040003@student.nsysu.edu.tw">M073040003@student.nsysu.edu.tw</a> </td>
-                      </tr>
-                      <tr>
-                        <td align="center" valign="middle"><a href="/member/pwhsiao/personal.html">Po-Chin Wang</a></td>
-                        <td align="center" valign="middle"><a href="mailto:M073040069@student.nsysu.edu.tw">M073040069@student.nsysu.edu.tw</a> </td>
-                      </tr>
-                      <tr>
-                        <td align="center" valign="middle"><a href="/member/accheng/personal.html">An-Chieh Cheng</a></td>
-                        <td align="center" valign="middle"><a href="mailto:M073040081@student.nsysu.edu.tw">M073040081@student.nsysu.edu.tw</a> </td>
-                      </tr>
-                      <tr>
-                        <td align="center" valign="middle"><a href="/member/kcwu/personal.html">Kai-Cheng Wu</a></td>
-                        <td align="center" valign="middle"><a href="mailto:M073040098@student.nsysu.edu.tw">M073040098@student.nsysu.edu.tw</a> </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                        <table aria-label="104" class="info">
+                          <tbody>
+                            <tr>
+                              <th scope="col">Grade</th>
+                              <th scope="col">Name</th>
+                              <th scope="col">E-mail Address</th>
+                            </tr>
+                            <tr>
+                              <td rowspan="4" width="43">104</td>
+                              <td><a href="/member/thwu/personal_en.html">Tung-Han Wu</a></td>
+                              <td><a href="mailto:M043040029@student.nsysu.edu.tw">M043040029@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                            <tr>
+                              <td><a href="/member/jszhan/personal_en.html">Chia-Hsien Chan</a></td>
+                              <td><a href="mailto:M043040070@student.nsysu.edu.tw">M043040070@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                            <tr>
+                              <td><a href="/member/thtseng/personal_en.html">Tzu-Hsuan Tseng</a></td>
+                              <td><a href="mailto:M043040013@student.nsysu.edu.tw">M043040013@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                            <tr>
+                              <td><a href="/member/thyang/personal_en.html">Tzu-Hsuan Yang</a></td>
+                              <td><a href="mailto:M043040003@student.nsysu.edu.tw">M043040003@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <p>&nbsp;</p>
+              
+                        <table aria-label="102" class="info">
+                          <tbody>
+                            <tr>
+                              <th scope="col">Grade</th>
+                              <th scope="col">Name</th>
+                              <th scope="col">E-mail Address</th>
+                            </tr>
+                            <tr>
+                              <td rowspan="2" width="43">102</td>
+                              <td><a href="/member/chhsieh/personal_en.html">Chi-Hao Hsieh</a></td>
+                              <td><a href="mailto:M023040031@student.nsysu.edu.tw">M023040031@student.nsysu.edu.tw</a> </td>
+                            </tr>                  
+                          </tbody>
+                        </table>
+                        <p>&nbsp;</p>
+                        
+                        <table aria-label="100" class="info">
+                          <tbody>
+                            <tr>
+                              <th scope="col">Grade</th>
+                              <th scope="col">Name</th>
+                              <th scope="col">E-mail Address</th>
+                            </tr>
+                            <tr>
+                              <td rowspan="3" width="43">100</td>                          
+                              <td><a href="/member/tpyen/personal.html">Tsung-Peng Yen</a></td>
+                              <td><a href="mailto:M003040029@student.nsysu.edu.tw">M003040029@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                            <tr>
+                              <td><a href="/member/mkwu/personal.html">Ming-Kung Wu</a></td>
+                              <td><a href="mailto:M003040056@student.nsysu.edu.tw">M003040056@student.nsysu.edu.tw</a> </td>						  
+                            </tr>
+                            <tr>
+                              <td><a href="/member/yjhsu/personal_en.html">Yu-Jen Hsu</a></td>
+                              <td><a href="mailto:M003040035@student.nsysu.edu.tw">M003040035@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <p>&nbsp;</p>	
 
-                  <p>&nbsp;</p>
+                        <table aria-label="98" class="info">
+                          <tbody>
+                            <tr>
+                              <th scope="col">Grade</th>
+                              <th scope="col">Name</th>
+                              <th scope="col">E-mail Address</th>
+                            </tr>
+                            <tr>
+                              <td rowspan="3" width="43">98</td>
+                              <td><a href="/member/hhchung/personal.html">Chung-Hsiang Huang</a></td>
+                              <td><a href="mailto:M983040007@student.nsysu.edu.tw">M983040007@student.nsysu.edu.tw</a></td>
+                            </tr>
+                            <tr>
+                              <td><a href="/member/bfwu/personal.html">Bo-Feng Wu</a></td>
+                              <td><a href="mailto:M983040035@student.nsysu.edu.tw">M983040035@student.nsysu.edu.tw</a></td>
+                            </tr>
+                            <tr>
+                              <td><a href="/member/fgshiu/personal.html">Feng-Ho Hsu</a></td>
+                              <td><a href="mailto:M983040058@student.nsysu.edu.tw">M983040058@student.nsysu.edu.tw</a></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <p>&nbsp;</p>
 
-                    <table width="100%" cellspacing="0" cellpadding="2" border="1">
-                      <tbody>
-                          <tr>
-                              <th scope="col">Grade</td>
-                              <th scope="col">Name</td>
-                              <th scope="col">E-mail Address</td>
-                          </tr>
-                          <tr>
-                              <td rowspan="4" align="center" valign="middle" width="10%">106</td>
-                              <td align="center" valign="middle"><a href="//member/suyu/personal_en.html">Su-Yu Chang</a></td>
-                              <td align="center" valign="middle"><a href="mailto:M063040058@student.nsysu.edu.tw">M063040058@student.nsysu.edu.tw</a> </td>
-                          </tr>
-                          <tr>
-                              <td align="center" valign="middle"><a href="//member/MengPing/personal_en.html">Meng-Ping Lu</a></td>
-                              <td align="center" valign="middle"><a href="mailto:M063040028@student.nsysu.edu.tw">M063040028@student.nsysu.edu.tw</a> </td>
-                          </tr>
-                          <tr>
-                              <td align="center" valign="middle"><a href="//member/ctyeh/personal_en.html">Chih-Ting Yeh</a></td>
-                              <td align="center" valign="middle"><a href="mailto:M063040008@student.nsysu.edu.tw">M063040008@student.nsysu.edu.tw</a> </td>
-                          </tr>
-                          <tr>
-                              <td align="center" valign="middle"><a href="//member/yifan/personal_en.html">Yi-Fan Chen</a></td>
-                              <td align="center" valign="middle"><a href="mailto:M053010023@student.nsysu.edu.tw">M053010023@student.nsysu.edu.tw</a> </td>
-                          </tr>
-                      </tbody>
-                  </table>
-                  <p>&nbsp;</p>
-                    <table width="100%" cellspacing="0" cellpadding="2" border="1">
-                      <tbody>
-                          <tr>
-                              <th scope="col">Grade</td>
-                              <th scope="col">Name</td>
-                              <th scope="col">E-mail Address</td>
-                          </tr>
-                          <tr>
-                              <td rowspan="4" align="center" valign="middle" width="10%">105</td>
-                              <td align="center" valign="middle"><a href="/member/zygao/personal_en.html">Zi-Yuan Gao</a></td>
-                              <td align="center" valign="middle"><a href="mailto:M053040030@student.nsysu.edu.tw">M053040030@student.nsysu.edu.tw</a> </td>
-                          </tr>
-                          <tr>
-                              <td align="center" valign="middle"><a href="/member/pwhsiao/personal_en.html">Po-Wei Hsiao</a></td>
-                              <td align="center" valign="middle"><a href="mailto:M053040067@student.nsysu.edu.tw">M053040067@student.nsysu.edu.tw</a> </td>
-                          </tr>
-                          <tr>
-                              <td align="center" valign="middle"><a href="/member/zsding/personal_en.html">Zi-Shuan Ding</a></td>
-                              <td align="center" valign="middle"><a href="mailto:M053040022@student.nsysu.edu.tw">M053040022@student.nsysu.edu.tw</a> </td>
-                          </tr>
-                          <tr>
-                              <td align="center" valign="middle"><a href="/member/pchsieh/personal_en.html">Po-Chen Hsieh</a></td>
-                              <td align="center" valign="middle"><a href="mailto:M053040031@student.nsysu.edu.tw">M053040031@student.nsysu.edu.tw</a> </td>
-                          </tr>
-                      </tbody>
-                  </table>
-                  <p>&nbsp;</p>
-				  <table width="100%" cellspacing="0" cellpadding="2" border="1">
-                      <tbody>
-                        <tr>
-                          <th scope="col">Grade</td>
-                          <th scope="col">Name</td>
-                          <th scope="col">E-mail Address</td>
-                        </tr>
-                        <tr>
-                          <td rowspan="3" align="center" valign="middle" width="10%">100</td>                          
-                          <td align="center" valign="middle"><a href="/member/tpyen/personal.html">Tsung-Peng Yen</a></td>
-                          <td align="center" valign="middle"><a href="mailto:M003040029@student.nsysu.edu.tw">M003040029@student.nsysu.edu.tw</a> </td>
-                        </tr>
-                        <tr>
-                          <td align="center" valign="middle"><a href="/member/mkwu/personal.html">Ming-Kung Wu</a></td>
-                          <td align="center" valign="middle"><a href="mailto:M003040056@student.nsysu.edu.tw">M003040056@student.nsysu.edu.tw</a> </td>						  
-                        </tr>
-						 <tr>
-                          <td align="center" valign="middle"><a href="/member/yjhsu/personal_en.html">Yu-Jen Hsu</a></td>
-                          <td align="center" valign="middle"><a href="mailto:M003040035@student.nsysu.edu.tw">M003040035@student.nsysu.edu.tw</a> </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    <p>&nbsp;</p>	
-                  <table width="100%" cellspacing="0" cellpadding="2" border="1">
-                    <tbody>
-                      <tr>
-                        <th scope="col">Grade</td>
-                        <td align="center" valign="middle" bgcolor="#5AB6D6">Name</td>
-                        <td align="center" valign="middle" bgcolor="#5AB6D6">E-mail Address</td>
-                      </tr>
-                      <tr>
-                        <td rowspan="3" align="center" valign="middle" width="10%">98</td>
-                        <td noWrap align="center" valign="middle"><a href="/member/hhchung/personal.html">Chung-Hsiang Huang</a></td>
-                        <td align="center" valign="middle"><a href="mailto:M983040007@student.nsysu.edu.tw">M983040007@student.nsysu.edu.tw</a></td>
-                      </tr>
-                      <tr>
-                        <td align="center" valign="middle"><a href="/member/bfwu/personal.html">Bo-Feng Wu</a></td>
-                        <td align="center" valign="middle"><a href="mailto:M983040035@student.nsysu.edu.tw">M983040035@student.nsysu.edu.tw</a></td>
-                      </tr>
-                      <tr>
-                        <td align="center" valign="middle"><a href="/member/fgshiu/personal.html">Feng-Ho Hsu</a></td>
-                        <td align="center" valign="middle"><a href="mailto:M983040058@student.nsysu.edu.tw">M983040058@student.nsysu.edu.tw</a></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <p>&nbsp;</p>
-                      <table width="100%" cellspacing="0" cellpadding="2" border="1"> 
-                        <tbody> 
-                          <tr> 
-                            <th scope="col">Grade</td> 
-                            <th scope="col">Name</td> 
-                            <th scope="col">E-mail Address</td> 
-                          </tr> 
-                          <tr> 
-                            <td rowspan="3" align="center" valign="middle" width="10%">96</td> 
-                            <td align="center" valign="middle"><a href="/member/ypwang/personal.html">Yu-Ping Wang</a></td> 
-                            <td align="center" valign="middle"><a href="mailto:papadogintw@hotmail.com">M963040020@student.nsysu.edu.tw</a> </td> 
-                          </tr> 
-                          <tr> 
-                            <td align="center" valign="middle"><a href="/member/scchou/index.html">Sheng-Chiuan Chiou</a></td> 
-                            <td align="center" valign="middle"><a href="mailto:M963040039@student.nsysu.edu.tw">M963040039@student.nsysu.edu.tw</a></td> 
-                          </tr> 
-                          <tr> 
-                            <td align="center" valign="middle"><a href="/member/ycchen/index.html">Yi-Chang Chen</a></td> 
-                            <td align="center" valign="middle"><a href="mailto:M963040046@student.nsysu.edu.tw">M963040046@student.nsysu.edu.tw</a> </td> 
-                          </tr> 
-                        </tbody> 
-                      </table> 
-                    <p>&nbsp;</p> 
-                    <table width="100%" cellspacing="0" cellpadding="2" border="1"> 
-                        <tbody> 
-                          <tr> 
-                            <th scope="col">Grade</td> 
-                            <th scope="col">Name</td> 
-                            <th scope="col">E-mail Address</td> 
-                          </tr> 
-                          <tr> 
-                            <td rowspan="3" align="center" valign="middle" width="10%">94</td> 
-                            <td align="center" valign="middle"><a href="/apache2-default/chtseng/index.html">Chun-Han Tseng</a></td> 
-                            <td align="center" valign="middle"><a href="mailto:M943040041@student.nsysu.edu.tw">M943040041@student.nsysu.edu.tw</a> </td> 
-                          </tr> 
-                          <tr> 
-                            <td align="center" valign="middle"><a href="/member/sfwang/index.html">Shen-Fu Wang</a></td> 
-                            <td align="center" valign="middle"><a href="mailto:M943040056@student.nsysu.edu.tw">M943040055@student.nsysu.edu.tw</a> </td> 
-                          </tr> 
-                          <tr> 
-                            <td align="center" valign="middle"><a href="/apache2-default/thchen/index.html">Tai_Hung Chen</a></td> 
-                            <td align="center" valign="middle"><a href="mailto:M943040071@student.nsysu.edu.tw">M943040071@student.nsysu.edu.tw</a> </td> 
-                          </tr> 
-                        </tbody> 
-                      </table> 
-                   </td> 
-                </tr> 
-              </table> 
-                </td> 
-            </tr> 
-          </table></td> 
+                        <table aria-label="96" class="info"> 
+                          <tbody> 
+                            <tr> 
+                              <th scope="col">Grade</th> 
+                              <th scope="col">Name</th> 
+                              <th scope="col">E-mail Address</th> 
+                            </tr> 
+                            <tr> 
+                              <td rowspan="3" width="43">96</td> 
+                              <td><a href="/member/ypwang/personal.html">Yu-Ping Wang</a></td> 
+                              <td><a href="mailto:papadogintw@hotmail.com">M963040020@student.nsysu.edu.tw</a> </td> 
+                            </tr> 
+                            <tr> 
+                              <td><a href="/member/scchou/index.html">Sheng-Chiuan Chiou</a></td> 
+                              <td><a href="mailto:M963040039@student.nsysu.edu.tw">M963040039@student.nsysu.edu.tw</a></td> 
+                            </tr> 
+                            <tr> 
+                              <td><a href="/member/ycchen/index.html">Yi-Chang Chen</a></td> 
+                              <td><a href="mailto:M963040046@student.nsysu.edu.tw">M963040046@student.nsysu.edu.tw</a> </td> 
+                            </tr> 
+                          </tbody> 
+                        </table> 
+                        <p>&nbsp;</p> 
+
+                        <table aria-label="94" class="info"> 
+                          <tbody> 
+                            <tr> 
+                              <th scope="col">Grade</th> 
+                              <th scope="col">Name</th> 
+                              <th scope="col">E-mail Address</th> 
+                            </tr> 
+                            <tr> 
+                              <td rowspan="3" width="43">94</td> 
+                              <td><a href="/apache2-default/chtseng/index.html">Chun-Han Tseng</a></td> 
+                              <td><a href="mailto:M943040041@student.nsysu.edu.tw">M943040041@student.nsysu.edu.tw</a> </td> 
+                            </tr> 
+                            <tr> 
+                              <td><a href="/member/sfwang/index.html">Shen-Fu Wang</a></td> 
+                              <td><a href="mailto:M943040056@student.nsysu.edu.tw">M943040055@student.nsysu.edu.tw</a> </td> 
+                            </tr> 
+                            <tr> 
+                              <td><a href="/apache2-default/thchen/index.html">Tai_Hung Chen</a></td> 
+                              <td><a href="mailto:M943040071@student.nsysu.edu.tw">M943040071@student.nsysu.edu.tw</a> </td> 
+                            </tr> 
+                          </tbody> 
+                        </table> 
+                        <p>&nbsp;</p>
+
+                      </th>
+                      <th scope="col" class="header"> <!-- odd -->
+                        <p class="style5">&nbsp;</p>
+
+                        <table aria-label="107" class="info">
+                          <tbody>
+                            <tr>
+                              <th scope="col">Grade</th>
+                              <th scope="col">Name</th>
+                              <th scope="col">E-mail Address</th>
+                            </tr>
+                            <tr>
+                              <td rowspan="5" width="43">107</td>
+                              <td><a href="/member/ckfang/personal.html">Chih-Gang Fang</a></td>
+                              <td><a href="mailto:M073040003@student.nsysu.edu.tw">M073040003@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                            <tr>
+                              <td><a href="/member/pwhsiao/personal.html">Po-Chin Wang</a></td>
+                              <td><a href="mailto:M073040069@student.nsysu.edu.tw">M073040069@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                            <tr>
+                              <td><a href="/member/accheng/personal.html">An-Chieh Cheng</a></td>
+                              <td><a href="mailto:M073040081@student.nsysu.edu.tw">M073040081@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                            <tr>
+                              <td><a href="/member/kcwu/personal.html">Kai-Cheng Wu</a></td>
+                              <td><a href="mailto:M073040098@student.nsysu.edu.tw">M073040098@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <p>&nbsp;</p>
+
+                        <table aria-label="105" class="info">
+                          <tbody>
+                            <tr>
+                              <th scope="col">Grade</th>
+                              <th scope="col">Name</th>
+                              <th scope="col">E-mail Address</th>
+                            </tr>
+                            <tr>
+                              <td rowspan="4" width="43">105</td>
+                              <td><a href="/member/zygao/personal_en.html">Zi-Yuan Gao</a></td>
+                              <td><a href="mailto:M053040030@student.nsysu.edu.tw">M053040030@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                            <tr>
+                              <td><a href="/member/pwhsiao/personal_en.html">Po-Wei Hsiao</a></td>
+                              <td><a href="mailto:M053040067@student.nsysu.edu.tw">M053040067@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                            <tr>
+                              <td><a href="/member/zsding/personal_en.html">Zi-Shuan Ding</a></td>
+                              <td><a href="mailto:M053040022@student.nsysu.edu.tw">M053040022@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                            <tr>
+                              <td><a href="/member/pchsieh/personal_en.html">Po-Chen Hsieh</a></td>
+                              <td><a href="mailto:M053040031@student.nsysu.edu.tw">M053040031@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <p>&nbsp;</p>
+                        
+                        <table aria-label="103" class="info">
+                          <tbody>
+                            <tr>
+                              <th scope="col">Grade</th>
+                              <th scope="col">Name</th>
+                              <th scope="col">E-mail Address</th>
+                            </tr>
+                            <tr>
+                              <td rowspan="4" width="43">103</td>                          
+                              <td><a href="/member/pyshih/personal_en.html">Po-Yuan Shih</a></td>
+                              <td><a href="mailto:M033040066@student.nsysu.edu.tw">M033040066@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                            <tr>
+                              <td><a href="/member/cychen/personal.html">Chia-Ying Chen</a></td>
+                              <td><a href="mailto:M033040029@student.nsysu.edu.tw">M033040029@student.nsysu.edu.tw</a></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <p>&nbsp;</p>
+                        
+                        <table aria-label="101" class="info">
+                          <tbody>
+                            <tr>
+                              <th scope="col">Grade</th>
+                              <th scope="col">Name</th>
+                              <th scope="col">E-mail Address</th>
+                            </tr>
+                            <tr>
+                              <td rowspan="1" width="43">101</td>                          
+                              <td><a href="/member/yjhsu/personal2.html">Bo-Chang Chiou</a></td>
+                              <td><a href="mailto:M013040072@student.nsysu.edu.tw">M013040072@student.nsysu.edu.tw</a> </td>
+                            </tr>                    
+                          </tbody>
+                        </table>
+                        <p>&nbsp;</p>
+
+                        <table aria-label="99" class="info">
+                          <tbody>
+                            <tr>
+                              <th scope="col">Grade</th>
+                              <th scope="col">Name</th>
+                              <th scope="col">E-mail Address</th>
+                            </tr>
+                            <tr>
+                              <td rowspan="4" width="43">99</td>
+                              <td><a href="/member/mlshiu/personal.html">Miau-Luan Shiu</a></td>
+                              <td><a href="mailto:M993040038@student.nsysu.edu.tw">M993040038@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                            <tr>
+                              <td><a href="/member/bfyeh/personal.html">Bing-Feng Yeh</a></td>
+                              <td><a href="mailto:M993040052@student.nsysu.edu.tw">M993040052@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                            <tr>
+                              <td><a href="/member/cyhsu/personal.html">Chih-Yu Hsu</a></td>
+                              <td><a href="mailto:M993040061@student.nsysu.edu.tw">M993040061@student.nsysu.edu.tw</a> </td>
+                            </tr>
+                            <tr>
+                              <td><a href="/member/yhhuang/personal_en.html">Yu-Hung Huang</a></td>
+                              <td><a href="mailto:M993040036@student.nsysu.edu.tw">M993040036@student.nsysu.edu.tw</a> </td>
+                            </tr> 
+                          </tbody>
+                        </table> 
+                        <p>&nbsp;</p>
+                        
+                        <table aria-label="97" class="info"> 
+                          <tbody> 
+                            <tr> 
+                              <th scope="col">Grade</th> 
+                              <th scope="col">Name</th> 
+                              <th scope="col">E-mail Address</th> 
+                            </tr> 
+                            <tr> 
+                              <td rowspan="3" width="43">97</td> 
+                              <td><a href="/member/jzye/index.html">Ja-Zang Yeh</a></td> 
+                              <td><a href="mailto:ycc97m@cse.nsysu.edu.tw">ycc97m@cse.nsysu.edu.tw</a> </td> 
+                            </tr> 
+                            <tr> 
+                              <td><a href="/member/khwu/index.html">Kuo-Hao Wu</a></td> 
+                              <td><a href="mailto:wkh97m@cse.nsysu.edu.tw">wkh97m@cse.nsysu.edu.tw </a> </td> 
+                            </tr> 
+                            <tr> 
+                              <td><a href="/member/cyyang/index.html">Chih-Yung Yang</a></td> 
+                              <td><a href="mailto:ycyg97m@cse.nsysu.edu.tw">ycyg97m@cse.nsysu.edu.tw</a> </td> 
+                            </tr> 
+                          </tbody> 
+                        </table> 
+                        <p>&nbsp;</p>
+                        
+                        <table aria-label="95" class="info"> 
+                          <tbody> 
+                            <tr> 
+                              <th scope="col">Grade</th> 
+                              <th scope="col">Name</th> 
+                              <th scope="col">E-mail Address</th> 
+                            </tr>                            
+                            <tr> 
+                              <td rowspan="3" width="43">95</td> 
+                              <td><a href="/member/ychuang/index.html">Yi-Ching Huang</a></td> 
+                              <td><a href="mailto:M953040053@student.nsysu.edu.tw">M953040053@student.nsysu.edu.tw</a> </td> 
+                            </tr> 
+                            <tr> 
+                              <td><a href="/member/bhchen/index.html">Bo-Han Chen</a></td> 
+                              <td><a href="mailto:M953040057@student.nsysu.edu.tw">M953040057@student.nsysu.edu.tw</a> </td> 
+                            </tr> 
+                            <tr>                            
+                              <td><a href="/member/scchiang/index.html">Shin-Chian Chiang</a></a></td> 
+                              <td><a href="mailto:M953040062@student.nsysu.edu.tw">M953040062@student.nsysu.edu.tw</a> </td> 
+                            </tr>
+                          </tbody> 
+                        </table>
+                        <p>&nbsp;</p>
+
+                      </th> 
+                    </tr> 
+
+                  </table> 
+                </th> 
+              </tr> 
+            </table>
+          </th> 
         </tr> 
-    </table> 
+      </table> 
    
       <div align="center"> 
         <table width="100%" border="0" bordercolor="#FFFFCC"  bgcolor="#eeeeee"> 
@@ -570,7 +570,8 @@
             </span></strong><strong>Telephone</strong><strong><span lang="EN-US" xml:lang="EN-US">: (07)525-1750 </span></strong><strong>#</strong><strong><span lang="EN-US" xml:lang="EN-US"> 434201</span></strong></div></td> 
           </tr> 
         </table> 
-        </div></td> 
+      </div>
+    </th> 
   </tr> 
 </table> 
 </div> 
